@@ -15,6 +15,7 @@ import {
 } from "react-icons/si";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 function ChatGptIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -45,12 +46,12 @@ const STACK: StackItem[] = [
   { name: "Firebase", Icon: SiFirebase, color: "#DD2C00" },
 ];
 
-export function TechStack() {
+export function TechStack({ dict }: { dict: Dictionary }) {
   return (
     <Section
       align="center"
-      eyebrow="Tech Stack"
-      title="Les outils que j'utilise au quotidien"
+      eyebrow={dict.techStack.eyebrow}
+      title={dict.techStack.title}
     >
       <Reveal>
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">

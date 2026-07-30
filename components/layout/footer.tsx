@@ -2,26 +2,8 @@ import Link from "next/link";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
-
-const COLUMNS = [
-  {
-    title: "Navigation",
-    links: [
-      { href: "/work", label: "Work" },
-      { href: "/breakdowns", label: "Breakdowns" },
-      { href: "/services", label: "Services" },
-      { href: "/about", label: "About" },
-      { href: "/blog", label: "Blog" },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [
-      { href: "/contact", label: "Let's Talk" },
-      { href: "mailto:hello@arnaudmalanda.com", label: "Email" },
-    ],
-  },
-];
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 const SOCIALS = [
   { href: "https://linkedin.com", label: "LinkedIn", Icon: FaLinkedin, color: "#0A66C2" },
@@ -30,7 +12,27 @@ const SOCIALS = [
   { href: "https://whatsapp.com/channel/", label: "WhatsApp", Icon: FaWhatsapp, color: "#25D366" },
 ];
 
-export function Footer() {
+export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const columns = [
+    {
+      title: dict.footer.navTitle,
+      links: [
+        { href: `/${lang}/work`, label: dict.nav.work },
+        { href: `/${lang}/breakdowns`, label: dict.nav.breakdowns },
+        { href: `/${lang}/services`, label: dict.nav.services },
+        { href: `/${lang}/about`, label: dict.nav.about },
+        { href: `/${lang}/blog`, label: dict.nav.blog },
+      ],
+    },
+    {
+      title: dict.footer.contactTitle,
+      links: [
+        { href: `/${lang}/contact`, label: dict.nav.letsTalk },
+        { href: "mailto:hello@arnaudmalanda.com", label: "Email" },
+      ],
+    },
+  ];
+
   return (
     <footer className="mt-auto bg-card">
       <Container className="py-16 md:py-20">
@@ -40,13 +42,11 @@ export function Footer() {
               Arnaud Malanda
             </p>
             <p className="mt-3 max-w-[320px] text-sm leading-[1.7] text-muted-foreground">
-              Product-Focused Developer basé à Dubai. J&apos;aide les
-              entreprises à transformer leurs produits digitaux en
-              expériences que les gens aiment utiliser.
+              {dict.footer.tagline}
             </p>
           </div>
 
-          {COLUMNS.map((col) => (
+          {columns.map((col) => (
             <div key={col.title}>
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.06em] text-muted-foreground">
                 {col.title}
@@ -71,8 +71,7 @@ export function Footer() {
 
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Arnaud Malanda. Tous droits
-            réservés.
+            © {new Date().getFullYear()} Arnaud Malanda. {dict.footer.rights}
           </p>
           <div className="flex gap-5">
             {SOCIALS.map(({ label, href, Icon, color }) => (

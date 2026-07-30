@@ -1,13 +1,17 @@
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
-import { processSteps } from "@/lib/content/testimonials";
+import { getProcessSteps } from "@/lib/content/testimonials";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
-export function Process() {
+export function Process({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const processSteps = getProcessSteps(lang);
+
   return (
     <Section
-      eyebrow="My Process"
-      title="Un processus prévisible, pensé pour réduire le risque"
-      description="Tu sais toujours où on en est et ce qui arrive ensuite."
+      eyebrow={dict.process.eyebrow}
+      title={dict.process.title}
+      description={dict.process.description}
     >
       <div className="grid gap-8 md:grid-cols-5">
         {processSteps.map((step, i) => (

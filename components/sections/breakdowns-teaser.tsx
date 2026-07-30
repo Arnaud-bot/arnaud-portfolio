@@ -4,22 +4,30 @@ import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/animations/reveal";
-import { breakdowns } from "@/lib/content/breakdowns";
+import { getBreakdowns } from "@/lib/content/breakdowns";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
-export function BreakdownsTeaser() {
-  const featured = breakdowns.slice(0, 3);
+export function BreakdownsTeaser({
+  lang,
+  dict,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+}) {
+  const featured = getBreakdowns(lang).slice(0, 3);
 
   return (
     <Section
-      eyebrow="Website Breakdowns"
-      title="J'analyse des sites publics, gratuitement"
-      description="Score UX, points forts, points faibles et recommandations — mon contenu signature."
+      eyebrow={dict.breakdownsTeaser.eyebrow}
+      title={dict.breakdownsTeaser.title}
+      description={dict.breakdownsTeaser.description}
     >
       <div className="grid gap-6 md:grid-cols-3">
         {featured.map((item, i) => (
           <Reveal key={item.slug} delay={i * 0.05}>
             <Link
-              href={`/breakdowns/${item.slug}`}
+              href={`/${lang}/breakdowns/${item.slug}`}
               className="group flex h-full flex-col rounded-lg border border-border bg-card p-8 transition-colors hover:bg-accent"
             >
               <div className="flex items-center justify-between">
@@ -33,7 +41,7 @@ export function BreakdownsTeaser() {
                 {item.summary}
               </p>
               <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Lire l&apos;analyse
+                {dict.breakdownsTeaser.readAnalysis}
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </Link>
@@ -43,7 +51,7 @@ export function BreakdownsTeaser() {
 
       <div className="mt-10 flex justify-center">
         <Button asChild variant="outline" className="h-11 px-6">
-          <Link href="/breakdowns">Voir toutes les analyses</Link>
+          <Link href={`/${lang}/breakdowns`}>{dict.breakdownsTeaser.seeAll}</Link>
         </Button>
       </div>
     </Section>

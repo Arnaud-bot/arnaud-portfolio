@@ -4,19 +4,22 @@ import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
-import { breakdowns } from "@/lib/content/breakdowns";
+import { getBreakdowns } from "@/lib/content/breakdowns";
+import { hasLocale, defaultLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 export function generateStaticParams() {
-  return breakdowns.map((item) => ({ slug: item.slug }));
+  return getBreakdowns("fr").map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const item = breakdowns.find((b) => b.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const item = getBreakdowns(lang).find((b) => b.slug === slug);
   if (!item) return {};
   return {
     title: `${item.title} — Arnaud Malanda`,
@@ -27,10 +30,12 @@ export async function generateMetadata({
 export default async function BreakdownPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const item = breakdowns.find((b) => b.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  const item = getBreakdowns(lang).find((b) => b.slug === slug);
   if (!item) notFound();
 
   return (
@@ -57,7 +62,7 @@ export default async function BreakdownPage({
             <div>
               <h2 className="flex items-center gap-2 text-lg font-semibold">
                 <CheckCircle2 className="size-5 text-success" strokeWidth={1.75} />
-                Points forts
+                {dict.breakdownsPage.strengths}
               </h2>
               <ul className="mt-4 space-y-2">
                 {item.strengths.map((s) => (
@@ -76,7 +81,7 @@ export default async function BreakdownPage({
             <div>
               <h2 className="flex items-center gap-2 text-lg font-semibold">
                 <XCircle className="size-5 text-destructive" strokeWidth={1.75} />
-                Points faibles
+                {dict.breakdownsPage.weaknesses}
               </h2>
               <ul className="mt-4 space-y-2">
                 {item.weaknesses.map((w) => (
@@ -95,7 +100,7 @@ export default async function BreakdownPage({
             <div>
               <h2 className="flex items-center gap-2 text-lg font-semibold">
                 <Lightbulb className="size-5 text-warning" strokeWidth={1.75} />
-                Recommandations
+                {dict.breakdownsPage.recommendations}
               </h2>
               <ul className="mt-4 space-y-2">
                 {item.recommendations.map((r) => (
@@ -112,8 +117,7 @@ export default async function BreakdownPage({
 
           <Reveal delay={0.15}>
             <div className="rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-              [Emplacement pour un concept Before/After — capture d&apos;écran
-              avant, puis proposition de redesign.]
+              {dict.breakdownsPage.beforeAfterPlaceholder}
             </div>
           </Reveal>
         </div>

@@ -10,13 +10,9 @@ import {
 } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
-import { services } from "@/lib/content/services";
-
-export const metadata: Metadata = {
-  title: "Services — Arnaud Malanda",
-  description:
-    "UX Audit, UI/UX Redesign, Web & Mobile Development, Product Strategy et Conversion Optimization.",
-};
+import { getServices } from "@/lib/content/services";
+import { hasLocale, defaultLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 const ICONS: Record<string, LucideIcon> = {
   SearchCheck,
@@ -27,13 +23,33 @@ const ICONS: Record<string, LucideIcon> = {
   TrendingUp,
 };
 
-export default function ServicesPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang: rawLang } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  return dict.meta.services;
+}
+
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang: rawLang } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  const services = getServices(lang);
+
   return (
     <Section
       align="center"
-      eyebrow="Services"
-      title="Comment je peux aider ton produit"
-      description="Chaque service peut être pris seul ou combiné selon où tu en es dans ton produit."
+      eyebrow={dict.servicesPage.eyebrow}
+      title={dict.servicesPage.title}
+      description={dict.servicesPage.description}
     >
       <div className="grid gap-6 sm:grid-cols-2">
         {services.map((service, i) => {

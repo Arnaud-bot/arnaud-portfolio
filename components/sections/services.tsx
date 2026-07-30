@@ -9,7 +9,9 @@ import {
 } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
-import { services } from "@/lib/content/services";
+import { getServices } from "@/lib/content/services";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 const ICONS: Record<string, LucideIcon> = {
   SearchCheck,
@@ -20,12 +22,14 @@ const ICONS: Record<string, LucideIcon> = {
   TrendingUp,
 };
 
-export function Services() {
+export function Services({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const services = getServices(lang);
+
   return (
     <Section
-      eyebrow="Services"
-      title="Ce que je peux faire pour ton produit"
-      description="Du diagnostic à la mise en production, sur web comme sur mobile."
+      eyebrow={dict.homeServices.eyebrow}
+      title={dict.homeServices.title}
+      description={dict.homeServices.description}
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, i) => {

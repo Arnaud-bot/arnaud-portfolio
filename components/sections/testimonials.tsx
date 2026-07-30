@@ -1,13 +1,17 @@
 import { Section } from "@/components/layout/section";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Reveal } from "@/components/animations/reveal";
-import { testimonials } from "@/lib/content/testimonials";
+import { getTestimonials } from "@/lib/content/testimonials";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
-export function Testimonials() {
+export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const testimonials = getTestimonials(lang);
+
   return (
     <Section
-      eyebrow="Testimonials"
-      title="Ce que les clients en disent"
+      eyebrow={dict.testimonialsSection.eyebrow}
+      title={dict.testimonialsSection.title}
     >
       <div className="grid gap-6 md:grid-cols-3">
         {testimonials.map((t, i) => (

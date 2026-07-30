@@ -4,27 +4,43 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations/reveal";
-import { breakdowns } from "@/lib/content/breakdowns";
+import { getBreakdowns } from "@/lib/content/breakdowns";
+import { hasLocale, defaultLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 
-export const metadata: Metadata = {
-  title: "Website Breakdowns — Arnaud Malanda",
-  description:
-    "Analyses UX de sites publics : score, points forts, points faibles, recommandations.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang: rawLang } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  return dict.meta.breakdowns;
+}
 
-export default function BreakdownsPage() {
+export default async function BreakdownsPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang: rawLang } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  const breakdowns = getBreakdowns(lang);
+
   return (
     <Section
       align="center"
-      eyebrow="Website Breakdowns"
-      title="Analyses de sites publics"
-      description="Mon contenu signature : un regard critique et constructif sur de vraies interfaces."
+      eyebrow={dict.breakdownsPage.eyebrow}
+      title={dict.breakdownsPage.title}
+      description={dict.breakdownsPage.description}
     >
       <div className="grid gap-6 md:grid-cols-3">
         {breakdowns.map((item, i) => (
           <Reveal key={item.slug} delay={(i % 3) * 0.05}>
             <Link
-              href={`/breakdowns/${item.slug}`}
+              href={`/${lang}/breakdowns/${item.slug}`}
               className="group flex h-full flex-col rounded-lg border border-border bg-card p-8 transition-colors hover:bg-accent"
             >
               <div className="flex items-center justify-between">
@@ -38,7 +54,7 @@ export default function BreakdownsPage() {
                 {item.summary}
               </p>
               <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Lire l&apos;analyse
+                {dict.breakdownsPage.readAnalysis}
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </Link>

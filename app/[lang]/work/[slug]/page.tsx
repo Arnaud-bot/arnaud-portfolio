@@ -3,20 +3,23 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
-import { caseStudies } from "@/lib/content/case-studies";
+import { getCaseStudies } from "@/lib/content/case-studies";
+import { hasLocale, defaultLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 import type { CaseStudy } from "@/types/content";
 
 export function generateStaticParams() {
-  return caseStudies.map((study) => ({ slug: study.slug }));
+  return getCaseStudies("fr").map((study) => ({ slug: study.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const study = caseStudies.find((s) => s.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const study = getCaseStudies(lang).find((s) => s.slug === slug);
   if (!study) return {};
   return {
     title: `${study.title} — Arnaud Malanda`,
@@ -24,24 +27,26 @@ export async function generateMetadata({
   };
 }
 
-const CHAPTERS: { key: keyof CaseStudy; label: string }[] = [
-  { key: "problem", label: "Problem" },
-  { key: "research", label: "Research" },
-  { key: "analysis", label: "Analysis" },
-  { key: "designDecisions", label: "Design Decisions" },
-  { key: "development", label: "Development" },
-  { key: "results", label: "Results" },
-  { key: "lessonsLearned", label: "Lessons Learned" },
-];
-
 export default async function CaseStudyPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const study = caseStudies.find((s) => s.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const dict = await getDictionary(lang);
+  const study = getCaseStudies(lang).find((s) => s.slug === slug);
   if (!study) notFound();
+
+  const chapters: { key: keyof CaseStudy; label: string }[] = [
+    { key: "problem", label: dict.workPage.chapters.problem },
+    { key: "research", label: dict.workPage.chapters.research },
+    { key: "analysis", label: dict.workPage.chapters.analysis },
+    { key: "designDecisions", label: dict.workPage.chapters.designDecisions },
+    { key: "development", label: dict.workPage.chapters.development },
+    { key: "results", label: dict.workPage.chapters.results },
+    { key: "lessonsLearned", label: dict.workPage.chapters.lessonsLearned },
+  ];
 
   return (
     <>
@@ -57,7 +62,7 @@ export default async function CaseStudyPage({
 
       <Section narrow>
         <div className="space-y-16">
-          {CHAPTERS.map((chapter, i) => (
+          {chapters.map((chapter, i) => (
             <Reveal key={chapter.key} delay={i * 0.03}>
               <div>
                 <h2 className="text-xl font-semibold">{chapter.label}</h2>

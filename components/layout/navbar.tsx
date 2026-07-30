@@ -5,23 +5,27 @@ import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { getDir, type Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
-const NAV_LINKS = [
-  { href: "/work", label: "Work" },
-  { href: "/breakdowns", label: "Breakdowns" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-];
-
-export function Navbar() {
+export function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const [scrolled, setScrolled] = useState(false);
+  const dir = getDir(lang);
+
+  const navLinks = [
+    { href: `/${lang}/work`, label: dict.nav.work },
+    { href: `/${lang}/breakdowns`, label: dict.nav.breakdowns },
+    { href: `/${lang}/services`, label: dict.nav.services },
+    { href: `/${lang}/about`, label: dict.nav.about },
+    { href: `/${lang}/blog`, label: dict.nav.blog },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -39,12 +43,12 @@ export function Navbar() {
       }`}
     >
       <Container className="flex h-[72px] items-center justify-between">
-        <Link href="/" className="text-base font-semibold tracking-tight">
+        <Link href={`/${lang}`} className="text-base font-semibold tracking-tight">
           Arnaud Malanda
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -55,9 +59,10 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-6 md:flex">
+          <LanguageSwitcher lang={lang} />
           <Button asChild className="h-10 px-5">
-            <Link href="/contact">Let&apos;s Talk</Link>
+            <Link href={`/${lang}/contact`}>{dict.nav.letsTalk}</Link>
           </Button>
         </div>
 
@@ -67,10 +72,10 @@ export function Navbar() {
               <Menu className="size-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px]">
-            <SheetTitle className="sr-only">Menu</SheetTitle>
+          <SheetContent side={dir === "rtl" ? "left" : "right"} className="w-[280px]">
+            <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
             <nav className="mt-12 flex flex-col gap-6 px-6">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -80,8 +85,9 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="mt-4">
-                <Link href="/contact">Let&apos;s Talk</Link>
+                <Link href={`/${lang}/contact`}>{dict.nav.letsTalk}</Link>
               </Button>
+              <LanguageSwitcher lang={lang} className="mt-2" />
             </nav>
           </SheetContent>
         </Sheet>

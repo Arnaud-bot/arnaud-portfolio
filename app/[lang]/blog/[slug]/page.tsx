@@ -2,19 +2,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section";
-import { blogPosts } from "@/lib/content/blog";
+import { getBlogPosts } from "@/lib/content/blog";
+import { hasLocale, defaultLocale } from "@/lib/i18n/config";
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return getBlogPosts("fr").map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const post = getBlogPosts(lang).find((p) => p.slug === slug);
   if (!post) return {};
   return {
     title: `${post.title} — Arnaud Malanda`,
@@ -25,10 +27,11 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const { lang: rawLang, slug } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
+  const post = getBlogPosts(lang).find((p) => p.slug === slug);
   if (!post) notFound();
 
   return (
@@ -42,7 +45,7 @@ export default async function BlogPostPage({
       <time className="mt-4 block text-sm text-muted-foreground">
         {post.date}
       </time>
-      <p className="mx-auto mt-8 max-w-[600px] text-left text-base leading-[1.7] text-muted-foreground">
+      <p className="mx-auto mt-8 max-w-[600px] text-left rtl:text-right text-base leading-[1.7] text-muted-foreground">
         {post.content}
       </p>
     </Section>
