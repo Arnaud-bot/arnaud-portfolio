@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
 
@@ -23,9 +24,9 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
-  { href: "https://linkedin.com", label: "LinkedIn" },
-  { href: "https://github.com", label: "GitHub" },
-  { href: "https://instagram.com", label: "Instagram" },
+  { href: "https://linkedin.com", label: "LinkedIn", Icon: FaLinkedin, color: "#0A66C2" },
+  { href: "https://github.com", label: "GitHub", Icon: FaGithub },
+  { href: "https://instagram.com", label: "Instagram", Icon: FaInstagram, color: "#E4405F" },
 ];
 
 export function Footer() {
@@ -72,16 +73,17 @@ export function Footer() {
             © {new Date().getFullYear()} Arnaud Malanda. Tous droits
             réservés.
           </p>
-          <div className="flex gap-6">
-            {SOCIALS.map((social) => (
+          <div className="flex gap-5">
+            {SOCIALS.map(({ label, href, Icon, color }) => (
               <a
-                key={social.label}
-                href={social.href}
+                key={label}
+                href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                aria-label={label}
+                className="text-foreground/70 transition-colors hover:text-foreground"
               >
-                {social.label}
+                <Icon size={20} style={color ? { color } : undefined} />
               </a>
             ))}
           </div>
