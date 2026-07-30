@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
 
@@ -13,9 +14,14 @@ export default function AboutPage() {
     <Section eyebrow="About" title="Arnaud Malanda">
       <div className="grid gap-12 md:grid-cols-[1fr_1.4fr]">
         <Reveal>
-          {/* TODO: remplacer par la photo professionnelle */}
-          <div className="flex aspect-[4/5] w-full items-center justify-center rounded-lg border border-border bg-card text-sm text-muted-foreground">
-            Portrait
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg border border-border bg-card">
+            <Image
+              src="/Ras.jpg"
+              alt="Arnaud Malanda"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 100vw"
+            />
           </div>
         </Reveal>
 

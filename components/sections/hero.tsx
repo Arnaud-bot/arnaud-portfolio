@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
@@ -57,9 +58,15 @@ export function Hero() {
                 aria-hidden
                 className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-[radial-gradient(circle,rgba(24,168,255,0.18),transparent_70%)] sm:-inset-12"
               />
-              {/* TODO: remplacer par la photo professionnelle */}
-              <div className="flex aspect-square w-full items-center justify-center rounded-2xl border border-border bg-card text-sm text-muted-foreground md:aspect-[4/5]">
-                Portrait
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-border bg-card md:aspect-[4/5]">
+                <Image
+                  src="/Ras.jpg"
+                  alt="Portrait"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                  sizes="(min-width: 640px) 420px, 220px"
+                />
               </div>
 
               <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-border bg-popover/95 px-3 py-2 text-[11px] shadow-lg backdrop-blur-sm sm:left-5 sm:translate-x-0 sm:gap-2.5 sm:px-4 sm:py-2.5 sm:text-xs">
