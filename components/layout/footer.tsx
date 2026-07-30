@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
 
@@ -27,6 +27,7 @@ const SOCIALS = [
   { href: "https://linkedin.com", label: "LinkedIn", Icon: FaLinkedin, color: "#0A66C2" },
   { href: "https://github.com", label: "GitHub", Icon: FaGithub },
   { href: "https://instagram.com", label: "Instagram", Icon: FaInstagram, color: "#E4405F" },
+  { href: "https://whatsapp.com/channel/", label: "WhatsApp", Icon: FaWhatsapp, color: "#25D366" },
 ];
 
 export function Footer() {
