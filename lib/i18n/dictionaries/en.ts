@@ -139,10 +139,31 @@ export const en: Dictionary = {
   aboutPage: {
     eyebrow: "About",
     title: "Arnaud Malanda",
-    paragraphs: [
-      "[Tell your story: how you got into development and UX, what was the moment you realized the real problem with digital products is rarely technical.]",
-      "[Explain what frustrates you about bad user experiences, and why you chose to position yourself as a Product-Focused Developer rather than a generalist freelancer.]",
-      "[End with what you want visitors to remember about you: your way of working, your values, what that changes for their products.]",
+    sections: [
+      {
+        title: "How I got into development and UX",
+        paragraphs: [
+          "Computers have been part of my life since childhood. My father introduced me to them early on, and that sparked a real fascination with technology. I was curious to understand how these machines worked and, more importantly, how they could be used to create things and solve problems.",
+          "Like a lot of young people, my first choice of studies was shaped by the people around me. I went into biology and chemistry — an interesting field, but not what I was truly passionate about. After finishing high school, I decided to take a direction that felt more like me. I chose to study computer science, convinced that technology was one of the best ways to design concrete solutions to real challenges.",
+          "Moving to Dubai changed how I saw development even further. I noticed that many companies have a website, but mostly use it as a showcase. Visitors find information there, but rarely an experience that guides them, reassures them, and convinces them to take action. That reality pushed me to go deeper into user experience (UX), product strategy, and conversion. Today, my goal isn't just to build websites or apps — it's to create digital products that genuinely meet users' needs while helping businesses reach their goals.",
+        ],
+      },
+      {
+        title: "What frustrates me about bad user experiences",
+        paragraphs: [
+          "I firmly believe a website or app should never exist just because a company \"has to have one.\" Every digital product should tell a story, build trust, and naturally guide the user toward taking action.",
+          "What frustrates me most isn't imperfect design — it's missed opportunities. When a visitor doesn't immediately understand the value of a business, gets lost in confusing navigation, or leaves a site without finding what they came for, that's not just a bad user experience — it's a missed opportunity for the business.",
+          "That's why I like analyzing digital products as a whole. I care as much about the user journey as I do about business goals. To me, a good product isn't just about looking nice or being well built technically. It has to solve a real problem, simplify the user's decisions, and contribute to the company's growth.",
+        ],
+      },
+      {
+        title: "What I'd like you to remember about me",
+        paragraphs: [
+          "I'd like to be seen as someone who seeks to understand before building. Behind every interface are users, goals, constraints, and opportunities. My role is to connect those pieces to create experiences that are useful, consistent, and effective.",
+          "I don't see myself as just a developer. I like thinking about the product as a whole: understanding user needs, identifying friction points, imagining solutions, and turning them into modern apps or websites. To me, development is a means of bringing those ideas to life, not an end in itself.",
+          "My ambition is to work with companies that want to build quality digital products capable of creating a lasting impact. Whether through a UX audit, an interface redesign, or app development, I want every project to leave a positive impression on users and bring real value to the business.",
+        ],
+      },
     ],
   },
   servicesPage: {

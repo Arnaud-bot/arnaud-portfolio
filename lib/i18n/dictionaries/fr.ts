@@ -139,10 +139,31 @@ export const fr: Dictionary = {
   aboutPage: {
     eyebrow: "About",
     title: "Arnaud Malanda",
-    paragraphs: [
-      "[Raconte ton histoire : comment tu es arrivé au développement et à l'UX, quel a été le déclic qui t'a fait réaliser que le vrai problème des produits digitaux est rarement technique.]",
-      "[Explique ce qui te frustre dans les mauvaises expériences utilisateur, et pourquoi tu as choisi de te positionner comme Product-Focused Developer plutôt que comme freelance généraliste.]",
-      "[Termine sur ce que tu veux que les visiteurs retiennent de toi : ta manière de travailler, tes valeurs, ce que ça change pour leurs produits.]",
+    sections: [
+      {
+        title: "Comment je suis arrivé au développement et à l'UX",
+        paragraphs: [
+          "Depuis mon enfance, les ordinateurs ont toujours fait partie de mon environnement. Mon père m'a très tôt initié à leur utilisation, ce qui a éveillé une véritable fascination pour la technologie. J'étais curieux de comprendre comment ces machines fonctionnaient et, surtout, comment elles pouvaient être utilisées pour créer et résoudre des problèmes.",
+          "Comme beaucoup de jeunes, mon premier choix d'études a été influencé par mon entourage. J'ai suivi un parcours en biologie-chimie, un domaine intéressant mais qui ne correspondait pas réellement à ce qui me passionnait. Après l'obtention de mon baccalauréat, j'ai décidé de prendre une direction qui me ressemblait davantage. J'ai choisi d'étudier les sciences informatiques, convaincu que la technologie était l'un des meilleurs moyens de concevoir des solutions concrètes aux défis de notre société.",
+          "En arrivant à Dubaï, ma vision du développement a encore évolué. J'ai constaté que de nombreuses entreprises possèdent un site web, mais l'utilisent principalement comme une vitrine. Les visiteurs y trouvent des informations, mais rarement une expérience qui les guide, les rassure et les convainc de passer à l'action. Cette réalité m'a poussé à approfondir mes connaissances en expérience utilisateur (UX), en stratégie produit et en conversion. Aujourd'hui, mon objectif n'est plus seulement de développer des sites ou des applications, mais de créer des produits numériques qui répondent réellement aux besoins des utilisateurs tout en aidant les entreprises à atteindre leurs objectifs.",
+        ],
+      },
+      {
+        title: "Ce qui me frustre dans les mauvaises expériences utilisateur",
+        paragraphs: [
+          "Je suis convaincu qu'un site web ou une application ne devrait jamais exister uniquement parce qu'une entreprise « doit en avoir un ». Chaque produit numérique devrait raconter une histoire, inspirer confiance et guider naturellement l'utilisateur vers une action.",
+          "Ce qui me frustre le plus, ce n'est pas un design imparfait, mais les occasions perdues. Lorsqu'un visiteur ne comprend pas immédiatement la valeur d'une entreprise, lorsqu'il se perd dans une navigation confuse ou quitte un site sans avoir trouvé ce qu'il cherche, ce n'est pas seulement une mauvaise expérience utilisateur : c'est une opportunité manquée pour l'entreprise.",
+          "C'est pourquoi j'aime analyser les produits numériques dans leur ensemble. Je m'intéresse autant au parcours utilisateur qu'aux objectifs business. Pour moi, un bon produit ne se limite pas à être esthétique ou techniquement bien construit. Il doit résoudre un problème réel, simplifier les décisions de l'utilisateur et contribuer à la croissance de l'entreprise.",
+        ],
+      },
+      {
+        title: "Ce que j'aimerais que vous reteniez de moi",
+        paragraphs: [
+          "J'aimerais que l'on me voie comme une personne qui cherche avant tout à comprendre avant de construire. Derrière chaque interface se trouvent des utilisateurs, des objectifs, des contraintes et des opportunités. Mon rôle est de relier ces éléments pour créer des expériences utiles, cohérentes et performantes.",
+          "Je ne me considère pas simplement comme un développeur. J'aime réfléchir au produit dans son ensemble : comprendre les besoins des utilisateurs, identifier les points de friction, imaginer des solutions et les transformer en applications ou en sites web modernes. Le développement est pour moi un moyen de donner vie à ces idées, pas une finalité.",
+          "Mon ambition est de collaborer avec des entreprises qui souhaitent créer des produits numériques de qualité, capables de générer un impact durable. Que ce soit à travers une analyse UX, une refonte d'interface ou le développement d'une application, je souhaite que chaque projet laisse une impression positive aux utilisateurs et apporte une réelle valeur à l'entreprise.",
+        ],
+      },
     ],
   },
   servicesPage: {

@@ -60,7 +60,7 @@ export type Dictionary = {
   aboutPage: {
     eyebrow: string;
     title: string;
-    paragraphs: [string, string, string];
+    sections: { title: string; paragraphs: string[] }[];
   };
   servicesPage: { eyebrow: string; title: string; description: string };
   contactPage: {
