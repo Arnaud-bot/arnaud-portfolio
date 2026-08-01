@@ -51,7 +51,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["Product Design", "Flutter", "Marketplace", "Stratégie UX"],
       client: "Projet personnel",
       category: "Product Design · Flutter",
-      thumbnail: "/case-studies/konekta.jpg",
+      thumbnail: "/case-studies/konekta.png",
       summary:
         "Un marketplace conçu de zéro pour connecter entreprises et clients africains à travers une expérience de commerce digital simple, scalable et fiable.",
       overview:
@@ -166,7 +166,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["Product Design", "Flutter", "Marketplace", "UX Strategy"],
       client: "Personal project",
       category: "Product Design · Flutter",
-      thumbnail: "/case-studies/konekta.jpg",
+      thumbnail: "/case-studies/konekta.png",
       summary:
         "A marketplace platform built from the ground up to connect African businesses and customers through a simple, scalable and trustworthy digital commerce experience.",
       overview:
@@ -279,7 +279,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["تصميم المنتج", "Flutter", "السوق الإلكتروني", "استراتيجية تجربة المستخدم"],
       client: "مشروع شخصي",
       category: "تصميم المنتج · Flutter",
-      thumbnail: "/case-studies/konekta.jpg",
+      thumbnail: "/case-studies/konekta.png",
       summary:
         "سوق إلكتروني بُني من الصفر لربط الشركات والعملاء الأفارقة من خلال تجربة تجارة رقمية بسيطة وقابلة للتوسع وموثوقة.",
       overview:
