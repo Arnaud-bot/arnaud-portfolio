@@ -67,6 +67,14 @@ export default async function CaseStudyPage({
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-background">
             <Image
               src={study.thumbnail}
+              alt=""
+              aria-hidden
+              fill
+              className="scale-110 object-cover opacity-40 blur-2xl"
+              sizes="(min-width: 1024px) 900px, 100vw"
+            />
+            <Image
+              src={study.thumbnail}
               alt={study.title}
               fill
               className="object-contain"

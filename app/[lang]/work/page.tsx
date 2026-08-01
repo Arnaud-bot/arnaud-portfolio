@@ -47,6 +47,14 @@ export default async function WorkPage({
               <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border bg-background">
                 <Image
                   src={study.thumbnail}
+                  alt=""
+                  aria-hidden
+                  fill
+                  className="scale-110 object-cover opacity-40 blur-2xl"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <Image
+                  src={study.thumbnail}
                   alt={study.title}
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-105"
