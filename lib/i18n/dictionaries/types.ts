@@ -88,13 +88,14 @@ export type Dictionary = {
     description: string;
     seeCaseStudy: string;
     chapters: {
-      problem: string;
-      research: string;
-      analysis: string;
-      designDecisions: string;
-      development: string;
-      results: string;
+      overview: string;
+      challenge: string;
+      approach: string;
+      keyInsights: string;
+      solution: string;
+      outcome: string;
       lessonsLearned: string;
+      technologies: string;
     };
   };
   blogPage: { eyebrow: string; title: string; description: string };

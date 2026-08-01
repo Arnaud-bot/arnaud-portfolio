@@ -5,19 +5,28 @@ export type Service = {
   icon: string;
 };
 
+export type CaseStudySection = {
+  intro: string;
+  points: string[];
+};
+
 export type CaseStudy = {
   slug: string;
   title: string;
+  tagline: string;
+  tags: string[];
   client: string;
   category: string;
+  thumbnail: string;
   summary: string;
-  problem: string;
-  research: string;
-  analysis: string;
-  designDecisions: string;
-  development: string;
-  results: string;
+  overview: string;
+  challenge: string;
+  approach: CaseStudySection;
+  keyInsights: string[];
+  solution: CaseStudySection;
+  outcome: CaseStudySection;
   lessonsLearned: string;
+  technologies: string[];
 };
 
 export type Breakdown = {
