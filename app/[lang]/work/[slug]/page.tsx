@@ -64,12 +64,12 @@ export default async function CaseStudyPage({
 
       <Section narrow className="pt-10">
         <Reveal>
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-card">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-background">
             <Image
               src={study.thumbnail}
               alt={study.title}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(min-width: 1024px) 900px, 100vw"
               priority
             />

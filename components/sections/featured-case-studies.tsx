@@ -30,12 +30,12 @@ export function FeaturedCaseStudies({
               href={`/${lang}/work/${study.slug}`}
               className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:bg-accent"
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border">
+              <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border bg-background">
                 <Image
                   src={study.thumbnail}
                   alt={study.title}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
