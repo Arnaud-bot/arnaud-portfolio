@@ -103,16 +103,18 @@ export default async function CaseStudyPage({
               <p className="mt-3 text-base leading-[1.7] text-muted-foreground">
                 {study.approach.intro}
               </p>
-              <ul className="mt-4 space-y-2">
-                {study.approach.points.map((point) => (
-                  <li
-                    key={point}
-                    className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {study.approach.points.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {study.approach.points.map((point) => (
+                    <li
+                      key={point}
+                      className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </Reveal>
 
@@ -138,16 +140,18 @@ export default async function CaseStudyPage({
               <p className="mt-3 text-base leading-[1.7] text-muted-foreground">
                 {study.solution.intro}
               </p>
-              <ul className="mt-4 space-y-2">
-                {study.solution.points.map((point) => (
-                  <li
-                    key={point}
-                    className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {study.solution.points.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {study.solution.points.map((point) => (
+                    <li
+                      key={point}
+                      className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </Reveal>
 
@@ -157,16 +161,18 @@ export default async function CaseStudyPage({
               <p className="mt-3 text-base leading-[1.7] text-muted-foreground">
                 {study.outcome.intro}
               </p>
-              <ul className="mt-4 space-y-2">
-                {study.outcome.points.map((point) => (
-                  <li
-                    key={point}
-                    className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {study.outcome.points.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {study.outcome.points.map((point) => (
+                    <li
+                      key={point}
+                      className="ms-5 list-disc text-base leading-[1.7] text-muted-foreground"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </Reveal>
 
