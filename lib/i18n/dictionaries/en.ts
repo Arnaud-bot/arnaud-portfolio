@@ -120,7 +120,7 @@ export const en: Dictionary = {
   aboutTeaser: {
     eyebrow: "About",
     title: "Why I do this job",
-    body: "[Your story: why you got interested in digital products, what frustrates you about bad user experiences, and what motivates you to build better products for your clients.]",
+    body: "When I moved to Dubai, I made a simple observation: most company websites are just showcases, not experiences. That realization changed the direction of my entire career — and it shapes every project I take on today.",
     cta: "Learn more about me",
   },
   contactCta: {

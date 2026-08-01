@@ -120,7 +120,7 @@ export const fr: Dictionary = {
   aboutTeaser: {
     eyebrow: "About",
     title: "Pourquoi je fais ce métier",
-    body: "[Ton histoire : pourquoi tu t'es intéressé aux produits digitaux, ce qui te frustre dans les mauvaises expériences utilisateur, et ce qui te motive à construire de meilleurs produits pour tes clients.]",
+    body: "En arrivant à Dubaï, j'ai fait un constat simple : la plupart des sites d'entreprise ne sont que des vitrines, pas des expériences. Ce constat a changé la direction de toute ma carrière — et il façonne aujourd'hui chaque projet que je mène.",
     cta: "En savoir plus sur moi",
   },
   contactCta: {
