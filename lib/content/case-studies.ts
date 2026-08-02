@@ -86,36 +86,40 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       slug: "igc-video-translation",
       title: "IGC",
       tagline:
-        "Rendre le contenu éducatif accessible dans plusieurs langues grâce à la localisation par IA.",
-      tags: ["Workflow IA", "Localisation", "Collaboration Produit"],
-      client: "Collaboration produit",
-      category: "Workflow IA · Localisation",
+        "Automatiser la traduction vidéo multilingue pour une plateforme de formation en ligne au trading, afin de l'aider à s'étendre vers de nouveaux marchés internationaux.",
+      tags: ["Automatisation", "Workflow IA", "Localisation"],
+      client: "Contribution technique — automatisation",
+      category: "Automatisation · Localisation",
       thumbnail: "/case-studies/igc.jpg",
       summary:
-        "Une plateforme de traduction vidéo multilingue propulsée par l'IA, aidant les organisations à rendre leur contenu éducatif accessible dans plusieurs langues.",
+        "Un pipeline de traduction vidéo automatisé pour une plateforme de formation en ligne au trading, l'aidant à s'étendre vers de nouveaux marchés internationaux multilingues.",
       overview:
-        "IGC est une plateforme de traduction vidéo multilingue conçue pour aider les organisations à toucher une audience mondiale en traduisant du contenu vidéo éducatif dans plusieurs langues. Ma contribution s'est concentrée sur le workflow de localisation et l'expérience produit globale.",
+        "IGC est une plateforme de formation en ligne dédiée au trading. Mon rôle a été d'automatiser la traduction de leurs vidéos de formation en plusieurs langues, pour les aider à étendre leur marché vers différents pays et zones linguistiques.",
       challenge:
-        "Le contenu éducatif ne touche souvent qu'une seule audience car la barrière de la langue limite son accessibilité. L'objectif était de fluidifier le workflow de traduction tout en préservant clarté, cohérence et expérience utilisateur.",
+        "Le contenu de formation de la plateforme ne touchait qu'une seule audience linguistique, ce qui limitait son expansion à l'international. Traduire les vidéos manuellement pour chaque nouveau marché aurait été lent et coûteux. L'objectif était de construire un workflow automatisé capable de traduire le contenu vidéo en plusieurs langues rapidement, de façon cohérente et à grande échelle.",
       approach: {
         intro:
-          "J'ai collaboré sur ce projet en analysant le processus de localisation, en revoyant les workflows produit et en contribuant à l'expérience multilingue — avec pour objectif que le contenu traduit reste naturel, compréhensible et accessible.",
-        points: [],
+          "Je me suis concentré sur l'automatisation du pipeline de traduction de bout en bout, plutôt que sur un travail de traduction manuel au cas par cas. Cela impliquait de concevoir un processus reproductible que l'équipe pouvait exécuter pour chaque nouvelle vidéo et chaque nouvelle langue cible :",
+        points: ["Conception d'un workflow de traduction automatisé", "Intégration de la traduction vidéo assistée par IA", "Mise en place d'un pipeline multilingue", "Points de contrôle qualité", "Documentation du processus pour l'équipe"],
       },
-      keyInsights: ["Analyse du workflow de localisation", "Collaboration produit", "Revue qualité", "Améliorations de l'expérience utilisateur", "Optimisation des processus", "Cohérence inter-langues"],
+      keyInsights: [
+        "La traduction manuelle ne pouvait pas s'adapter à plusieurs marchés à la fois",
+        "Un pipeline automatisé pouvait gérer de nouvelles langues sans travail manuel supplémentaire par vidéo",
+        "Des contrôles qualité restaient nécessaires pour détecter les erreurs de traduction de l'IA",
+        "La cohérence entre les langues comptait autant que la vitesse",
+      ],
       solution: {
         intro:
-          "La plateforme intègre une traduction assistée par IA avec un processus de revue structuré pour accélérer la production de contenu multilingue tout en maintenant la qualité.",
-        points: [],
+          "J'ai construit un workflow automatisé qui prend une vidéo source et produit des versions traduites dans plusieurs langues avec une intervention manuelle minimale, en combinant traduction assistée par IA et contrôles qualité structurés.",
+        points: ["Traduction assistée par IA intégrée au pipeline vidéo", "Traitement automatisé pour plusieurs langues cibles", "Étape de revue structurée pour détecter les erreurs avant publication", "Processus réutilisable pour les futures vidéos et langues"],
       },
       outcome: {
-        intro:
-          "Ce projet a démontré comment l'IA peut considérablement améliorer l'accessibilité du contenu éducatif, en réduisant l'effort manuel et en permettant une distribution internationale plus rapide.",
-        points: [],
+        intro: "L'automatisation a permis à IGC de :",
+        points: ["Traduire les vidéos de formation en plusieurs langues sans retravail manuel pour chacune", "Réduire le temps et le coût de localisation du contenu", "Étendre sa portée vers de nouveaux marchés internationaux non anglophones", "Faire évoluer la localisation de contenu au rythme de la croissance de la plateforme"],
       },
       lessonsLearned:
-        "Travailler sur une plateforme propulsée par l'IA a renforcé ma compréhension du développement produit multilingue, de la collaboration inter-équipes, et de l'importance de concevoir des workflows qui équilibrent automatisation et contrôle qualité humain.",
-      technologies: ["Traduction assistée par IA", "Localisation", "Conception de workflow", "Assurance qualité", "Collaboration Produit"],
+        "Ce projet m'a montré que la vraie valeur de l'IA n'est pas seulement la qualité de traduction — c'est d'éliminer le travail manuel répétitif pour permettre à une équipe de s'étendre vers de nouveaux marchés sans devoir recruter davantage. Construire un workflow reproductible et fiable comptait autant que la traduction elle-même.",
+      technologies: ["Traduction assistée par IA", "Automatisation de workflow", "Localisation", "Assurance qualité"],
     },
   ],
   en: [
@@ -200,36 +204,41 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
     {
       slug: "igc-video-translation",
       title: "IGC",
-      tagline: "Making educational content accessible across languages through AI-powered localization.",
-      tags: ["AI Workflow", "Localization", "Product Collaboration"],
-      client: "Product collaboration",
-      category: "AI Workflow · Localization",
+      tagline:
+        "Automating multilingual video translation for an online trading education platform, to help it expand into new international markets.",
+      tags: ["Automation", "AI Workflow", "Localization"],
+      client: "Technical contribution — automation",
+      category: "Automation · Localization",
       thumbnail: "/case-studies/igc.jpg",
       summary:
-        "A multilingual AI-powered video translation platform helping organizations make educational content accessible across languages.",
+        "An automated video translation pipeline for an online trading education platform, helping it expand into new international, multilingual markets.",
       overview:
-        "IGC is a multilingual video translation platform designed to help organizations reach a global audience by translating educational video content into multiple languages. My contribution focused on the localization workflow and the overall product experience.",
+        "IGC is an online trading education platform. My role was to automate the translation of their training videos into multiple languages, helping them expand into new international markets across different language regions.",
       challenge:
-        "Educational content often reaches only one audience because language barriers limit accessibility. The objective was to streamline the translation workflow while preserving clarity, consistency and user experience.",
+        "The platform's training content only reached one language audience, limiting its ability to expand internationally. Translating videos manually for every new market would have been slow and costly. The objective was to build an automated workflow that could translate video content into multiple languages quickly, consistently, and at scale.",
       approach: {
         intro:
-          "I collaborated on the project by analyzing the localization process, reviewing product workflows and contributing to the multilingual experience — with a focus on ensuring translated content remained natural, understandable and accessible.",
-        points: [],
+          "I focused on automating the translation pipeline end-to-end, rather than relying on manual, one-off translation. That meant designing a repeatable process the team could run for every new video and every new target language:",
+        points: ["Automated translation workflow design", "AI-powered video translation integration", "Multi-language pipeline setup", "Quality control checkpoints", "Process documentation for the team"],
       },
-      keyInsights: ["Localization workflow analysis", "Product collaboration", "Quality review", "User experience improvements", "Process optimization", "Cross-language consistency"],
+      keyInsights: [
+        "Manual translation didn't scale across multiple markets",
+        "An automated pipeline could handle new languages without extra manual work per video",
+        "Quality checks were still needed to catch AI translation errors",
+        "Consistency across languages mattered as much as speed",
+      ],
       solution: {
         intro:
-          "The platform integrates AI-assisted translation with a structured review process to accelerate multilingual content production while maintaining quality.",
-        points: [],
+          "I built an automated workflow that takes a source video and produces translated versions in multiple languages with minimal manual intervention, combining AI-assisted translation with structured quality checks.",
+        points: ["AI-assisted translation integrated into the video pipeline", "Automated processing for multiple target languages", "Structured review step to catch errors before publishing", "Reusable process for future videos and languages"],
       },
       outcome: {
-        intro:
-          "The project demonstrated how AI can significantly improve the accessibility of educational content, reducing manual effort and enabling faster international distribution.",
-        points: [],
+        intro: "The automation allowed IGC to:",
+        points: ["Translate training videos into multiple languages without manual rework for each one", "Reduce the time and cost of localizing content", "Expand its reach into new international, non-English-speaking markets", "Scale content localization as the platform grows"],
       },
       lessonsLearned:
-        "Working on an AI-powered platform strengthened my understanding of multilingual product development, cross-team collaboration, and the importance of designing workflows that balance automation with human quality control.",
-      technologies: ["AI-assisted Translation", "Localization", "Workflow Design", "Quality Assurance", "Product Collaboration"],
+        "This project showed me that the real value of AI isn't just translation quality — it's removing repetitive manual work so a team can scale into new markets without scaling headcount. Building the workflow to be repeatable and reliable mattered as much as the translation itself.",
+      technologies: ["AI-assisted Translation", "Workflow Automation", "Localization", "Quality Assurance"],
     },
   ],
   ar: [
@@ -313,36 +322,41 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
     {
       slug: "igc-video-translation",
       title: "IGC",
-      tagline: "إتاحة الوصول إلى المحتوى التعليمي بلغات متعددة من خلال الترجمة المحلية المدعومة بالذكاء الاصطناعي.",
-      tags: ["سير عمل بالذكاء الاصطناعي", "الترجمة المحلية", "تعاون على المنتج"],
-      client: "تعاون على المنتج",
-      category: "سير عمل بالذكاء الاصطناعي · الترجمة المحلية",
+      tagline:
+        "أتمتة ترجمة الفيديو متعددة اللغات لمنصة تعليم تداول عبر الإنترنت، لمساعدتها على التوسع في أسواق دولية جديدة.",
+      tags: ["الأتمتة", "سير عمل بالذكاء الاصطناعي", "الترجمة المحلية"],
+      client: "مساهمة تقنية — أتمتة",
+      category: "الأتمتة · الترجمة المحلية",
       thumbnail: "/case-studies/igc.jpg",
       summary:
-        "منصة ترجمة فيديو متعددة اللغات مدعومة بالذكاء الاصطناعي، تساعد المؤسسات على إتاحة محتواها التعليمي بلغات متعددة.",
+        "مسار ترجمة فيديو آلي لمنصة تعليم تداول عبر الإنترنت، يساعدها على التوسع نحو أسواق دولية جديدة متعددة اللغات.",
       overview:
-        "IGC هي منصة ترجمة فيديو متعددة اللغات مصممة لمساعدة المؤسسات على الوصول إلى جمهور عالمي من خلال ترجمة المحتوى التعليمي المرئي إلى لغات متعددة. ركّزت مساهمتي على سير عمل الترجمة المحلية وتجربة المنتج بشكل عام.",
+        "IGC هي منصة تعليم إلكترونية متخصصة في التداول. كان دوري أتمتة ترجمة فيديوهات التدريب الخاصة بهم إلى لغات متعددة، لمساعدتهم على توسيع نطاق سوقهم نحو دول ومناطق لغوية مختلفة.",
       challenge:
-        "غالبًا ما يصل المحتوى التعليمي إلى جمهور واحد فقط لأن حاجز اللغة يحدّ من إمكانية الوصول إليه. كان الهدف هو تبسيط سير عمل الترجمة مع الحفاظ على الوضوح والاتساق وتجربة المستخدم.",
+        "كان محتوى التدريب على المنصة يصل إلى جمهور لغة واحدة فقط، مما حدّ من قدرتها على التوسع دوليًا. كانت ترجمة الفيديوهات يدويًا لكل سوق جديد ستكون بطيئة ومكلفة. كان الهدف بناء سير عمل آلي قادر على ترجمة المحتوى المرئي إلى لغات متعددة بسرعة واتساق وعلى نطاق واسع.",
       approach: {
         intro:
-          "تعاونت في هذا المشروع من خلال تحليل عملية الترجمة المحلية، ومراجعة سير عمل المنتج، والمساهمة في التجربة متعددة اللغات — مع التركيز على أن يبقى المحتوى المترجم طبيعيًا ومفهومًا وسهل الوصول إليه.",
-        points: [],
+          "ركّزت على أتمتة مسار الترجمة من البداية إلى النهاية، بدلاً من الاعتماد على ترجمة يدوية لكل حالة على حدة. كان ذلك يعني تصميم عملية قابلة للتكرار يمكن للفريق تنفيذها مع كل فيديو جديد وكل لغة مستهدفة جديدة:",
+        points: ["تصميم سير عمل ترجمة آلي", "دمج الترجمة المرئية بمساعدة الذكاء الاصطناعي", "إعداد مسار متعدد اللغات", "نقاط تحقق من الجودة", "توثيق العملية للفريق"],
       },
-      keyInsights: ["تحليل سير عمل الترجمة المحلية", "التعاون على المنتج", "مراجعة الجودة", "تحسينات تجربة المستخدم", "تحسين العمليات", "الاتساق بين اللغات"],
+      keyInsights: [
+        "الترجمة اليدوية لم تكن قابلة للتوسع عبر أسواق متعددة",
+        "المسار الآلي يمكنه التعامل مع لغات جديدة دون عمل يدوي إضافي لكل فيديو",
+        "بقيت هناك حاجة لمراجعات الجودة لرصد أخطاء ترجمة الذكاء الاصطناعي",
+        "كان الاتساق بين اللغات مهمًا بقدر أهمية السرعة",
+      ],
       solution: {
         intro:
-          "تدمج المنصة الترجمة بمساعدة الذكاء الاصطناعي مع عملية مراجعة منظمة لتسريع إنتاج المحتوى متعدد اللغات مع الحفاظ على الجودة.",
-        points: [],
+          "بنيت سير عمل آليًا يأخذ فيديو المصدر وينتج نسخًا مترجمة بعدة لغات بأقل تدخل يدوي ممكن، من خلال الجمع بين الترجمة بمساعدة الذكاء الاصطناعي ومراجعات جودة منظمة.",
+        points: ["ترجمة بمساعدة الذكاء الاصطناعي مدمجة في مسار الفيديو", "معالجة آلية للغات مستهدفة متعددة", "خطوة مراجعة منظمة لرصد الأخطاء قبل النشر", "عملية قابلة لإعادة الاستخدام للفيديوهات واللغات المستقبلية"],
       },
       outcome: {
-        intro:
-          "أظهر المشروع كيف يمكن للذكاء الاصطناعي أن يحسّن بشكل كبير إمكانية الوصول إلى المحتوى التعليمي، مع تقليل الجهد اليدوي وتمكين توزيع دولي أسرع.",
-        points: [],
+        intro: "سمحت الأتمتة لـ IGC بـ:",
+        points: ["ترجمة فيديوهات التدريب إلى لغات متعددة دون إعادة عمل يدوي لكل فيديو", "تقليل وقت وتكلفة توطين المحتوى", "توسيع نطاق وصولها إلى أسواق دولية جديدة غير ناطقة بالإنجليزية", "توسيع نطاق توطين المحتوى مع نمو المنصة"],
       },
       lessonsLearned:
-        "عزّز العمل على منصة مدعومة بالذكاء الاصطناعي فهمي لتطوير المنتجات متعددة اللغات، والتعاون بين الفرق، وأهمية تصميم سير عمل يوازن بين الأتمتة والرقابة البشرية على الجودة.",
-      technologies: ["ترجمة بمساعدة الذكاء الاصطناعي", "الترجمة المحلية", "تصميم سير العمل", "ضمان الجودة", "التعاون على المنتج"],
+        "أظهر لي هذا المشروع أن القيمة الحقيقية للذكاء الاصطناعي ليست فقط في جودة الترجمة — بل في إزالة العمل اليدوي المتكرر لتمكين الفريق من التوسع إلى أسواق جديدة دون الحاجة لتوسيع عدد الموظفين. كان بناء سير عمل قابل للتكرار وموثوق به لا يقل أهمية عن الترجمة نفسها.",
+      technologies: ["ترجمة بمساعدة الذكاء الاصطناعي", "أتمتة سير العمل", "الترجمة المحلية", "ضمان الجودة"],
     },
   ],
 };
