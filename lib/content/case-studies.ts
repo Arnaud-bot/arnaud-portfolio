@@ -90,7 +90,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["Automatisation", "Workflow IA", "Localisation"],
       client: "Contribution technique — automatisation",
       category: "Automatisation · Localisation",
-      thumbnail: "/case-studies/igc.jpg",
+      thumbnail: "/case-studies/igc.png",
       summary:
         "Un pipeline de traduction vidéo automatisé pour une plateforme de formation en ligne au trading, l'aidant à s'étendre vers de nouveaux marchés internationaux multilingues.",
       overview:
@@ -209,7 +209,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["Automation", "AI Workflow", "Localization"],
       client: "Technical contribution — automation",
       category: "Automation · Localization",
-      thumbnail: "/case-studies/igc.jpg",
+      thumbnail: "/case-studies/igc.png",
       summary:
         "An automated video translation pipeline for an online trading education platform, helping it expand into new international, multilingual markets.",
       overview:
@@ -327,7 +327,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       tags: ["الأتمتة", "سير عمل بالذكاء الاصطناعي", "الترجمة المحلية"],
       client: "مساهمة تقنية — أتمتة",
       category: "الأتمتة · الترجمة المحلية",
-      thumbnail: "/case-studies/igc.jpg",
+      thumbnail: "/case-studies/igc.png",
       summary:
         "مسار ترجمة فيديو آلي لمنصة تعليم تداول عبر الإنترنت، يساعدها على التوسع نحو أسواق دولية جديدة متعددة اللغات.",
       overview:
