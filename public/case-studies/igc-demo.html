@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IGC — PrimeTime Tutorials Preview</title>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 40px 20px; }
+    h1 { text-align: center; font-size: 22px; color: #fff; margin-bottom: 8px; }
+    .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto; }
+    .card { background: #141414; border: 1px solid #222; border-radius: 20px; overflow: hidden; }
+    .card-title { padding: 16px 20px 12px; font-size: 15px; font-weight: 600; color: #e0e0e0; }
+    .card-num { font-size: 12px; color: #555; margin-bottom: 4px; }
+    .player { position: relative; padding-bottom: 56.25%; background: #000; }
+    .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+    .lang-bar { position: absolute; top: 8px; right: 8px; z-index: 10; display: flex; gap: 4px; }
+    .lang-btn {
+      padding: 3px 8px; border-radius: 6px; font-size: 10px; font-weight: 700;
+      cursor: pointer; border: none; background: rgba(0,0,0,0.6); color: rgba(255,255,255,0.8);
+      transition: all 0.15s;
+    }
+    .lang-btn:hover { background: rgba(255,255,255,0.2); }
+    .lang-btn.active { background: #fff; color: #000; }
+  </style>
+</head>
+<body>
+  <h1>PrimeTime Tutorials</h1>
+  <p class="subtitle">Sélectionne une langue pour chaque vidéo</p>
+
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const VIDEOS = [
+      {
+        num: '01',
+        startTime: 0,
+        title: 'Setting Up Your Broker Account & MT5/TL',
+        langs: {
+          en: { id: '1200855201', h: '687165d5c8' },
+          es: { id: '1202513591', h: '87b7e82ed4' },
+          ar: { id: '1202513592', h: 'e690b7e515' },
+          fr: { id: '1202513593', h: '981855299c' },
+          it: { id: '1202513581', h: '09c7aa54cd' },
+        }
+      },
+      {
+        num: '02',
+        startTime: 16,
+        title: 'Trading on MT5 & TradeLocker',
+        langs: {
+          en: { id: '1191316339', h: '7261fe2847' },
+          es: { id: '1203148991', h: '652a241e4a' },
+          it: { id: '1203148992', h: '69ef8421a6' },
+          fr: { id: '1203148993', h: '437f5f1c6f' },
+          ar: { id: '1203148990', h: '51400bc7c8' },
+        }
+      },
+      {
+        num: '03',
+        startTime: 16,
+        title: 'Placing Trades & Risk Management',
+        langs: {
+          en: { id: '1191316871', h: '6e2c3e3002' },
+          es: { id: '1203149226', h: 'cba7f074d0' },
+          it: { id: '1203149473', h: '7c945c7868' },
+          fr: { id: '1203149334', h: '820c197d19' },
+          ar: { id: '1203149148', h: '1b93f71d48' },
+        }
+      },
+    ];
+
+    const LANGS = [
+      { code: 'en', flag: '🇺🇸', label: 'EN' },
+      { code: 'es', flag: '🇪🇸', label: 'ES' },
+      { code: 'ar', flag: '🇦🇪', label: 'AR' },
+      { code: 'fr', flag: '🇫🇷', label: 'FR' },
+      { code: 'it', flag: '🇮🇹', label: 'IT' },
+    ];
+
+    const state = { '01': 'en', '02': 'en', '03': 'en' };
+    const players = {};
+
+    function vimeoSrc(id, h, startTime) {
+      const t = startTime ? `#t=${startTime}s` : '';
+      return `https://player.vimeo.com/video/${id}?h=${h}&dnt=1&title=0&byline=0&portrait=0${t}`;
+    }
+
+    function initPlayer(num, startTime) {
+      if (!startTime) return;
+      const iframe = document.getElementById(`iframe-${num}`);
+      if (!iframe) return;
+
+      if (players[num]) {
+        players[num].off('timeupdate');
+        players[num].off('seeked');
+      }
+
+      const player = new Vimeo.Player(iframe);
+      players[num] = player;
+
+      const enforce = (data) => {
+        if (data.seconds < startTime) player.setCurrentTime(startTime);
+      };
+      player.on('timeupdate', enforce);
+      player.on('seeked', enforce);
+    }
+
+    function render() {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      VIDEOS.forEach(v => {
+        const lang = state[v.num];
+        const { id, h } = v.langs[lang];
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="card-title">
+            <div class="card-num">VIDEO ${v.num}</div>
+            ${v.title}
+          </div>
+          <div class="player">
+            <div class="lang-bar">
+              ${LANGS.map(l => `
+                <button class="lang-btn ${lang === l.code ? 'active' : ''}"
+                  onclick="switchLang('${v.num}', '${l.code}')">
+                  ${l.flag} ${l.label}
+                </button>
+              `).join('')}
+            </div>
+            <iframe id="iframe-${v.num}" src="${vimeoSrc(id, h, v.startTime)}"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      VIDEOS.forEach(v => initPlayer(v.num, v.startTime));
+    }
+
+    function switchLang(num, code) {
+      state[num] = code;
+      render();
+    }
+
+    render();
+  </script>
+</body>
+</html>

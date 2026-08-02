@@ -64,25 +64,25 @@ export default async function CaseStudyPage({
 
       <Section narrow className="pt-10">
         <Reveal>
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-background">
-            <Image
-              src={study.thumbnail}
-              alt=""
-              aria-hidden
-              fill
-              className="scale-110 object-cover opacity-40 blur-2xl"
-              sizes="(min-width: 1024px) 900px, 100vw"
-            />
-            {study.demoVideo ? (
-              <video
-                controls
-                poster={study.thumbnail}
-                preload="none"
-                className="absolute inset-0 h-full w-full object-contain"
-              >
-                <source src={study.demoVideo} type="video/mp4" />
-              </video>
-            ) : (
+          {study.demoEmbed ? (
+            <div className="h-[950px] w-full overflow-hidden rounded-lg border border-border">
+              <iframe
+                src={study.demoEmbed}
+                title={study.title}
+                className="h-full w-full border-0"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-background">
+              <Image
+                src={study.thumbnail}
+                alt=""
+                aria-hidden
+                fill
+                className="scale-110 object-cover opacity-40 blur-2xl"
+                sizes="(min-width: 1024px) 900px, 100vw"
+              />
               <Image
                 src={study.thumbnail}
                 alt={study.title}
@@ -91,8 +91,8 @@ export default async function CaseStudyPage({
                 sizes="(min-width: 1024px) 900px, 100vw"
                 priority
               />
-            )}
-          </div>
+            </div>
+          )}
         </Reveal>
       </Section>
 
