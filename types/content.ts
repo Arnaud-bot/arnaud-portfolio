@@ -18,6 +18,7 @@ export type CaseStudy = {
   client: string;
   category: string;
   thumbnail: string;
+  demoVideo?: string;
   summary: string;
   overview: string;
   challenge: string;

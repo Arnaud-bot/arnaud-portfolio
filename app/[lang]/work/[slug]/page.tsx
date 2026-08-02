@@ -73,14 +73,25 @@ export default async function CaseStudyPage({
               className="scale-110 object-cover opacity-40 blur-2xl"
               sizes="(min-width: 1024px) 900px, 100vw"
             />
-            <Image
-              src={study.thumbnail}
-              alt={study.title}
-              fill
-              className="object-contain"
-              sizes="(min-width: 1024px) 900px, 100vw"
-              priority
-            />
+            {study.demoVideo ? (
+              <video
+                controls
+                poster={study.thumbnail}
+                preload="none"
+                className="absolute inset-0 h-full w-full object-contain"
+              >
+                <source src={study.demoVideo} type="video/mp4" />
+              </video>
+            ) : (
+              <Image
+                src={study.thumbnail}
+                alt={study.title}
+                fill
+                className="object-contain"
+                sizes="(min-width: 1024px) 900px, 100vw"
+                priority
+              />
+            )}
           </div>
         </Reveal>
       </Section>
