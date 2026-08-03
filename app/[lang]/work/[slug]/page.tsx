@@ -65,7 +65,7 @@ export default async function CaseStudyPage({
       <Section narrow className="pt-10">
         <Reveal>
           {study.demoEmbed ? (
-            <div className="h-[420px] w-full overflow-hidden rounded-lg border border-border">
+            <div className="h-[380px] w-full overflow-hidden rounded-lg border border-border sm:h-[430px] md:h-[460px]">
               <iframe
                 src={study.demoEmbed}
                 title={study.title}
