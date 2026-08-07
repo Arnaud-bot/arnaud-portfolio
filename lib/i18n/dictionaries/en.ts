@@ -197,6 +197,8 @@ export const en: Dictionary = {
     title: "Case studies",
     description: "Every project tells the problem solved, not just the final result.",
     seeCaseStudy: "See the case study",
+    beforeSite: "View the current site",
+    afterSite: "View the concept",
     chapters: {
       overview: "Project Overview",
       challenge: "The Challenge",

@@ -19,6 +19,8 @@ export type CaseStudy = {
   category: string;
   thumbnail: string;
   demoEmbed?: string;
+  beforeUrl?: string;
+  afterUrl?: string;
   summary: string;
   overview: string;
   challenge: string;

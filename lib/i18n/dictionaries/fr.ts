@@ -198,6 +198,8 @@ export const fr: Dictionary = {
     description:
       "Chaque projet raconte le problème résolu, pas seulement le résultat final.",
     seeCaseStudy: "Voir l'étude de cas",
+    beforeSite: "Voir le site actuel",
+    afterSite: "Voir le concept",
     chapters: {
       overview: "Aperçu du projet",
       challenge: "Le défi",

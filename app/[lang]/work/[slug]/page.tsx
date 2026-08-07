@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
 import { getCaseStudies } from "@/lib/content/case-studies";
@@ -60,12 +62,39 @@ export default async function CaseStudyPage({
           ))}
         </div>
         <p className="mt-4 text-sm text-muted-foreground">{study.client}</p>
+
+        {(study.beforeUrl || study.afterUrl) && (
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            {study.beforeUrl && (
+              <Button asChild variant="outline" size="sm">
+                <a href={study.beforeUrl} target="_blank" rel="noreferrer">
+                  {dict.workPage.beforeSite}
+                  <ExternalLink className="size-3.5" />
+                </a>
+              </Button>
+            )}
+            {study.afterUrl && (
+              <Button asChild variant="outline" size="sm">
+                <a href={study.afterUrl} target="_blank" rel="noreferrer">
+                  {dict.workPage.afterSite}
+                  <ExternalLink className="size-3.5" />
+                </a>
+              </Button>
+            )}
+          </div>
+        )}
       </Section>
 
       <Section narrow className="pt-10">
         <Reveal>
           {study.demoEmbed ? (
-            <div className="h-[380px] w-full overflow-hidden rounded-lg border border-border sm:h-[430px] md:h-[460px]">
+            <div
+              className={
+                study.demoEmbed.endsWith(".pdf")
+                  ? "h-[600px] w-full overflow-hidden rounded-lg border border-border sm:h-[750px] md:h-[900px]"
+                  : "h-[380px] w-full overflow-hidden rounded-lg border border-border sm:h-[430px] md:h-[460px]"
+              }
+            >
               <iframe
                 src={study.demoEmbed}
                 title={study.title}

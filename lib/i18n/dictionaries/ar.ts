@@ -192,6 +192,8 @@ export const ar: Dictionary = {
     title: "دراسات الحالة",
     description: "كل مشروع يروي المشكلة التي تم حلها، وليس فقط النتيجة النهائية.",
     seeCaseStudy: "اطّلع على دراسة الحالة",
+    beforeSite: "شاهد الموقع الحالي",
+    afterSite: "شاهد المفهوم الجديد",
     chapters: {
       overview: "نظرة عامة على المشروع",
       challenge: "التحدي",

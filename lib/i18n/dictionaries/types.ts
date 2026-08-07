@@ -87,6 +87,8 @@ export type Dictionary = {
     title: string;
     description: string;
     seeCaseStudy: string;
+    beforeSite: string;
+    afterSite: string;
     chapters: {
       overview: string;
       challenge: string;
