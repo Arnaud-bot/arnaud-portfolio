@@ -21,6 +21,7 @@ export type CaseStudy = {
   demoEmbed?: string;
   beforeUrl?: string;
   afterUrl?: string;
+  pdfUrl?: string;
   summary: string;
   overview: string;
   challenge: string;

@@ -12,17 +12,17 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       client: "Audit UX présenté à l'équipe EasyFitness",
       category: "Audit UX · Refonte UI",
       thumbnail: "/case-studies/easyfitness.jpg",
-      demoEmbed: "/case-studies/easyfitness-recommendations.pdf",
       beforeUrl: "https://easyfitness-uae-website.vercel.app",
       afterUrl: "https://easyfitness-uae-redesign.vercel.app",
+      pdfUrl: "/case-studies/easyfitness-recommendations.pdf",
       summary:
-        "Un audit UX/UI du site EasyFitness UAE avec 8 recommandations concrètes — de l'expérience mobile à la présentation des abonnements — accompagné d'un concept de refonte codé pour illustrer les changements proposés.",
+        "Un audit UX/UI du site EasyFitness UAE avec 8 recommandations concrètes, accompagné d'un concept de refonte codé.",
       overview:
-        "EasyFitness UAE est un club de fitness premium basé à Dubaï. Après avoir présenté mon travail à leur équipe, j'ai partagé une analyse détaillée du site existant ainsi qu'un nouveau concept de refonte, avec pour objectif d'identifier des opportunités concrètes pour améliorer l'expérience utilisateur et la performance de conversion — tout en m'appuyant sur les points forts déjà en place : une identité premium, un design propre et moderne, et une communication claire des services.",
+        "EasyFitness UAE est un club de fitness premium basé à Dubaï. J'ai présenté à leur équipe une analyse du site existant et un concept de refonte, avec pour objectif d'améliorer l'expérience utilisateur et la conversion — en m'appuyant sur les points forts déjà en place.",
       challenge:
-        "Le site actuel offre une base solide, mais plusieurs sections restent pensées d'abord pour desktop puis adaptées au mobile, la section Hero ne capture pas pleinement l'attention dans les premières secondes, la preuve sociale est peu exploitée, et le parcours de conversion pourrait guider plus naturellement les visiteurs vers une réservation ou une adhésion.",
+        "Le site offre une base solide, mais plusieurs sections restent pensées desktop-first, la Hero section ne capte pas assez vite l'attention, la preuve sociale est peu exploitée, et le parcours de conversion pourrait mieux guider les visiteurs vers une adhésion.",
       approach: {
-        intro: "J'ai analysé le site existant sur huit axes complémentaires, en le comparant à un nouveau concept de refonte que j'ai développé pour illustrer concrètement les améliorations proposées :",
+        intro: "J'ai analysé le site sur huit axes, en le comparant à un concept de refonte que j'ai développé pour illustrer les améliorations proposées :",
         points: ["Expérience mobile", "Section Hero et première impression", "Preuve sociale", "Parcours de conversion", "Storytelling de la page d'accueil", "Présentation des abonnements", "Performance et SEO", "Stratégie de croissance digitale à long terme"],
       },
       keyInsights: [
@@ -34,7 +34,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         "La page d'accueil gagnerait à suivre un fil narratif unique plutôt que des sections indépendantes",
       ],
       solution: {
-        intro: "J'ai formulé huit recommandations concrètes, présentées à l'équipe EasyFitness avec un concept de refonte codé à l'appui :",
+        intro: "Huit recommandations concrètes, présentées à l'équipe avec un concept de refonte codé à l'appui :",
         points: ["Concevoir certaines sections spécifiquement pour mobile plutôt que d'adapter le desktop", "Renforcer la Hero section avec le positionnement premium, les avantages membres et des indicateurs de confiance", "Intégrer des avis Google, témoignages et parcours de transformation pour renforcer la confiance", "Optimiser le parcours de conversion avec des CTA mieux placés et des formulaires simplifiés", "Structurer la page d'accueil autour d'un fil narratif : Fitness → Recovery → Wellness", "Simplifier la comparaison des abonnements en mettant en avant le plan recommandé", "Améliorer la performance et le SEO technique pour la recherche locale", "Poser les bases d'une croissance digitale continue : CRO, landing pages, monitoring et itérations"],
       },
       outcome: {
@@ -42,7 +42,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         points: ["Renforcer la première impression et le positionnement premium de la marque", "Augmenter la confiance des visiteurs grâce à une preuve sociale plus visible", "Améliorer l'expérience mobile là où la majorité des visiteurs arrivent", "Fluidifier le parcours de conversion de la découverte à l'adhésion", "Poser les bases d'une croissance organique et digitale durable"],
       },
       lessonsLearned:
-        "Ce projet m'a rappelé qu'un bon audit UX ne consiste pas à pointer ce qui ne va pas, mais à construire sur ce qui fonctionne déjà. Présenter des recommandations à une marque qui a déjà une identité forte demande de la diplomatie autant que de la rigueur — reconnaître les points forts existants tout en proposant des améliorations concrètes et mesurables.",
+        "Ce projet m'a rappelé qu'un bon audit UX consiste à construire sur ce qui fonctionne déjà, pas seulement à pointer ce qui ne va pas — avec autant de diplomatie que de rigueur.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Figma"],
     },
     {
@@ -134,17 +134,17 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       client: "UX audit presented to the EasyFitness team",
       category: "UX Audit · UI Redesign",
       thumbnail: "/case-studies/easyfitness.jpg",
-      demoEmbed: "/case-studies/easyfitness-recommendations.pdf",
       beforeUrl: "https://easyfitness-uae-website.vercel.app",
       afterUrl: "https://easyfitness-uae-redesign.vercel.app",
+      pdfUrl: "/case-studies/easyfitness-recommendations.pdf",
       summary:
-        "A UX/UI audit of the EasyFitness UAE website with 8 concrete recommendations — from mobile experience to membership presentation — paired with a coded redesign concept to illustrate the proposed changes.",
+        "A UX/UI audit of the EasyFitness UAE website with 8 concrete recommendations, paired with a coded redesign concept.",
       overview:
-        "EasyFitness UAE is a premium fitness club based in Dubai. After presenting my work to their team, I shared a detailed review of the existing website along with a new redesign concept, aiming to identify concrete opportunities to enhance the user experience and improve conversion performance — while building on what already works: a premium identity, a clean modern design, and clear communication of their services.",
+        "EasyFitness UAE is a premium fitness club based in Dubai. I presented their team with a review of the existing site and a redesign concept, aiming to improve the user experience and conversion — building on what already works well.",
       challenge:
-        "The current website provides a strong foundation, but several sections are adapted from the desktop layout rather than designed mobile-first, the Hero section doesn't fully capture attention within the first few seconds, social proof is underused, and the conversion journey could guide visitors more naturally toward booking a trial or becoming a member.",
+        "The site has a strong foundation, but several sections are still desktop-first, the Hero section doesn't grab attention fast enough, social proof is underused, and the conversion journey could better guide visitors toward membership.",
       approach: {
-        intro: "I reviewed the existing website across eight complementary areas, comparing it against a new redesign concept I built to concretely illustrate the proposed improvements:",
+        intro: "I reviewed the site across eight areas, comparing it to a redesign concept I built to illustrate the proposed improvements:",
         points: ["Mobile experience", "Hero section & first impression", "Social proof", "Conversion journey", "Homepage storytelling", "Membership presentation", "Performance & SEO", "Long-term digital growth strategy"],
       },
       keyInsights: [
@@ -156,7 +156,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         "The homepage would benefit from a single narrative thread instead of independent sections",
       ],
       solution: {
-        intro: "I formulated eight concrete recommendations, presented to the EasyFitness team alongside a coded redesign concept:",
+        intro: "Eight concrete recommendations, presented to the team alongside a coded redesign concept:",
         points: ["Design certain sections specifically for mobile instead of adapting the desktop layout", "Strengthen the Hero section with premium positioning, member benefits and trust indicators", "Add Google Reviews, testimonials and transformation stories to build trust", "Optimize the conversion journey with stronger CTA placement and simplified forms", "Structure the homepage around one narrative: Fitness → Recovery → Wellness", "Simplify membership comparison by highlighting the recommended plan", "Improve performance and technical SEO for local search intent", "Lay the groundwork for continuous digital growth: CRO, campaign landing pages, monitoring and iteration"],
       },
       outcome: {
@@ -164,7 +164,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         points: ["Strengthen the brand's first impression and premium positioning", "Increase visitor trust through more visible social proof", "Improve the mobile experience, where most visitors arrive", "Smooth the conversion journey from discovery to membership", "Lay the foundation for sustainable organic and digital growth"],
       },
       lessonsLearned:
-        "This project reminded me that a good UX audit isn't about pointing out what's wrong — it's about building on what already works. Presenting recommendations to a brand with an already strong identity takes as much diplomacy as rigor: acknowledging existing strengths while proposing concrete, measurable improvements.",
+        "This project reminded me that a good UX audit is about building on what already works, not just pointing out flaws — with as much diplomacy as rigor.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Figma"],
     },
     {
@@ -256,17 +256,17 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
       client: "تدقيق تجربة مستخدم قُدّم لفريق EasyFitness",
       category: "تدقيق تجربة المستخدم · إعادة تصميم الواجهة",
       thumbnail: "/case-studies/easyfitness.jpg",
-      demoEmbed: "/case-studies/easyfitness-recommendations.pdf",
       beforeUrl: "https://easyfitness-uae-website.vercel.app",
       afterUrl: "https://easyfitness-uae-redesign.vercel.app",
+      pdfUrl: "/case-studies/easyfitness-recommendations.pdf",
       summary:
-        "تدقيق لتجربة وواجهة مستخدم موقع EasyFitness UAE يتضمن 8 توصيات ملموسة — من تجربة الجوّال إلى عرض العضويات — مرفقة بمفهوم إعادة تصميم مبرمج فعليًا لتوضيح التغييرات المقترحة.",
+        "تدقيق لتجربة وواجهة مستخدم موقع EasyFitness UAE يتضمن 8 توصيات ملموسة، مرفقة بمفهوم إعادة تصميم مبرمج فعليًا.",
       overview:
-        "EasyFitness UAE هو نادي لياقة بدنية متميز مقره دبي. بعد تقديم عملي لفريقهم، شاركت مراجعة تفصيلية للموقع الحالي إلى جانب مفهوم إعادة تصميم جديد، بهدف تحديد فرص ملموسة لتحسين تجربة المستخدم وأداء التحويل — مع البناء على ما ينجح بالفعل: هوية متميزة، تصميم نظيف وعصري، وتواصل واضح حول خدماتهم.",
+        "EasyFitness UAE هو نادي لياقة بدنية متميز في دبي. قدّمت لفريقهم مراجعة للموقع الحالي ومفهوم إعادة تصميم، بهدف تحسين تجربة المستخدم والتحويل — مع البناء على ما ينجح بالفعل.",
       challenge:
-        "يوفر الموقع الحالي أساسًا قويًا، لكن عدة أقسام مُكيَّفة من تخطيط سطح المكتب بدلاً من أن تُصمَّم أولاً للجوّال، ولا يجذب قسم Hero الانتباه بشكل كامل في الثواني الأولى، والدليل الاجتماعي غير مستغل بالشكل الكافي، ويمكن لمسار التحويل أن يوجّه الزوار بشكل أكثر طبيعية نحو حجز تجربة أو الانضمام كعضو.",
+        "يمتلك الموقع أساسًا قويًا، لكن بعض الأقسام لا تزال مصممة أولاً لسطح المكتب، ولا يجذب قسم Hero الانتباه بسرعة كافية، والدليل الاجتماعي غير مستغل، ويمكن لمسار التحويل أن يوجّه الزوار بشكل أفضل نحو العضوية.",
       approach: {
-        intro: "راجعت الموقع الحالي عبر ثمانية محاور متكاملة، بمقارنته بمفهوم إعادة تصميم جديد قمت ببنائه لتوضيح التحسينات المقترحة بشكل ملموس:",
+        intro: "راجعت الموقع عبر ثمانية محاور، بمقارنته بمفهوم إعادة تصميم بنيته لتوضيح التحسينات المقترحة:",
         points: ["تجربة الجوّال", "قسم Hero والانطباع الأول", "الدليل الاجتماعي", "مسار التحويل", "سرد قصة الصفحة الرئيسية", "عرض العضويات", "الأداء وتحسين محركات البحث", "استراتيجية النمو الرقمي طويلة المدى"],
       },
       keyInsights: [
@@ -278,7 +278,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         "ستستفيد الصفحة الرئيسية من خيط سردي واحد بدلاً من أقسام منفصلة",
       ],
       solution: {
-        intro: "صغت ثماني توصيات ملموسة، قدّمتها لفريق EasyFitness إلى جانب مفهوم إعادة تصميم مبرمج فعليًا:",
+        intro: "ثماني توصيات ملموسة، قدّمتها للفريق إلى جانب مفهوم إعادة تصميم مبرمج:",
         points: ["تصميم أقسام معينة خصيصًا للجوّال بدلاً من تكييف تخطيط سطح المكتب", "تعزيز قسم Hero بالموقع المتميز، مزايا الأعضاء، ومؤشرات الثقة", "إضافة مراجعات Google والشهادات وقصص التحول لبناء الثقة", "تحسين مسار التحويل بوضع أفضل لأزرار الدعوة لاتخاذ إجراء ونماذج مبسطة", "بناء الصفحة الرئيسية حول سرد واحد: اللياقة ← التعافي ← العافية", "تبسيط مقارنة العضويات من خلال إبراز الخطة الموصى بها", "تحسين الأداء وتحسين محركات البحث التقني لنية البحث المحلي", "إرساء أسس نمو رقمي مستمر: تحسين معدل التحويل، صفحات الحملات، المراقبة والتكرار"],
       },
       outcome: {
@@ -286,7 +286,7 @@ const caseStudiesByLocale: Record<Locale, CaseStudy[]> = {
         points: ["تعزيز الانطباع الأول للعلامة التجارية وموقعها المتميز", "زيادة ثقة الزوار من خلال دليل اجتماعي أكثر وضوحًا", "تحسين تجربة الجوّال، حيث يصل معظم الزوار", "تسهيل مسار التحويل من الاكتشاف إلى العضوية", "إرساء الأساس لنمو عضوي ورقمي مستدام"],
       },
       lessonsLearned:
-        "ذكّرني هذا المشروع بأن التدقيق الجيد لتجربة المستخدم لا يتعلق بالإشارة إلى ما هو خاطئ — بل بالبناء على ما ينجح بالفعل. تقديم توصيات لعلامة تجارية ذات هوية قوية بالفعل يتطلب دبلوماسية بقدر ما يتطلب الدقة — الاعتراف بنقاط القوة الحالية مع اقتراح تحسينات ملموسة وقابلة للقياس.",
+        "ذكّرني هذا المشروع بأن التدقيق الجيد لتجربة المستخدم يعني البناء على ما ينجح بالفعل، لا مجرد الإشارة إلى الأخطاء — بدبلوماسية بقدر الدقة.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Figma"],
     },
     {

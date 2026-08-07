@@ -63,7 +63,7 @@ export default async function CaseStudyPage({
         </div>
         <p className="mt-4 text-sm text-muted-foreground">{study.client}</p>
 
-        {(study.beforeUrl || study.afterUrl) && (
+        {(study.beforeUrl || study.afterUrl || study.pdfUrl) && (
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             {study.beforeUrl && (
               <Button asChild variant="outline" size="sm">
@@ -77,6 +77,14 @@ export default async function CaseStudyPage({
               <Button asChild variant="outline" size="sm">
                 <a href={study.afterUrl} target="_blank" rel="noreferrer">
                   {dict.workPage.afterSite}
+                  <ExternalLink className="size-3.5" />
+                </a>
+              </Button>
+            )}
+            {study.pdfUrl && (
+              <Button asChild variant="outline" size="sm">
+                <a href={study.pdfUrl} target="_blank" rel="noreferrer">
+                  {dict.workPage.readPdf}
                   <ExternalLink className="size-3.5" />
                 </a>
               </Button>

@@ -199,6 +199,7 @@ export const en: Dictionary = {
     seeCaseStudy: "See the case study",
     beforeSite: "View the current site",
     afterSite: "View the concept",
+    readPdf: "Read the full report (PDF)",
     chapters: {
       overview: "Project Overview",
       challenge: "The Challenge",

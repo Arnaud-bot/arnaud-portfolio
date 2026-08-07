@@ -200,6 +200,7 @@ export const fr: Dictionary = {
     seeCaseStudy: "Voir l'étude de cas",
     beforeSite: "Voir le site actuel",
     afterSite: "Voir le concept",
+    readPdf: "Lire le rapport complet (PDF)",
     chapters: {
       overview: "Aperçu du projet",
       challenge: "Le défi",

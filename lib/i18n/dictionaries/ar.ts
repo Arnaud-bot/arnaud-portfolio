@@ -194,6 +194,7 @@ export const ar: Dictionary = {
     seeCaseStudy: "اطّلع على دراسة الحالة",
     beforeSite: "شاهد الموقع الحالي",
     afterSite: "شاهد المفهوم الجديد",
+    readPdf: "اقرأ التقرير كاملاً (PDF)",
     chapters: {
       overview: "نظرة عامة على المشروع",
       challenge: "التحدي",
