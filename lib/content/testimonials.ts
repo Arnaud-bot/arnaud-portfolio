@@ -4,9 +4,10 @@ import type { Locale } from "@/lib/i18n/config";
 const testimonialsByLocale: Record<Locale, Testimonial[]> = {
   fr: [
     {
-      quote: "[Témoignage à recueillir auprès d'un client réel.]",
-      name: "[Nom du client]",
-      role: "[Poste, entreprise]",
+      quote:
+        "Travailler avec Arnaud a été une expérience exceptionnelle. Dès le premier jour, il a fait preuve d'un professionnalisme, d'une créativité et d'une expertise technique remarquables dans le développement de notre site pour EasyFitness. Son souci du détail, sa réactivité et sa capacité à transformer notre vision en un site moderne et performant ont dépassé nos attentes. Je recommande vivement Arnaud à quiconque recherche un développeur web fiable et talentueux, sincèrement investi dans la qualité de son travail.",
+      name: "Ali Chaikhi",
+      role: "COO, EasyFitness UAE",
     },
     {
       quote: "[Témoignage à recueillir auprès d'un client réel.]",
@@ -21,9 +22,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
   ],
   en: [
     {
-      quote: "[Testimonial to collect from a real client.]",
-      name: "[Client name]",
-      role: "[Role, company]",
+      quote:
+        "Working with Arnaud has been an outstanding experience. From day one, he has demonstrated exceptional professionalism, creativity, and technical expertise in developing our website for EasyFitness. His attention to detail, responsiveness, and ability to transform our vision into a modern, high-performing website have exceeded our expectations. I highly recommend Arnaud to anyone looking for a reliable and talented web developer who genuinely cares about delivering quality results.",
+      name: "Ali Chaikhi",
+      role: "COO, EasyFitness UAE",
     },
     {
       quote: "[Testimonial to collect from a real client.]",
@@ -38,9 +40,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
   ],
   ar: [
     {
-      quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
-      name: "[اسم العميل]",
-      role: "[المنصب، الشركة]",
+      quote:
+        "كان العمل مع أرنو تجربة استثنائية. منذ اليوم الأول، أظهر احترافية وإبداعًا وخبرة تقنية استثنائية في تطوير موقعنا لـ EasyFitness. اهتمامه بالتفاصيل، واستجابته السريعة، وقدرته على تحويل رؤيتنا إلى موقع حديث وعالي الأداء فاقت توقعاتنا. أوصي بشدة بأرنو لأي شخص يبحث عن مطوّر ويب موثوق وموهوب يهتم فعلاً بتقديم نتائج عالية الجودة.",
+      name: "Ali Chaikhi",
+      role: "COO، EasyFitness UAE",
     },
     {
       quote: "[شهادة سيتم جمعها من عميل حقيقي.]",

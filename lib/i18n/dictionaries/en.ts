@@ -58,8 +58,9 @@ export const en: Dictionary = {
     availableBadge: "Available for new projects",
   },
   trustBar: {
-    quote: "[Short quote from a client about the result achieved]",
-    author: "[Name, role at Client]",
+    quote:
+      "His attention to detail, responsiveness, and ability to transform our vision into a modern, high-performing website have exceeded our expectations.",
+    author: "Ali Chaikhi, COO, EasyFitness UAE",
   },
   valueProposition: {
     eyebrow: "My mission",
