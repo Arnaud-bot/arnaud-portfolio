@@ -7,9 +7,11 @@ export type Dictionary = {
     work: { title: string; description: string };
     blog: { title: string; description: string };
     breakdowns: { title: string; description: string };
+    lab: { title: string; description: string };
   };
   nav: {
     work: string;
+    lab: string;
     breakdowns: string;
     services: string;
     about: string;
@@ -102,6 +104,13 @@ export type Dictionary = {
     };
   };
   blogPage: { eyebrow: string; title: string; description: string };
+  labPage: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    exploreDemo: string;
+    conceptNote: string;
+  };
   breakdownsPage: {
     eyebrow: string;
     title: string;

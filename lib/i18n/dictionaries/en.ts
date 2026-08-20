@@ -37,9 +37,15 @@ export const en: Dictionary = {
       description:
         "UX reviews of public websites: score, strengths, weaknesses, recommendations.",
     },
+    lab: {
+      title: "Website Lab — Arnaud Malanda",
+      description:
+        "Explore industry-specific website concepts — real estate, restaurant, fitness, SaaS — to see what your business could look like online.",
+    },
   },
   nav: {
     work: "Work",
+    lab: "Lab",
     breakdowns: "Breakdowns",
     services: "Services",
     about: "About",
@@ -216,6 +222,15 @@ export const en: Dictionary = {
     eyebrow: "Blog",
     title: "Articles",
     description: "UX, product design, development, and lessons learned.",
+  },
+  labPage: {
+    eyebrow: "Website Lab",
+    title: "Explore what your business could become",
+    description:
+      "Website concepts designed industry by industry, to give you a concrete sense of what a redesign could bring.",
+    exploreDemo: "Explore the demo",
+    conceptNote:
+      "Concept website — designed and developed by Arnaud Malanda to showcase what a modern digital experience could bring to this type of business.",
   },
   breakdownsPage: {
     eyebrow: "Website Breakdowns",

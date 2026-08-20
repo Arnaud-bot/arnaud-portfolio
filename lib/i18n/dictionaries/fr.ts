@@ -37,9 +37,15 @@ export const fr: Dictionary = {
       description:
         "Analyses UX de sites publics : score, points forts, points faibles, recommandations.",
     },
+    lab: {
+      title: "Website Lab — Arnaud Malanda",
+      description:
+        "Explore des concepts de sites conçus par secteur — immobilier, restaurant, fitness, SaaS — pour voir à quoi pourrait ressembler ton entreprise en ligne.",
+    },
   },
   nav: {
     work: "Work",
+    lab: "Lab",
     breakdowns: "Breakdowns",
     services: "Services",
     about: "About",
@@ -217,6 +223,15 @@ export const fr: Dictionary = {
     eyebrow: "Blog",
     title: "Articles",
     description: "UX, product design, développement, et retours d'expérience.",
+  },
+  labPage: {
+    eyebrow: "Website Lab",
+    title: "Explore ce que ton entreprise pourrait devenir",
+    description:
+      "Des concepts de sites conçus secteur par secteur, pour te donner une idée concrète de ce qu'une refonte pourrait apporter.",
+    exploreDemo: "Explorer la démo",
+    conceptNote:
+      "Site concept — conçu et développé par Arnaud Malanda pour illustrer ce qu'une expérience digitale moderne pourrait apporter à ce type d'entreprise.",
   },
   breakdownsPage: {
     eyebrow: "Website Breakdowns",

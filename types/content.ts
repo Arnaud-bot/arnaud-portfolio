@@ -33,6 +33,15 @@ export type CaseStudy = {
   technologies: string[];
 };
 
+export type LabDemo = {
+  slug: string;
+  industry: string;
+  title: string;
+  tagline: string;
+  liveUrl: string;
+  thumbnail: string;
+};
+
 export type Breakdown = {
   slug: string;
   title: string;
