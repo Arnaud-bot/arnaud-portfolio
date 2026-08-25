@@ -35,6 +35,14 @@ const labDemosByLocale: Record<Locale, LabDemo[]> = {
       liveUrl: "https://startup-saas-demo.vercel.app",
       thumbnail: "/lab/flowdesk-ai.jpg",
     },
+    {
+      slug: "healthcare",
+      industry: "Santé",
+      title: "Dubai Medical Center",
+      tagline: "Un centre médical pensé pour rassurer et simplifier la prise de rendez-vous.",
+      liveUrl: "https://dubai-medical-center.vercel.app",
+      thumbnail: "/lab/dubai-medical-center.jpg",
+    },
   ],
   en: [
     {
@@ -69,6 +77,14 @@ const labDemosByLocale: Record<Locale, LabDemo[]> = {
       liveUrl: "https://startup-saas-demo.vercel.app",
       thumbnail: "/lab/flowdesk-ai.jpg",
     },
+    {
+      slug: "healthcare",
+      industry: "Healthcare",
+      title: "Dubai Medical Center",
+      tagline: "A medical center site designed to reassure patients and simplify booking.",
+      liveUrl: "https://dubai-medical-center.vercel.app",
+      thumbnail: "/lab/dubai-medical-center.jpg",
+    },
   ],
   ar: [
     {
@@ -102,6 +118,14 @@ const labDemosByLocale: Record<Locale, LabDemo[]> = {
       tagline: "صفحة هبوط لمنتج SaaS مصممة للتحويل من الزيارة الأولى.",
       liveUrl: "https://startup-saas-demo.vercel.app",
       thumbnail: "/lab/flowdesk-ai.jpg",
+    },
+    {
+      slug: "healthcare",
+      industry: "الرعاية الصحية",
+      title: "Dubai Medical Center",
+      tagline: "موقع مركز طبي مصمم لطمأنة المرضى وتبسيط حجز المواعيد.",
+      liveUrl: "https://dubai-medical-center.vercel.app",
+      thumbnail: "/lab/dubai-medical-center.jpg",
     },
   ],
 };
