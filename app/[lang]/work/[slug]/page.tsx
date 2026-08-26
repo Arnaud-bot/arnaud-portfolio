@@ -93,7 +93,7 @@ export default async function CaseStudyPage({
         )}
       </Section>
 
-      <Section narrow className="pt-10">
+      <Section className="pt-10">
         <Reveal>
           {study.demoEmbed ? (
             <div
