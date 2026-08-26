@@ -20,6 +20,12 @@ export const localeNames: Record<Locale, string> = {
   ar: "العربية",
 };
 
+export const localeFlags: Record<Locale, string> = {
+  fr: "🇫🇷",
+  en: "🇺🇸",
+  ar: "🇦🇪",
+};
+
 export function hasLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }

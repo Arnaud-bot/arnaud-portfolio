@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { locales, type Locale } from "@/lib/i18n/config";
+import { DropdownMenu } from "radix-ui";
+import { locales, localeNames, localeFlags, type Locale } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher({
@@ -16,28 +17,46 @@ export function LanguageSwitcher({
   const rest = pathname.split("/").slice(2).join("/");
 
   return (
-    <div className={cn("flex items-center gap-1", className)}>
-      {locales.map((locale, i) => (
-        <span key={locale} className="flex items-center">
-          {i > 0 && (
-            <span className="mx-1 text-muted-foreground/40" aria-hidden>
-              /
-            </span>
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger asChild>
+        <button
+          type="button"
+          aria-label={localeNames[lang]}
+          className={cn(
+            "flex size-9 items-center justify-center rounded-full text-lg transition-colors hover:bg-muted",
+            className
           )}
-          <Link
-            href={`/${locale}${rest ? `/${rest}` : ""}`}
-            aria-current={locale === lang ? "true" : undefined}
-            className={cn(
-              "text-xs font-medium uppercase transition-colors",
-              locale === lang
-                ? "text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            {locale}
-          </Link>
-        </span>
-      ))}
-    </div>
+        >
+          <span aria-hidden>{localeFlags[lang]}</span>
+        </button>
+      </DropdownMenu.Trigger>
+      <DropdownMenu.Portal>
+        <DropdownMenu.Content
+          align="end"
+          sideOffset={8}
+          className="z-50 min-w-[140px] overflow-hidden rounded-lg border border-border bg-popover p-1 text-popover-foreground shadow-lg"
+        >
+          {locales.map((locale) => (
+            <DropdownMenu.Item key={locale} asChild>
+              <Link
+                href={`/${locale}${rest ? `/${rest}` : ""}`}
+                aria-current={locale === lang ? "true" : undefined}
+                className={cn(
+                  "flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-sm outline-none",
+                  locale === lang
+                    ? "bg-primary/10 text-foreground"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                )}
+              >
+                <span aria-hidden className="text-base">
+                  {localeFlags[locale]}
+                </span>
+                {localeNames[locale]}
+              </Link>
+            </DropdownMenu.Item>
+          ))}
+        </DropdownMenu.Content>
+      </DropdownMenu.Portal>
+    </DropdownMenu.Root>
   );
 }

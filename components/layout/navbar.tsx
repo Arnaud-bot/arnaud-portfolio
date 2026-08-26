@@ -67,31 +67,34 @@ export function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </Button>
         </div>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="size-5" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={dir === "rtl" ? "left" : "right"} className="w-[280px]">
-            <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
-            <nav className="mt-12 flex flex-col gap-6 px-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-base text-foreground"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Button asChild className="mt-4">
-                <Link href={`/${lang}/contact`}>{dict.nav.letsTalk}</Link>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher lang={lang} />
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="size-5" />
               </Button>
-              <LanguageSwitcher lang={lang} className="mt-2" />
-            </nav>
-          </SheetContent>
-        </Sheet>
+            </SheetTrigger>
+            <SheetContent side={dir === "rtl" ? "left" : "right"} className="w-[280px]">
+              <SheetTitle className="sr-only">{dict.nav.menu}</SheetTitle>
+              <nav className="mt-12 flex flex-col gap-6 px-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-base text-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Button asChild className="mt-4">
+                  <Link href={`/${lang}/contact`}>{dict.nav.letsTalk}</Link>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </Container>
     </header>
   );
