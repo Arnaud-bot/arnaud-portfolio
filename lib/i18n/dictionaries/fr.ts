@@ -10,47 +10,47 @@ export const fr: Dictionary = {
         "UX audit, UI redesign, développement web et mobile pour des produits digitaux premium.",
     },
     about: {
-      title: "About — Arnaud Malanda",
+      title: "À propos — Arnaud Malanda",
       description:
         "Product-Focused Developer basé à Dubai, spécialisé en UX, conversion et développement web & mobile.",
     },
     services: {
       title: "Services — Arnaud Malanda",
       description:
-        "UX Audit, UI/UX Redesign, Web & Mobile Development, Product Strategy et Conversion Optimization.",
+        "Audit UX, refonte UI/UX, développement web et mobile, stratégie produit et optimisation de conversion.",
     },
     contact: {
       title: "Contact — Arnaud Malanda",
       description: "Parlons de ton produit et de la manière dont je peux aider.",
     },
     work: {
-      title: "Work — Arnaud Malanda",
+      title: "Projets — Arnaud Malanda",
       description: "Études de cas : problème, recherche, décisions, résultats.",
     },
     blog: {
       title: "Blog — Arnaud Malanda",
       description:
-        "UX, Product Design, Flutter, React, Case Studies, AI, Business, Development.",
+        "UX, design produit, Flutter, React, études de cas, IA, business, développement.",
     },
     breakdowns: {
-      title: "Website Breakdowns — Arnaud Malanda",
+      title: "Analyses de sites — Arnaud Malanda",
       description:
         "Analyses UX de sites publics : score, points forts, points faibles, recommandations.",
     },
     lab: {
-      title: "Website Lab — Arnaud Malanda",
+      title: "Labo — Arnaud Malanda",
       description:
         "Explore des concepts de sites conçus par secteur — immobilier, restaurant, fitness, SaaS — pour voir à quoi pourrait ressembler ton entreprise en ligne.",
     },
   },
   nav: {
-    work: "Work",
-    lab: "Lab",
-    breakdowns: "Breakdowns",
+    work: "Projets",
+    lab: "Labo",
+    breakdowns: "Analyses",
     services: "Services",
-    about: "About",
+    about: "À propos",
     blog: "Blog",
-    letsTalk: "Let's Talk",
+    letsTalk: "Me contacter",
     menu: "Menu",
   },
   hero: {
@@ -59,8 +59,8 @@ export const fr: Dictionary = {
       "Je transforme des produits digitaux en expériences que les gens aiment utiliser.",
     description:
       "J'analyse, je redesigne et je développe des sites et applications premium pour des fondateurs et des équipes produit qui veulent convertir plus et paraître plus crédibles.",
-    viewMyWork: "View My Work",
-    letsTalk: "Let's Talk",
+    viewMyWork: "Voir mes réalisations",
+    letsTalk: "Me contacter",
     availableBadge: "Disponible pour nouveaux projets",
   },
   trustBar: {
@@ -97,14 +97,14 @@ export const fr: Dictionary = {
     description: "Du diagnostic à la mise en production, sur web comme sur mobile.",
   },
   featuredCaseStudies: {
-    eyebrow: "Case Studies",
+    eyebrow: "Études de cas",
     title: "Des histoires, pas des captures d'écran",
     description:
       "Chaque projet suit le même fil : problème, recherche, décisions, résultats.",
     seeCaseStudy: "Voir l'étude de cas",
   },
   breakdownsTeaser: {
-    eyebrow: "Website Breakdowns",
+    eyebrow: "Analyses de sites",
     title: "J'analyse des sites publics, gratuitement",
     description:
       "Score UX, points forts, points faibles et recommandations — mon contenu signature.",
@@ -112,20 +112,20 @@ export const fr: Dictionary = {
     seeAll: "Voir toutes les analyses",
   },
   process: {
-    eyebrow: "My Process",
+    eyebrow: "Ma méthode",
     title: "Un processus prévisible, pensé pour réduire le risque",
     description: "Tu sais toujours où on en est et ce qui arrive ensuite.",
   },
   techStack: {
-    eyebrow: "Tech Stack",
+    eyebrow: "Stack technique",
     title: "Les outils que j'utilise au quotidien",
   },
   testimonialsSection: {
-    eyebrow: "Testimonials",
+    eyebrow: "Témoignages",
     title: "Ce que les clients en disent",
   },
   aboutTeaser: {
-    eyebrow: "About",
+    eyebrow: "À propos",
     title: "Pourquoi je fais ce métier",
     body: "En arrivant à Dubaï, j'ai fait un constat simple : la plupart des sites d'entreprise ne sont que des vitrines, pas des expériences. Ce constat a changé la direction de toute ma carrière — et il façonne aujourd'hui chaque projet que je mène.",
     cta: "En savoir plus sur moi",
@@ -134,7 +134,7 @@ export const fr: Dictionary = {
     title: "Prêt à transformer ton produit ?",
     description:
       "Parlons de ton produit, de tes objectifs et de la manière dont je peux t'aider à convertir plus.",
-    cta: "Let's Talk",
+    cta: "Me contacter",
   },
   footer: {
     tagline:
@@ -200,7 +200,7 @@ export const fr: Dictionary = {
     },
   },
   workPage: {
-    eyebrow: "Work",
+    eyebrow: "Projets",
     title: "Études de cas",
     description:
       "Chaque projet raconte le problème résolu, pas seulement le résultat final.",
@@ -225,7 +225,7 @@ export const fr: Dictionary = {
     description: "UX, product design, développement, et retours d'expérience.",
   },
   labPage: {
-    eyebrow: "Website Lab",
+    eyebrow: "Labo",
     title: "Explore ce que ton entreprise pourrait devenir",
     description:
       "Des concepts de sites conçus secteur par secteur, pour te donner une idée concrète de ce qu'une refonte pourrait apporter.",
@@ -234,7 +234,7 @@ export const fr: Dictionary = {
       "Site concept — conçu et développé par Arnaud Malanda pour illustrer ce qu'une expérience digitale moderne pourrait apporter à ce type d'entreprise.",
   },
   breakdownsPage: {
-    eyebrow: "Website Breakdowns",
+    eyebrow: "Analyses de sites",
     title: "Analyses de sites publics",
     description:
       "Mon contenu signature : un regard critique et constructif sur de vraies interfaces.",
