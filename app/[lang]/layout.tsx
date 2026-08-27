@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Manrope, Inter, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { ConstructionBanner } from "@/components/layout/construction-banner";
 import {
   locales,
   hasLocale,
@@ -88,6 +89,7 @@ export default async function RootLayout({
       className={`dark ${manrope.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ConstructionBanner dict={dict.constructionBanner} />
         <Navbar lang={lang} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer lang={lang} dict={dict} />

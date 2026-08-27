@@ -1,6 +1,10 @@
 import type { Dictionary } from "./types";
 
 export const ar: Dictionary = {
+  constructionBanner: {
+    message: "الموقع لا يزال قيد الإنجاز — يتم إضافة محتوى جديد بانتظام.",
+    dismiss: "إغلاق",
+  },
   meta: {
     home: {
       title: "أرنو مالاندا — مطوّر مُركّز على المنتج",

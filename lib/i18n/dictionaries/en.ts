@@ -1,6 +1,11 @@
 import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
+  constructionBanner: {
+    message:
+      "Portfolio still being finalized — new content is being added regularly.",
+    dismiss: "Dismiss",
+  },
   meta: {
     home: {
       title: "Arnaud Malanda — Product-Focused Developer",
