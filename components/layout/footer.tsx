@@ -2,6 +2,8 @@ import Link from "next/link";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
+import { getBlogPosts } from "@/lib/content/blog";
+import { getBreakdowns } from "@/lib/content/breakdowns";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
@@ -28,16 +30,21 @@ const SOCIALS = [
 ];
 
 export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const hasBlogPosts = getBlogPosts(lang).length > 0;
+  const hasBreakdowns = getBreakdowns(lang).length > 0;
+
   const columns = [
     {
       title: dict.footer.navTitle,
       links: [
         { href: `/${lang}/work`, label: dict.nav.work },
         { href: `/${lang}/lab`, label: dict.nav.lab },
-        { href: `/${lang}/breakdowns`, label: dict.nav.breakdowns },
+        ...(hasBreakdowns
+          ? [{ href: `/${lang}/breakdowns`, label: dict.nav.breakdowns }]
+          : []),
         { href: `/${lang}/services`, label: dict.nav.services },
         { href: `/${lang}/about`, label: dict.nav.about },
-        { href: `/${lang}/blog`, label: dict.nav.blog },
+        ...(hasBlogPosts ? [{ href: `/${lang}/blog`, label: dict.nav.blog }] : []),
       ],
     },
     {

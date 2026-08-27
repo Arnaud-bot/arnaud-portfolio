@@ -62,12 +62,16 @@ export type BlogPost = {
   excerpt: string;
   content: string;
   date: string;
+  /** Set to false while the real article isn't written yet — hides it without deleting it. */
+  published?: boolean;
 };
 
 export type Testimonial = {
   quote: string;
   name: string;
   role: string;
+  /** Set to false while this isn't a real client quote yet — hides it without deleting it. */
+  published?: boolean;
 };
 
 export type ProcessStep = {

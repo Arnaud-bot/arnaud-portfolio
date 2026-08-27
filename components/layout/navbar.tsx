@@ -13,19 +13,25 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { getDir, type Locale } from "@/lib/i18n/config";
+import { getBlogPosts } from "@/lib/content/blog";
+import { getBreakdowns } from "@/lib/content/breakdowns";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const [scrolled, setScrolled] = useState(false);
   const dir = getDir(lang);
+  const hasBlogPosts = getBlogPosts(lang).length > 0;
+  const hasBreakdowns = getBreakdowns(lang).length > 0;
 
   const navLinks = [
     { href: `/${lang}/work`, label: dict.nav.work },
     { href: `/${lang}/lab`, label: dict.nav.lab },
-    { href: `/${lang}/breakdowns`, label: dict.nav.breakdowns },
+    ...(hasBreakdowns
+      ? [{ href: `/${lang}/breakdowns`, label: dict.nav.breakdowns }]
+      : []),
     { href: `/${lang}/services`, label: dict.nav.services },
     { href: `/${lang}/about`, label: dict.nav.about },
-    { href: `/${lang}/blog`, label: dict.nav.blog },
+    ...(hasBlogPosts ? [{ href: `/${lang}/blog`, label: dict.nav.blog }] : []),
   ];
 
   useEffect(() => {

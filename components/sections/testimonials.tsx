@@ -2,18 +2,28 @@ import { Section } from "@/components/layout/section";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Reveal } from "@/components/animations/reveal";
 import { getTestimonials } from "@/lib/content/testimonials";
+import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const testimonials = getTestimonials(lang);
 
+  if (testimonials.length === 0) return null;
+
   return (
     <Section
       eyebrow={dict.testimonialsSection.eyebrow}
       title={dict.testimonialsSection.title}
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <div
+        className={cn(
+          "grid gap-6",
+          testimonials.length === 1 && "mx-auto max-w-[420px]",
+          testimonials.length === 2 && "mx-auto max-w-[760px] sm:grid-cols-2",
+          testimonials.length >= 3 && "md:grid-cols-3"
+        )}
+      >
         {testimonials.map((t, i) => (
           <Reveal key={t.name + i} delay={i * 0.05}>
             <figure className="flex h-full flex-col justify-between rounded-lg border border-border bg-card p-8">

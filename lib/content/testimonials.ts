@@ -13,11 +13,13 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       quote: "[Témoignage à recueillir auprès d'un client réel.]",
       name: "[Nom du client]",
       role: "[Poste, entreprise]",
+      published: false,
     },
     {
       quote: "[Témoignage à recueillir auprès d'un client réel.]",
       name: "[Nom du client]",
       role: "[Poste, entreprise]",
+      published: false,
     },
   ],
   en: [
@@ -31,11 +33,13 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       quote: "[Testimonial to collect from a real client.]",
       name: "[Client name]",
       role: "[Role, company]",
+      published: false,
     },
     {
       quote: "[Testimonial to collect from a real client.]",
       name: "[Client name]",
       role: "[Role, company]",
+      published: false,
     },
   ],
   ar: [
@@ -49,11 +53,13 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
       name: "[اسم العميل]",
       role: "[المنصب، الشركة]",
+      published: false,
     },
     {
       quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
       name: "[اسم العميل]",
       role: "[المنصب، الشركة]",
+      published: false,
     },
   ],
 };
@@ -154,7 +160,7 @@ const processStepsByLocale: Record<Locale, ProcessStep[]> = {
 };
 
 export function getTestimonials(locale: Locale): Testimonial[] {
-  return testimonialsByLocale[locale];
+  return testimonialsByLocale[locale].filter((t) => t.published !== false);
 }
 
 export function getProcessSteps(locale: Locale): ProcessStep[] {

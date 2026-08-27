@@ -10,6 +10,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Résumé court de l'article en une phrase.]",
       content: "[Contenu de l'article à rédiger.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "deuxieme-article",
@@ -18,6 +19,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Résumé court de l'article en une phrase.]",
       content: "[Contenu de l'article à rédiger.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "troisieme-article",
@@ -26,6 +28,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Résumé court de l'article en une phrase.]",
       content: "[Contenu de l'article à rédiger.]",
       date: "2026-07-29",
+      published: false,
     },
   ],
   en: [
@@ -36,6 +39,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Short one-sentence summary of the article.]",
       content: "[Article content to be written.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "deuxieme-article",
@@ -44,6 +48,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Short one-sentence summary of the article.]",
       content: "[Article content to be written.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "troisieme-article",
@@ -52,6 +57,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[Short one-sentence summary of the article.]",
       content: "[Article content to be written.]",
       date: "2026-07-29",
+      published: false,
     },
   ],
   ar: [
@@ -62,6 +68,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[ملخص قصير للمقال في جملة واحدة.]",
       content: "[محتوى المقال بانتظار الكتابة.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "deuxieme-article",
@@ -70,6 +77,7 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[ملخص قصير للمقال في جملة واحدة.]",
       content: "[محتوى المقال بانتظار الكتابة.]",
       date: "2026-07-29",
+      published: false,
     },
     {
       slug: "troisieme-article",
@@ -78,10 +86,11 @@ const blogPostsByLocale: Record<Locale, BlogPost[]> = {
       excerpt: "[ملخص قصير للمقال في جملة واحدة.]",
       content: "[محتوى المقال بانتظار الكتابة.]",
       date: "2026-07-29",
+      published: false,
     },
   ],
 };
 
 export function getBlogPosts(locale: Locale): BlogPost[] {
-  return blogPostsByLocale[locale];
+  return blogPostsByLocale[locale].filter((post) => post.published !== false);
 }
