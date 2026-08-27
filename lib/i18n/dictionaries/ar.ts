@@ -243,5 +243,6 @@ export const ar: Dictionary = {
     recommendations: "التوصيات",
     beforeAfterPlaceholder:
       "[مكان مخصص لمقارنة قبل/بعد — لقطة شاشة للموقع الحالي، ثم مقترح إعادة تصميم.]",
+    visitSite: "زيارة الموقع",
   },
 };

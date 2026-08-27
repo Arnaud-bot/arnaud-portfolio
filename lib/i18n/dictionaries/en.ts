@@ -250,5 +250,6 @@ export const en: Dictionary = {
     recommendations: "Recommendations",
     beforeAfterPlaceholder:
       "[Space for a Before/After concept — screenshot of the current site, then a redesign proposal.]",
+    visitSite: "Visit the site",
   },
 };

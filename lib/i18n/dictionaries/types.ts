@@ -122,5 +122,6 @@ export type Dictionary = {
     weaknesses: string;
     recommendations: string;
     beforeAfterPlaceholder: string;
+    visitSite: string;
   };
 };

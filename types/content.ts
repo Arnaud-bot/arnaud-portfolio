@@ -51,6 +51,8 @@ export type Breakdown = {
   strengths: string[];
   weaknesses: string[];
   recommendations: string[];
+  /** Link to the real site being reviewed, when available. */
+  siteUrl?: string;
   /** Set to false while the real content isn't written yet — hides it without deleting it. */
   published?: boolean;
 };

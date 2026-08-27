@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
+import { CheckCircle2, XCircle, Lightbulb, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
 import { getBreakdowns } from "@/lib/content/breakdowns";
@@ -58,6 +59,14 @@ export default async function BreakdownPage({
         <p className="mx-auto mt-4 max-w-[600px] text-base leading-[1.7] text-muted-foreground">
           {item.summary}
         </p>
+        {item.siteUrl && (
+          <Button asChild variant="outline" size="sm" className="mt-6">
+            <a href={item.siteUrl} target="_blank" rel="noreferrer">
+              {dict.breakdownsPage.visitSite}
+              <ExternalLink className="size-3.5" />
+            </a>
+          </Button>
+        )}
       </Section>
 
       <Section narrow>
@@ -119,11 +128,13 @@ export default async function BreakdownPage({
             </div>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <div className="rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-              {dict.breakdownsPage.beforeAfterPlaceholder}
-            </div>
-          </Reveal>
+          {!item.siteUrl && (
+            <Reveal delay={0.15}>
+              <div className="rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
+                {dict.breakdownsPage.beforeAfterPlaceholder}
+              </div>
+            </Reveal>
+          )}
         </div>
       </Section>
     </>
