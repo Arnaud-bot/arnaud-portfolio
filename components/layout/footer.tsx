@@ -19,7 +19,12 @@ const SOCIALS = [
     Icon: FaInstagram,
     color: "#E4405F",
   },
-  { href: "https://whatsapp.com/channel/", label: "WhatsApp", Icon: FaWhatsapp, color: "#25D366" },
+  {
+    href: "https://wa.me/message/6D2CAPBPUT7ZN1",
+    label: "WhatsApp",
+    Icon: FaWhatsapp,
+    color: "#25D366",
+  },
 ];
 
 export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
