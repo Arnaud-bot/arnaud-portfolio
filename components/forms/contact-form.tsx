@@ -13,6 +13,7 @@ import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export function ContactForm({ dict }: { dict: Dictionary["contactPage"]["form"] }) {
   const [submitted, setSubmitted] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   const contactSchema = z.object({
     name: z.string().min(2, dict.nameError),
@@ -32,11 +33,19 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"]["form"] 
   });
 
   async function onSubmit(values: ContactValues) {
-    // TODO: brancher un vrai endpoint d'envoi (API route + service email)
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    console.log(values);
-    setSubmitted(true);
-    reset();
+    setSendError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) throw new Error("Send failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSendError(true);
+    }
   }
 
   if (submitted) {
@@ -79,6 +88,10 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"]["form"] 
           <p className="text-xs text-destructive">{errors.message.message}</p>
         )}
       </div>
+
+      {sendError && (
+        <p className="text-sm text-destructive">{dict.sendError}</p>
+      )}
 
       <Button type="submit" disabled={isSubmitting} className="h-11 w-full">
         {isSubmitting && <Loader2 className="size-4 animate-spin" />}

@@ -202,6 +202,8 @@ export const en: Dictionary = {
       nameError: "Your name must contain at least 2 characters.",
       emailError: "Invalid email address.",
       messageError: "Describe your project in at least 20 characters.",
+      sendError:
+        "Something went wrong sending your message. Try again, or email me directly at arnaudmalanda1@gmail.com.",
     },
   },
   workPage: {

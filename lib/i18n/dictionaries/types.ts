@@ -83,6 +83,7 @@ export type Dictionary = {
       nameError: string;
       emailError: string;
       messageError: string;
+      sendError: string;
     };
   };
   workPage: {

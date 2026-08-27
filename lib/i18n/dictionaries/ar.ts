@@ -196,6 +196,8 @@ export const ar: Dictionary = {
       nameError: "يجب أن يحتوي اسمك على حرفين على الأقل.",
       emailError: "عنوان بريد إلكتروني غير صالح.",
       messageError: "صف مشروعك في 20 حرفًا على الأقل.",
+      sendError:
+        "تعذّر إرسال رسالتك. حاول مرة أخرى، أو راسلني مباشرة على arnaudmalanda1@gmail.com.",
     },
   },
   workPage: {
