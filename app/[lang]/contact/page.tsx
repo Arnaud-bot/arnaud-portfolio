@@ -27,13 +27,21 @@ export default async function ContactPage({
   const dict = await getDictionary(lang);
 
   const contacts = [
-    { icon: Mail, label: "hello@arnaudmalanda.com", href: "mailto:hello@arnaudmalanda.com" },
+    {
+      icon: Mail,
+      label: "arnaudmalanda1@gmail.com",
+      href: "mailto:arnaudmalanda1@gmail.com",
+    },
     {
       icon: ExternalLink,
       label: dict.contactPage.linkedin,
       href: "https://www.linkedin.com/in/arnaud-malanda-8883a7260/",
     },
-    { icon: ExternalLink, label: dict.contactPage.github, href: "https://github.com" },
+    {
+      icon: ExternalLink,
+      label: dict.contactPage.github,
+      href: "https://github.com/Arnaud-bot",
+    },
     {
       icon: ExternalLink,
       label: dict.contactPage.instagram,

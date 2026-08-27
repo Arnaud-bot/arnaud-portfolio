@@ -33,14 +33,14 @@ export function ConstructionBanner({
   }
 
   return (
-    <div className="flex items-center justify-center gap-3 bg-primary/10 px-4 py-2.5 text-center text-xs text-foreground sm:text-sm">
-      <Construction className="hidden size-4 shrink-0 text-primary sm:block" aria-hidden />
+    <div className="flex items-center justify-center gap-3 bg-destructive px-4 py-2.5 text-center text-xs text-destructive-foreground sm:text-sm">
+      <Construction className="hidden size-4 shrink-0 sm:block" aria-hidden />
       <p>{dict.message}</p>
       <button
         type="button"
         onClick={dismiss}
         aria-label={dict.dismiss}
-        className="ms-1 shrink-0 rounded-full p-1 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-foreground"
+        className="ms-1 shrink-0 rounded-full p-1 transition-colors hover:bg-black/15"
       >
         <X className="size-3.5" />
       </button>

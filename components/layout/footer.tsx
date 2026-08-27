@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
 import { getBlogPosts } from "@/lib/content/blog";
 import { getBreakdowns } from "@/lib/content/breakdowns";
+import { Logo } from "@/components/layout/logo";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
@@ -14,7 +15,7 @@ const SOCIALS = [
     Icon: FaLinkedin,
     color: "#0A66C2",
   },
-  { href: "https://github.com", label: "GitHub", Icon: FaGithub },
+  { href: "https://github.com/Arnaud-bot", label: "GitHub", Icon: FaGithub },
   {
     href: "https://www.instagram.com/arnaud_kuyzer/",
     label: "Instagram",
@@ -51,7 +52,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       title: dict.footer.contactTitle,
       links: [
         { href: `/${lang}/contact`, label: dict.nav.letsTalk },
-        { href: "mailto:hello@arnaudmalanda.com", label: "Email" },
+        { href: "mailto:arnaudmalanda1@gmail.com", label: "Email" },
       ],
     },
   ];
@@ -61,9 +62,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <Container className="py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <p className="text-base font-semibold tracking-tight">
-              Arnaud Malanda
-            </p>
+            <Logo />
             <p className="mt-3 max-w-[320px] text-sm leading-[1.7] text-muted-foreground">
               {dict.footer.tagline}
             </p>

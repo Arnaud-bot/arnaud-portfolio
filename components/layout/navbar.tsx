@@ -6,6 +6,7 @@ import { Menu } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { Logo } from "@/components/layout/logo";
 import {
   Sheet,
   SheetContent,
@@ -50,8 +51,8 @@ export function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       }`}
     >
       <Container className="flex h-[72px] items-center justify-between">
-        <Link href={`/${lang}`} className="text-base font-semibold tracking-tight">
-          Arnaud Malanda
+        <Link href={`/${lang}`}>
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
