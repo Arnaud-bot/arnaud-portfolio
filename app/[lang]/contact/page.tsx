@@ -28,9 +28,17 @@ export default async function ContactPage({
 
   const contacts = [
     { icon: Mail, label: "hello@arnaudmalanda.com", href: "mailto:hello@arnaudmalanda.com" },
-    { icon: ExternalLink, label: dict.contactPage.linkedin, href: "https://linkedin.com" },
+    {
+      icon: ExternalLink,
+      label: dict.contactPage.linkedin,
+      href: "https://www.linkedin.com/in/arnaud-malanda-8883a7260/",
+    },
     { icon: ExternalLink, label: dict.contactPage.github, href: "https://github.com" },
-    { icon: ExternalLink, label: dict.contactPage.instagram, href: "https://instagram.com" },
+    {
+      icon: ExternalLink,
+      label: dict.contactPage.instagram,
+      href: "https://www.instagram.com/arnaud_kuyzer/",
+    },
   ];
 
   return (

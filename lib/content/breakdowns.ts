@@ -17,6 +17,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Point fort 1]", "[Point fort 2]"],
       weaknesses: ["[Point faible 1]", "[Point faible 2]", "[Point faible 3]"],
       recommendations: ["[Recommandation 1]", "[Recommandation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-restaurant",
@@ -27,6 +28,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Point fort 1]"],
       weaknesses: ["[Point faible 1]", "[Point faible 2]"],
       recommendations: ["[Recommandation 1]", "[Recommandation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-healthcare",
@@ -37,6 +39,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Point fort 1]", "[Point fort 2]"],
       weaknesses: ["[Point faible 1]"],
       recommendations: ["[Recommandation 1]"],
+      published: false,
     },
     {
       slug: "breakdown-real-estate",
@@ -47,6 +50,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Point fort 1]"],
       weaknesses: ["[Point faible 1]", "[Point faible 2]", "[Point faible 3]"],
       recommendations: ["[Recommandation 1]", "[Recommandation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-saas",
@@ -57,6 +61,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Point fort 1]", "[Point fort 2]"],
       weaknesses: ["[Point faible 1]"],
       recommendations: ["[Recommandation 1]"],
+      published: false,
     },
   ],
   en: [
@@ -69,6 +74,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Strength 1]", "[Strength 2]"],
       weaknesses: ["[Weakness 1]", "[Weakness 2]", "[Weakness 3]"],
       recommendations: ["[Recommendation 1]", "[Recommendation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-restaurant",
@@ -79,6 +85,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Strength 1]"],
       weaknesses: ["[Weakness 1]", "[Weakness 2]"],
       recommendations: ["[Recommendation 1]", "[Recommendation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-healthcare",
@@ -89,6 +96,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Strength 1]", "[Strength 2]"],
       weaknesses: ["[Weakness 1]"],
       recommendations: ["[Recommendation 1]"],
+      published: false,
     },
     {
       slug: "breakdown-real-estate",
@@ -99,6 +107,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Strength 1]"],
       weaknesses: ["[Weakness 1]", "[Weakness 2]", "[Weakness 3]"],
       recommendations: ["[Recommendation 1]", "[Recommendation 2]"],
+      published: false,
     },
     {
       slug: "breakdown-saas",
@@ -109,6 +118,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[Strength 1]", "[Strength 2]"],
       weaknesses: ["[Weakness 1]"],
       recommendations: ["[Recommendation 1]"],
+      published: false,
     },
   ],
   ar: [
@@ -121,6 +131,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[نقطة قوة 1]", "[نقطة قوة 2]"],
       weaknesses: ["[نقطة ضعف 1]", "[نقطة ضعف 2]", "[نقطة ضعف 3]"],
       recommendations: ["[توصية 1]", "[توصية 2]"],
+      published: false,
     },
     {
       slug: "breakdown-restaurant",
@@ -131,6 +142,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[نقطة قوة 1]"],
       weaknesses: ["[نقطة ضعف 1]", "[نقطة ضعف 2]"],
       recommendations: ["[توصية 1]", "[توصية 2]"],
+      published: false,
     },
     {
       slug: "breakdown-healthcare",
@@ -141,6 +153,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[نقطة قوة 1]", "[نقطة قوة 2]"],
       weaknesses: ["[نقطة ضعف 1]"],
       recommendations: ["[توصية 1]"],
+      published: false,
     },
     {
       slug: "breakdown-real-estate",
@@ -151,6 +164,7 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[نقطة قوة 1]"],
       weaknesses: ["[نقطة ضعف 1]", "[نقطة ضعف 2]", "[نقطة ضعف 3]"],
       recommendations: ["[توصية 1]", "[توصية 2]"],
+      published: false,
     },
     {
       slug: "breakdown-saas",
@@ -161,10 +175,11 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       strengths: ["[نقطة قوة 1]", "[نقطة قوة 2]"],
       weaknesses: ["[نقطة ضعف 1]"],
       recommendations: ["[توصية 1]"],
+      published: false,
     },
   ],
 };
 
 export function getBreakdowns(locale: Locale): Breakdown[] {
-  return breakdownsByLocale[locale];
+  return breakdownsByLocale[locale].filter((item) => item.published !== false);
 }

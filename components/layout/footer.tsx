@@ -6,9 +6,19 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 const SOCIALS = [
-  { href: "https://linkedin.com", label: "LinkedIn", Icon: FaLinkedin, color: "#0A66C2" },
+  {
+    href: "https://www.linkedin.com/in/arnaud-malanda-8883a7260/",
+    label: "LinkedIn",
+    Icon: FaLinkedin,
+    color: "#0A66C2",
+  },
   { href: "https://github.com", label: "GitHub", Icon: FaGithub },
-  { href: "https://instagram.com", label: "Instagram", Icon: FaInstagram, color: "#E4405F" },
+  {
+    href: "https://www.instagram.com/arnaud_kuyzer/",
+    label: "Instagram",
+    Icon: FaInstagram,
+    color: "#E4405F",
+  },
   { href: "https://whatsapp.com/channel/", label: "WhatsApp", Icon: FaWhatsapp, color: "#25D366" },
 ];
 

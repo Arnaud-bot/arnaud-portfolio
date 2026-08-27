@@ -17,6 +17,8 @@ export function BreakdownsTeaser({
 }) {
   const featured = getBreakdowns(lang).slice(0, 3);
 
+  if (featured.length === 0) return null;
+
   return (
     <Section
       eyebrow={dict.breakdownsTeaser.eyebrow}
