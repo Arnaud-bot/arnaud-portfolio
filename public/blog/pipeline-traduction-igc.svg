@@ -1,0 +1,54 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#161C44" />
+      <stop offset="1" stop-color="#0B1030" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)" />
+
+  <g opacity="0.15" stroke="#8B5CF6" stroke-width="1">
+    <line x1="0" y1="140" x2="800" y2="140" />
+    <line x1="0" y1="260" x2="800" y2="260" />
+    <line x1="0" y1="380" x2="800" y2="380" />
+  </g>
+
+  <rect x="90" y="210" width="140" height="80" rx="10" fill="#1D2144" stroke="#3B4374" />
+  <circle cx="120" cy="250" r="14" fill="#8B5CF6" />
+  <path d="M115 244 l12 6 -12 6 z" fill="#fff" />
+  <text x="140" y="270" fill="#C9CDF0" font-family="Arial, sans-serif" font-size="12">Vidéo source</text>
+
+  <path d="M240 250 L320 250" stroke="#8B5CF6" stroke-width="2.5" />
+  <path d="M308 240 L320 250 L308 260" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <g>
+    <circle cx="400" cy="250" r="55" fill="#1D2144" stroke="#8B5CF6" stroke-width="2" />
+    <circle cx="400" cy="250" r="26" fill="none" stroke="#8B5CF6" stroke-width="5" />
+    <circle cx="400" cy="250" r="8" fill="#8B5CF6" />
+    <path d="M400 224 v10 M400 266 v10 M374 250 h10 M416 250 h10" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" />
+  </g>
+  <text x="400" y="325" text-anchor="middle" fill="#C9CDF0" font-family="Arial, sans-serif" font-size="13" font-weight="600">Pipeline IA</text>
+
+  <path d="M470 250 L550 250" stroke="#8B5CF6" stroke-width="2.5" />
+  <path d="M538 240 L550 250 L538 260" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <g>
+    <rect x="580" y="150" width="150" height="44" rx="8" fill="#1D2144" stroke="#4C3B8A" />
+    <text x="605" y="177" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700">EN</text>
+    <circle cx="705" cy="172" r="6" fill="#4CD97B" />
+  </g>
+  <g>
+    <rect x="580" y="228" width="150" height="44" rx="8" fill="#1D2144" stroke="#4C3B8A" />
+    <text x="605" y="255" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700">AR</text>
+    <circle cx="705" cy="250" r="6" fill="#4CD97B" />
+  </g>
+  <g>
+    <rect x="580" y="306" width="150" height="44" rx="8" fill="#1D2144" stroke="#4C3B8A" />
+    <text x="605" y="333" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700">FR</text>
+    <circle cx="705" cy="328" r="6" fill="#4CD97B" />
+  </g>
+
+  <path d="M450 240 L580 172" stroke="#4C3B8A" stroke-width="1.5" fill="none" />
+  <path d="M450 250 L580 250" stroke="#4C3B8A" stroke-width="1.5" fill="none" />
+  <path d="M450 260 L580 328" stroke="#4C3B8A" stroke-width="1.5" fill="none" />
+</svg>

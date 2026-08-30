@@ -1,0 +1,35 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2A4A" />
+      <stop offset="1" stop-color="#081A2F" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg5)" />
+
+  <rect x="130" y="90" width="130" height="300" rx="22" fill="#0E2340" stroke="#18A8FF" stroke-width="3" />
+  <rect x="146" y="118" width="98" height="200" rx="6" fill="#12294A" />
+  <rect x="156" y="130" width="78" height="10" rx="3" fill="#18A8FF" />
+  <rect x="156" y="150" width="78" height="6" rx="2" fill="#2C5D8C" />
+  <rect x="156" y="164" width="60" height="6" rx="2" fill="#2C5D8C" />
+  <rect x="156" y="190" width="78" height="40" rx="6" fill="#18A8FF" opacity="0.3" />
+  <rect x="156" y="240" width="78" height="40" rx="6" fill="#18A8FF" opacity="0.3" />
+  <circle cx="195" cy="340" r="10" fill="#2C5D8C" />
+
+  <path d="M280 240 L360 240" stroke="#5A7797" stroke-width="2" stroke-dasharray="6 6" />
+  <line x1="320" y1="130" x2="320" y2="350" stroke="#5A7797" stroke-width="1.5" stroke-dasharray="4 6" />
+
+  <rect x="380" y="140" width="330" height="210" rx="12" fill="#12294A" stroke="#1E3E63" stroke-width="2" />
+  <rect x="380" y="140" width="330" height="32" rx="12" fill="#17304F" />
+  <circle cx="402" cy="156" r="4" fill="#F26D6D" />
+  <circle cx="416" cy="156" r="4" fill="#F5B54C" />
+  <circle cx="430" cy="156" r="4" fill="#4CD97B" />
+  <rect x="404" y="196" width="120" height="60" rx="6" fill="#26456B" />
+  <rect x="536" y="196" width="120" height="60" rx="6" fill="#26456B" />
+  <rect x="404" y="268" width="252" height="10" rx="3" fill="#26456B" />
+  <rect x="404" y="288" width="180" height="10" rx="3" fill="#26456B" />
+  <rect x="404" y="316" width="110" height="26" rx="6" fill="#18A8FF" />
+
+  <text x="195" y="430" text-anchor="middle" fill="#8FB4D8" font-family="Arial, sans-serif" font-size="16" font-weight="600">Mobile</text>
+  <text x="545" y="430" text-anchor="middle" fill="#8FB4D8" font-family="Arial, sans-serif" font-size="16" font-weight="600">Desktop</text>
+</svg>

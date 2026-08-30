@@ -62,7 +62,8 @@ export type BlogPost = {
   title: string;
   category: string;
   excerpt: string;
-  content: string;
+  coverImage: string;
+  sections: { title: string; paragraphs: string[] }[];
   date: string;
   /** Set to false while the real article isn't written yet — hides it without deleting it. */
   published?: boolean;
