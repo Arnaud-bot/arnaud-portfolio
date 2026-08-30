@@ -105,7 +105,12 @@ export type Dictionary = {
       technologies: string;
     };
   };
-  blogPage: { eyebrow: string; title: string; description: string };
+  blogPage: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    relatedTitle: string;
+  };
   labPage: {
     eyebrow: string;
     title: string;

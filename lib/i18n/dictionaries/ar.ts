@@ -223,6 +223,7 @@ export const ar: Dictionary = {
     eyebrow: "المدونة",
     title: "المقالات",
     description: "تجربة المستخدم، تصميم المنتج، التطوير، ودروس مستفادة من التجربة.",
+    relatedTitle: "مقالات أخرى قد تهمك",
   },
   labPage: {
     eyebrow: "مختبر المواقع",

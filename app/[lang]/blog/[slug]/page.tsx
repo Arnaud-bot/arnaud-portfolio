@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
 import { getBlogPosts } from "@/lib/content/blog";
 import { hasLocale, defaultLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 export function generateStaticParams() {
   return getBlogPosts("fr").map((post) => ({ slug: post.slug }));
@@ -33,8 +35,16 @@ export default async function BlogPostPage({
 }) {
   const { lang: rawLang, slug } = await params;
   const lang = hasLocale(rawLang) ? rawLang : defaultLocale;
-  const post = getBlogPosts(lang).find((p) => p.slug === slug);
+  const dict = await getDictionary(lang);
+  const allPosts = getBlogPosts(lang);
+  const post = allPosts.find((p) => p.slug === slug);
   if (!post) notFound();
+
+  const others = allPosts.filter((p) => p.slug !== slug);
+  const related = [
+    ...others.filter((p) => p.category === post.category),
+    ...others.filter((p) => p.category !== post.category),
+  ].slice(0, 3);
 
   return (
     <>
@@ -69,7 +79,7 @@ export default async function BlogPostPage({
         </Reveal>
       </Section>
 
-      <Section narrow className="pt-0 pb-16 md:pt-0 md:pb-24 lg:pt-0 lg:pb-32">
+      <Section narrow className="pt-0 pb-0 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0">
         <div className="space-y-10">
           {post.sections.map((section, i) => (
             <Reveal key={section.title} delay={i * 0.04}>
@@ -90,6 +100,37 @@ export default async function BlogPostPage({
           ))}
         </div>
       </Section>
+
+      {related.length > 0 && (
+        <Section className="pt-0">
+          <h2 className="text-xl font-semibold">{dict.blogPage.relatedTitle}</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {related.map((r) => (
+              <Link
+                key={r.slug}
+                href={`/${lang}/blog/${r.slug}`}
+                className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:bg-accent"
+              >
+                <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border">
+                  <Image
+                    src={r.coverImage}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <Badge variant="secondary" className="w-fit">
+                    {r.category}
+                  </Badge>
+                  <h3 className="mt-4 text-base font-semibold">{r.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   );
 }

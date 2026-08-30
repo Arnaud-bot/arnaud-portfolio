@@ -230,6 +230,7 @@ export const fr: Dictionary = {
     eyebrow: "Blog",
     title: "Articles",
     description: "UX, product design, développement, et retours d'expérience.",
+    relatedTitle: "À lire aussi",
   },
   labPage: {
     eyebrow: "Labo",

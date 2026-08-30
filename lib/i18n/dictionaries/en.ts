@@ -229,6 +229,7 @@ export const en: Dictionary = {
     eyebrow: "Blog",
     title: "Articles",
     description: "UX, product design, development, and lessons learned.",
+    relatedTitle: "You might also like",
   },
   labPage: {
     eyebrow: "Website Lab",
