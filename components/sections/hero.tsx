@@ -9,7 +9,7 @@ import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   return (
-    <section className="relative overflow-hidden pt-12 pb-10 md:pt-28 md:pb-24">
+    <section className="relative overflow-hidden pt-12 pb-10 md:pt-14 md:pb-12">
       <Container>
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
           <div>

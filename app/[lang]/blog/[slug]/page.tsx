@@ -51,7 +51,7 @@ export default async function BlogPostPage({
       <Section
         align="center"
         narrow
-        className="pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-32 lg:pb-0"
+        className="pt-16 pb-0 md:pt-12 md:pb-0 lg:pt-16 lg:pb-0"
       >
         <Badge variant="secondary" className="mx-auto w-fit">
           {post.category}
@@ -64,7 +64,7 @@ export default async function BlogPostPage({
         </time>
       </Section>
 
-      <Section narrow className="pt-10 pb-16 md:pt-10 md:pb-24 lg:pt-10 lg:pb-32">
+      <Section narrow className="pt-10 pb-16 md:pt-10 md:pb-12 lg:pt-10 lg:pb-16">
         <Reveal>
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border">
             <Image
@@ -102,7 +102,7 @@ export default async function BlogPostPage({
       </Section>
 
       {related.length > 0 && (
-        <Section className="pt-0">
+        <Section className="pt-0 pb-16 md:pt-0 md:pb-12 lg:pt-0 lg:pb-16">
           <h2 className="text-xl font-semibold">{dict.blogPage.relatedTitle}</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {related.map((r) => (

@@ -21,7 +21,7 @@ export function Section({
 }: SectionProps) {
   return (
     <section
-      className={cn("py-16 md:py-24 lg:py-32", className)}
+      className={cn("py-16 md:py-12 lg:py-16", className)}
       {...props}
     >
       <Container narrow={narrow}>

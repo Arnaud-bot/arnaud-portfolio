@@ -44,7 +44,7 @@ export default async function BreakdownPage({
       <Section
         align="center"
         narrow
-        className="pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-32 lg:pb-0"
+        className="pt-16 pb-0 md:pt-12 md:pb-0 lg:pt-16 lg:pb-0"
       >
         <Badge variant="secondary" className="mx-auto w-fit">
           {item.category}

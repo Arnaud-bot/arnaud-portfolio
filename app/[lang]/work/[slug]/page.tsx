@@ -47,7 +47,7 @@ export default async function CaseStudyPage({
       <Section
         align="center"
         narrow
-        className="pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-32 lg:pb-0"
+        className="pt-16 pb-0 md:pt-12 md:pb-0 lg:pt-16 lg:pb-0"
       >
         <Badge variant="secondary" className="mx-auto w-fit">
           {study.category}
@@ -97,7 +97,7 @@ export default async function CaseStudyPage({
         )}
       </Section>
 
-      <Section className="pt-10 pb-16 md:pt-10 md:pb-24 lg:pt-10 lg:pb-32">
+      <Section className="pt-10 pb-16 md:pt-10 md:pb-12 lg:pt-10 lg:pb-16">
         <Reveal>
           {study.demoEmbed ? (
             <div
@@ -139,7 +139,7 @@ export default async function CaseStudyPage({
 
       <Section
         narrow
-        className="pt-0 pb-16 md:pt-0 md:pb-24 lg:pt-0 lg:pb-32"
+        className="pt-0 pb-16 md:pt-0 md:pb-12 lg:pt-0 lg:pb-16"
       >
         <div className="space-y-16">
           <Reveal>
