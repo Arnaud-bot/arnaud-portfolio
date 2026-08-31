@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { Download } from "lucide-react";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import { getBlogPosts } from "@/lib/content/blog";
 import { getBreakdowns } from "@/lib/content/breakdowns";
 import { Logo } from "@/components/layout/logo";
@@ -53,7 +55,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       links: [
         { href: `/${lang}/contact`, label: dict.nav.letsTalk },
         { href: "mailto:arnaudmalanda1@gmail.com", label: "Email" },
-        { href: "/cv/arnaud-malanda-cv.pdf", label: dict.footer.downloadCv },
       ],
     },
   ];
@@ -67,6 +68,12 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <p className="mt-3 max-w-[320px] text-sm leading-[1.7] text-muted-foreground">
               {dict.footer.tagline}
             </p>
+            <Button asChild className="mt-5">
+              <a href="/cv/arnaud-malanda-cv.pdf" target="_blank" rel="noreferrer">
+                <Download className="size-4" />
+                {dict.footer.downloadCv}
+              </a>
+            </Button>
           </div>
 
           {columns.map((col) => (
@@ -79,8 +86,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      target={link.href.endsWith(".pdf") ? "_blank" : undefined}
-                      rel={link.href.endsWith(".pdf") ? "noreferrer" : undefined}
                       className="text-sm text-foreground/80 transition-colors hover:text-foreground"
                     >
                       {link.label}
