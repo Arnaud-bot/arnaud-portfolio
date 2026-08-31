@@ -59,6 +59,7 @@ export type Dictionary = {
     navTitle: string;
     contactTitle: string;
     rights: string;
+    downloadCv: string;
   };
   aboutPage: {
     eyebrow: string;

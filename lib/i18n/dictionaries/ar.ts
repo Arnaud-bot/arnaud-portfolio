@@ -143,6 +143,7 @@ export const ar: Dictionary = {
     navTitle: "التصفح",
     contactTitle: "تواصل",
     rights: "جميع الحقوق محفوظة.",
+    downloadCv: "تحميل سيرتي الذاتية",
   },
   aboutPage: {
     eyebrow: "نبذة عني",

@@ -147,6 +147,7 @@ export const en: Dictionary = {
     navTitle: "Navigation",
     contactTitle: "Contact",
     rights: "All rights reserved.",
+    downloadCv: "Download my CV",
   },
   aboutPage: {
     eyebrow: "About",

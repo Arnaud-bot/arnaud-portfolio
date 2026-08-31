@@ -53,6 +53,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       links: [
         { href: `/${lang}/contact`, label: dict.nav.letsTalk },
         { href: "mailto:arnaudmalanda1@gmail.com", label: "Email" },
+        { href: "/cv/arnaud-malanda-cv.pdf", label: dict.footer.downloadCv },
       ],
     },
   ];
@@ -78,6 +79,8 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      target={link.href.endsWith(".pdf") ? "_blank" : undefined}
+                      rel={link.href.endsWith(".pdf") ? "noreferrer" : undefined}
                       className="text-sm text-foreground/80 transition-colors hover:text-foreground"
                     >
                       {link.label}
