@@ -26,7 +26,7 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <RevealOnMount delay={0.05}>
               <h1 className="text-3xl font-bold leading-[1.12] tracking-[-0.02em] sm:text-4xl md:text-5xl md:leading-[1.08] lg:text-6xl">
                 {beforeHighlight}
-                <span className="text-highlight">{dict.hero.titleHighlight}</span>
+                <span className="text-primary">{dict.hero.titleHighlight}</span>
                 {afterHighlight}
               </h1>
             </RevealOnMount>
@@ -39,10 +39,7 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
             <RevealOnMount delay={0.15}>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 md:mt-10">
-                <Button
-                  asChild
-                  className="h-12 w-full bg-highlight px-8 text-base text-highlight-foreground hover:bg-highlight/85 sm:w-auto"
-                >
+                <Button asChild className="h-12 w-full px-8 text-base sm:w-auto">
                   <Link href={`/${lang}/work`}>
                     {dict.hero.viewMyWork}
                     <ArrowRight className="size-4 rtl:-scale-x-100" />
@@ -63,7 +60,7 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <div className="relative mx-auto w-[62%] max-w-[220px] sm:w-full sm:max-w-[420px]">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-[radial-gradient(circle,rgba(24,168,255,0.18),transparent_70%)] sm:-inset-12"
+                className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-[radial-gradient(circle,rgba(242,169,59,0.18),transparent_70%)] sm:-inset-12"
               />
               <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-border bg-card md:aspect-[4/5]">
                 <Image

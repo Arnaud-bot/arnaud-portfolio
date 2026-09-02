@@ -7,7 +7,7 @@ export function LogoMark({ className }: { className?: string }) {
       className={cn("size-8", className)}
       aria-hidden
     >
-      <rect width="40" height="40" rx="10" fill="#18A8FF" />
+      <rect width="40" height="40" rx="10" fill="#F2A93B" />
       <text
         x="20"
         y="27"
