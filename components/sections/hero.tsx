@@ -8,6 +8,10 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const [beforeHighlight, afterHighlight] = dict.hero.title.split(
+    dict.hero.titleHighlight
+  );
+
   return (
     <section className="relative overflow-hidden pt-12 pb-10 md:pt-14 md:pb-12">
       <Container>
@@ -21,7 +25,9 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
             <RevealOnMount delay={0.05}>
               <h1 className="text-3xl font-bold leading-[1.12] tracking-[-0.02em] sm:text-4xl md:text-5xl md:leading-[1.08] lg:text-6xl">
-                {dict.hero.title}
+                {beforeHighlight}
+                <span className="text-highlight">{dict.hero.titleHighlight}</span>
+                {afterHighlight}
               </h1>
             </RevealOnMount>
 
@@ -33,7 +39,10 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
             <RevealOnMount delay={0.15}>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 md:mt-10">
-                <Button asChild className="h-12 w-full px-8 text-base sm:w-auto">
+                <Button
+                  asChild
+                  className="h-12 w-full bg-highlight px-8 text-base text-highlight-foreground hover:bg-highlight/85 sm:w-auto"
+                >
                   <Link href={`/${lang}/work`}>
                     {dict.hero.viewMyWork}
                     <ArrowRight className="size-4 rtl:-scale-x-100" />

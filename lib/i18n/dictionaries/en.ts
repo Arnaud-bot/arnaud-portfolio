@@ -62,6 +62,7 @@ export const en: Dictionary = {
     eyebrow: "Product-Focused Developer · Dubai, UAE",
     title:
       "I turn digital products into experiences people love to use.",
+    titleHighlight: "people love",
     description:
       "I audit, redesign and build premium websites and apps for founders and product teams who want to convert more and look more credible.",
     viewMyWork: "View My Work",

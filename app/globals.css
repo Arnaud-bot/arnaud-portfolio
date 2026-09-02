@@ -32,6 +32,8 @@
   --color-success-foreground: var(--success-foreground);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
   --color-primary-hover: var(--primary-hover);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -76,6 +78,8 @@
   --success-foreground: #081A2F;
   --warning: #FFB547;
   --warning-foreground: #081A2F;
+  --highlight: #F2A93B;
+  --highlight-foreground: #2B1900;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
   --ring: #18A8FF;
@@ -117,6 +121,8 @@
   --success-foreground: #081A2F;
   --warning: #FFB547;
   --warning-foreground: #081A2F;
+  --highlight: #F2A93B;
+  --highlight-foreground: #2B1900;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
   --ring: #18A8FF;

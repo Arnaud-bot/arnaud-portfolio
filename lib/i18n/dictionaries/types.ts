@@ -23,6 +23,7 @@ export type Dictionary = {
   hero: {
     eyebrow: string;
     title: string;
+    titleHighlight: string;
     description: string;
     viewMyWork: string;
     letsTalk: string;
