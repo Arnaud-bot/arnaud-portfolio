@@ -1,11 +1,66 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiFlutter,
+  SiTailwindcss,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { RevealOnMount } from "@/components/animations/reveal-on-mount";
+import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
+
+type StackBadge = {
+  name: string;
+  Icon: IconType;
+  color: string;
+  position: string;
+  delay: number;
+};
+
+const STACK_BADGES: StackBadge[] = [
+  {
+    name: "Next.js",
+    Icon: SiNextdotjs,
+    color: "#081A2F",
+    position: "-top-[6%] -left-[10%]",
+    delay: 0,
+  },
+  {
+    name: "React",
+    Icon: SiReact,
+    color: "#61DAFB",
+    position: "top-[16%] -right-[12%]",
+    delay: 0.8,
+  },
+  {
+    name: "TypeScript",
+    Icon: SiTypescript,
+    color: "#3178C6",
+    position: "bottom-[30%] -left-[14%]",
+    delay: 1.6,
+  },
+  {
+    name: "Flutter",
+    Icon: SiFlutter,
+    color: "#02569B",
+    position: "bottom-[8%] -right-[8%]",
+    delay: 2.4,
+  },
+  {
+    name: "Tailwind",
+    Icon: SiTailwindcss,
+    color: "#06B6D4",
+    position: "top-[46%] -left-[16%]",
+    delay: 3.2,
+  },
+];
 
 export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const [beforeHighlight, afterHighlight] = dict.hero.title.split(
@@ -72,6 +127,23 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   sizes="(min-width: 640px) 420px, 220px"
                 />
               </div>
+
+              {STACK_BADGES.map(({ name, Icon, color, position, delay }) => (
+                <div
+                  key={name}
+                  aria-hidden
+                  className={cn(
+                    "absolute z-10 flex flex-col items-center gap-1 rounded-2xl border border-primary-foreground/15 bg-primary px-2.5 py-2 shadow-lg motion-safe:animate-float sm:gap-1.5 sm:px-3 sm:py-2.5",
+                    position
+                  )}
+                  style={{ animationDelay: `${delay}s` }}
+                >
+                  <Icon className="size-3.5 sm:size-[18px]" style={{ color }} />
+                  <span className="font-mono text-[7px] font-semibold tracking-tight text-primary-foreground sm:text-[9.5px]">
+                    {name}
+                  </span>
+                </div>
+              ))}
 
               <div className="absolute -bottom-4 start-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-border bg-popover/95 px-3 py-2 text-[11px] shadow-lg backdrop-blur-sm sm:start-5 sm:translate-x-0 sm:gap-2.5 sm:px-4 sm:py-2.5 sm:text-xs">
                 <span className="relative flex size-2 shrink-0">
