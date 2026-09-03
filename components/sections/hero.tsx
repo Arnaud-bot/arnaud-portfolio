@@ -50,14 +50,14 @@ const STACK_BADGES: StackBadge[] = [
     name: "Flutter",
     Icon: SiFlutter,
     color: "#02569B",
-    position: "-bottom-[4%] -right-[10%]",
+    position: "top-[54%] -right-[6%] sm:top-auto sm:-bottom-[4%] sm:-right-[10%]",
     delay: 2.4,
   },
   {
     name: "Tailwind",
     Icon: SiTailwindcss,
     color: "#06B6D4",
-    position: "-bottom-[2%] -left-[16%]",
+    position: "top-[54%] -left-[8%] sm:top-auto sm:-bottom-[2%] sm:-left-[16%]",
     delay: 3.2,
   },
 ];
