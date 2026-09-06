@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import { STEP_ILLUSTRATIONS } from "@/components/illustrations/service-illustrations";
 import { getProcessSteps } from "@/lib/content/testimonials";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
@@ -14,19 +15,23 @@ export function Process({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       description={dict.process.description}
     >
       <div className="grid gap-8 md:grid-cols-5">
-        {processSteps.map((step, i) => (
-          <Reveal key={step.step} delay={i * 0.05}>
-            <div>
-              <span className="text-sm font-semibold text-primary">
-                {step.step}
-              </span>
-              <h3 className="mt-3 text-base font-semibold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-[1.7] text-muted-foreground">
-                {step.description}
-              </p>
-            </div>
-          </Reveal>
-        ))}
+        {processSteps.map((step, i) => {
+          const Illustration = STEP_ILLUSTRATIONS[i];
+          return (
+            <Reveal key={step.step} delay={i * 0.05}>
+              <div>
+                <Illustration className="h-14 w-14" />
+                <span className="mt-3 block text-sm font-semibold text-primary">
+                  {step.step}
+                </span>
+                <h3 className="mt-1 text-base font-semibold">{step.title}</h3>
+                <p className="mt-2 text-sm leading-[1.7] text-muted-foreground">
+                  {step.description}
+                </p>
+              </div>
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );

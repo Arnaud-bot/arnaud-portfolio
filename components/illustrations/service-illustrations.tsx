@@ -236,3 +236,88 @@ export function BuildMissionIllustration(props: SVGProps<SVGSVGElement>) {
 export const MISSION_ILLUSTRATIONS: Array<
   (props: SVGProps<SVGSVGElement>) => React.JSX.Element
 > = [AuditMissionIllustration, RedesignMissionIllustration, BuildMissionIllustration];
+
+function StepBadge({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <circle cx="40" cy="40" r="34" fill={AMBER} opacity="0.1" />
+      {children}
+    </>
+  );
+}
+
+export function DiscoveryStepIllustration(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 80 80" {...props}>
+      <StepBadge>
+        <rect x="20" y="24" width="40" height="26" rx="10" fill={DEEP} stroke={INK} strokeWidth="2" />
+        <path d="M28 50 L28 58 L36 50 Z" fill={DEEP} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="32" cy="37" r="3" fill={AMBER} />
+        <circle cx="40" cy="37" r="3" fill={AMBER} />
+        <circle cx="48" cy="37" r="3" fill={AMBER} />
+      </StepBadge>
+    </svg>
+  );
+}
+
+export function AuditStepIllustration(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 80 80" {...props}>
+      <StepBadge>
+        <rect x="18" y="42" width="8" height="14" fill={INK} opacity="0.35" />
+        <rect x="28" y="34" width="8" height="22" fill={AMBER} />
+        <rect x="38" y="40" width="8" height="16" fill={INK} opacity="0.35" />
+        <circle cx="50" cy="34" r="13" fill={DEEP} stroke={AMBER} strokeWidth="4" />
+        <line x1="59" y1="43" x2="66" y2="50" stroke={AMBER} strokeWidth="5" strokeLinecap="round" />
+      </StepBadge>
+    </svg>
+  );
+}
+
+export function DesignStepIllustration(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 80 80" {...props}>
+      <StepBadge>
+        <circle cx="26" cy="50" r="7" fill={AMBER} />
+        <circle cx="40" cy="54" r="5" fill={INK} opacity="0.4" />
+        <path d="M32 44 L52 22 L60 30 L40 52 Z" fill={AMBER} />
+        <rect x="56" y="16" width="9" height="9" rx="2" fill={AMBER} transform="rotate(45 60.5 20.5)" />
+      </StepBadge>
+    </svg>
+  );
+}
+
+export function DevelopmentStepIllustration(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 80 80" {...props}>
+      <StepBadge>
+        <path d="M28 28 L16 40 L28 52" fill="none" stroke={AMBER} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M52 28 L64 40 L52 52" fill="none" stroke={AMBER} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="44" y1="24" x2="36" y2="56" stroke={INK} strokeWidth="3.5" strokeLinecap="round" opacity="0.7" />
+      </StepBadge>
+    </svg>
+  );
+}
+
+export function IterationStepIllustration(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 80 80" {...props}>
+      <StepBadge>
+        <path d="M18 54 L30 40 L38 48 L54 26" fill="none" stroke={AMBER} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M44 26 L54 26 L54 36" fill="none" stroke={AMBER} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M58 52a12 12 0 1 1-4-16" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" opacity="0.75" />
+        <path d="M52 34 L58 36 L57 30 Z" fill={INK} opacity="0.75" />
+      </StepBadge>
+    </svg>
+  );
+}
+
+export const STEP_ILLUSTRATIONS: Array<
+  (props: SVGProps<SVGSVGElement>) => React.JSX.Element
+> = [
+  DiscoveryStepIllustration,
+  AuditStepIllustration,
+  DesignStepIllustration,
+  DevelopmentStepIllustration,
+  IterationStepIllustration,
+];
