@@ -10,10 +10,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "COO, EasyFitness UAE",
     },
     {
-      quote: "[Témoignage à recueillir auprès d'un client réel.]",
-      name: "[Nom du client]",
-      role: "[Poste, entreprise]",
-      published: false,
+      quote:
+        "Travailler avec Arnaud sur le site d'EasyFitness a été une expérience fantastique. Il est incroyablement rapide, efficace, et a transformé notre vision en une présence digitale propre et moderne sans jamais perdre le rythme. Au-delà de son impressionnante rapidité d'exécution, son approche technique et sa capacité à résoudre les problèmes ont rendu tout le processus fluide. Je recommande vivement Arnaud à quiconque recherche un designer web fiable et de tout premier ordre.",
+      name: "Modi Komeyli",
+      role: "Responsable Marketing, EasyFitness UAE",
     },
     {
       quote: "[Témoignage à recueillir auprès d'un client réel.]",
@@ -30,10 +30,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "COO, EasyFitness UAE",
     },
     {
-      quote: "[Testimonial to collect from a real client.]",
-      name: "[Client name]",
-      role: "[Role, company]",
-      published: false,
+      quote:
+        "Working with Arnaud on the EasyFitness website was a fantastic experience. He is incredibly fast, efficient, and turned our vision into a clean, modern digital presence without missing a beat. Beyond his impressive turnaround time, his technical approach and problem-solving made the entire process seamless. I highly recommend Arnaud to anyone looking for a reliable, top-tier web designer.",
+      name: "Modi Komeyli",
+      role: "Marketing Manager, EasyFitness UAE",
     },
     {
       quote: "[Testimonial to collect from a real client.]",
@@ -50,10 +50,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "COO، EasyFitness UAE",
     },
     {
-      quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
-      name: "[اسم العميل]",
-      role: "[المنصب، الشركة]",
-      published: false,
+      quote:
+        "كان العمل مع أرنو على موقع EasyFitness تجربة رائعة. فهو سريع وفعّال بشكل مذهل، وحوّل رؤيتنا إلى حضور رقمي أنيق وعصري دون أي تعثّر. إلى جانب سرعة إنجازه المثيرة للإعجاب، جعلت مقاربته التقنية وقدرته على حل المشكلات العملية برمّتها سلسة تمامًا. أوصي بشدة بأرنو لأي شخص يبحث عن مصمم مواقع موثوق وعالي المستوى.",
+      name: "Modi Komeyli",
+      role: "مديرة التسويق، EasyFitness UAE",
     },
     {
       quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
