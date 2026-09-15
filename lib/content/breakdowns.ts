@@ -90,6 +90,56 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       recommendations: ["[Recommandation 1]"],
       published: false,
     },
+    {
+      slug: "breakdown-barbershop",
+      title: "Cuts Gents Salon — Analyse du site",
+      category: "Salon de coiffure",
+      uxScore: 6,
+      summary:
+        "Un salon qui affiche ses prix et raconte une vraie histoire de marque — mais une incohérence de nom et l'absence totale d'avis clients freinent la confiance.",
+      strengths: [
+        "Les tarifs sont affichés directement sur le site (45-210 AED) — un vrai gain de confiance pour un salon, alors que beaucoup cachent leurs prix",
+        "La page « About » raconte une vraie histoire de marque (les fondateurs Ali et Emad, leur mission) plutôt qu'un simple paragraphe générique",
+        "Plusieurs CTA « Book an Appointment » bien répartis sur la page, avec un lien WhatsApp direct",
+      ],
+      weaknesses: [
+        "Le nom de marque utilisé partout sur le site (email, copyright) est « Cutsinuae », différent du nom de domaine « cutsuae.com » — cette incohérence peut faire hésiter un visiteur qui vérifie qu'il est sur le bon site",
+        "Le tableau de prix ne couvre que 8 des 12 services mis en avant juste au-dessus (pas de prix pour le massage, la coloration, le threading ou les soins) — pour ces prestations, il faut appeler pour connaître le tarif",
+        "Aucun avis client ni note affichée, alors que c'est justement ce qui rassure le plus avant de réserver dans un nouveau salon",
+      ],
+      recommendations: [
+        "Aligner le nom de marque affiché (email, copyright) avec le nom de domaine pour éviter toute confusion",
+        "Compléter le tableau de prix avec les services manquants, ou au moins indiquer une fourchette « à partir de »",
+        "Ajouter les avis Google ou des témoignages clients directement sur la page d'accueil",
+      ],
+      siteUrl: "https://cutsuae.com",
+      published: true,
+    },
+    {
+      slug: "breakdown-construction",
+      title: "Contrast (ContrastTKP) — Analyse du site",
+      category: "Construction",
+      uxScore: 6,
+      summary:
+        "Un site B2B qui inspire confiance grâce à des références clients solides et une FAQ bien pensée — mais un canal de contact cassé et un portfolio trop peu détaillé freinent la conversion.",
+      strengths: [
+        "Une liste de clients très forte pour la crédibilité (Emaar, Nakheel, Meraas, Yas Island...) qui rassure immédiatement un acheteur B2B ou un particulier haut de gamme",
+        "Une FAQ qui répond directement aux vraies objections avant contact (délais, zones couvertes, garantie, gestion des coûts)",
+        "Un discours de marque travaillé (« Contrast isn't just our name, it's our language ») qui différencie l'entreprise d'un simple prestataire BTP générique",
+      ],
+      weaknesses: [
+        "L'adresse email affichée en pied de page et dans la section contact s'affiche littéralement comme « [email protected] » au lieu de la vraie adresse — un canal de contact entier est cassé pour le visiteur",
+        "Chaque service utilise le même lien « Learn More » sans texte différenciant — un visiteur qui scanne rapidement la page ne peut pas distinguer les liens entre eux",
+        "La section « Featured Projects » ne montre que des noms de projets (SALT Cairo, Sahel - Villa 1...) sans description, chiffres ou avant/après, alors que c'est justement la preuve qui devrait convaincre après 35 ans d'expérience",
+      ],
+      recommendations: [
+        "Corriger l'affichage de l'adresse email (probablement un plugin d'obfuscation mal configuré) pour rétablir ce canal de contact",
+        "Donner un texte spécifique à chaque lien « Learn More » (ex : « Découvrir les Turnkey Projects »)",
+        "Transformer chaque projet en mini étude de cas avec quelques lignes de contexte et des visuels avant/après",
+      ],
+      siteUrl: "https://contrasttkp.com",
+      published: true,
+    },
   ],
   en: [
     {
@@ -175,6 +225,56 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       recommendations: ["[Recommendation 1]"],
       published: false,
     },
+    {
+      slug: "breakdown-barbershop",
+      title: "Cuts Gents Salon — Website Review",
+      category: "Barbershop",
+      uxScore: 6,
+      summary:
+        "A salon that shows its prices and tells a real brand story — but a name mismatch and the total absence of reviews hold back trust.",
+      strengths: [
+        "Prices are shown directly on the site (AED 45-210) — a real trust signal for a salon, when many hide their pricing",
+        "The About section tells a real brand story (founders Ali and Emad, their mission) instead of a generic paragraph",
+        "Multiple well-placed \"Book an Appointment\" CTAs across the page, with a direct WhatsApp link",
+      ],
+      weaknesses: [
+        "The brand name used everywhere on the site (email, copyright) is \"Cutsinuae\", different from the domain name \"cutsuae.com\" — this mismatch can make a visitor double-check they're on the right site",
+        "The pricing table only covers 8 of the 12 services promoted just above it (no price for massage, coloring, threading or treatments) — for those, you have to call to find out",
+        "No customer reviews or rating shown anywhere, when that's exactly what reassures people most before booking at a new salon",
+      ],
+      recommendations: [
+        "Align the displayed brand name (email, copyright) with the domain name to avoid confusion",
+        "Fill in the missing services in the pricing table, or at least show a \"starting from\" range",
+        "Add Google reviews or client testimonials directly on the homepage",
+      ],
+      siteUrl: "https://cutsuae.com",
+      published: true,
+    },
+    {
+      slug: "breakdown-construction",
+      title: "Contrast (ContrastTKP) — Website Review",
+      category: "Construction",
+      uxScore: 6,
+      summary:
+        "A B2B site that builds trust through strong client references and a well-thought-out FAQ — but a broken contact channel and a thin portfolio hold back conversion.",
+      strengths: [
+        "A very strong client list for credibility (Emaar, Nakheel, Meraas, Yas Island...) that immediately reassures a B2B buyer or a high-end individual client",
+        "An FAQ that directly answers real objections before contact (timelines, coverage areas, warranty, cost management)",
+        "A crafted brand voice (\"Contrast isn't just our name, it's our language\") that sets the company apart from a generic construction contractor",
+      ],
+      weaknesses: [
+        "The email address shown in the footer and contact section literally displays as \"[email protected]\" instead of the real address — an entire contact channel is broken for visitors",
+        "Every service uses the same \"Learn More\" link text with nothing to differentiate it — a visitor scanning the page quickly can't tell the links apart",
+        "The \"Featured Projects\" section only shows project names (SALT Cairo, Sahel - Villa 1...) with no description, numbers or before/after, when that's exactly the proof that should close the deal after 35 years in business",
+      ],
+      recommendations: [
+        "Fix the broken email display (likely a misconfigured obfuscation plugin) to restore that contact channel",
+        "Give each \"Learn More\" link unique, specific text (e.g. \"Explore Turnkey Projects\")",
+        "Turn each project into a mini case study with a few lines of context and before/after visuals",
+      ],
+      siteUrl: "https://contrasttkp.com",
+      published: true,
+    },
   ],
   ar: [
     {
@@ -259,6 +359,56 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       weaknesses: ["[نقطة ضعف 1]"],
       recommendations: ["[توصية 1]"],
       published: false,
+    },
+    {
+      slug: "breakdown-barbershop",
+      title: "Cuts Gents Salon — مراجعة الموقع",
+      category: "صالون حلاقة",
+      uxScore: 6,
+      summary:
+        "صالون يعرض أسعاره ويروي قصة علامة تجارية حقيقية — لكن تناقض الاسم وغياب تقييمات العملاء كليًا يُضعفان الثقة.",
+      strengths: [
+        "الأسعار معروضة مباشرة على الموقع (45-210 درهم) — عامل ثقة حقيقي لصالون، بينما تُخفي مواقع كثيرة أسعارها",
+        "قسم 'من نحن' يروي قصة علامة تجارية حقيقية (المؤسسان علي وعماد ورسالتهما) بدلاً من فقرة عامة",
+        "عدة أزرار 'احجز موعدك' موزعة بشكل جيد على الصفحة، مع رابط واتساب مباشر",
+      ],
+      weaknesses: [
+        "اسم العلامة التجارية المستخدم في كل مكان بالموقع (البريد الإلكتروني، حقوق النشر) هو 'Cutsinuae'، وهو مختلف عن اسم النطاق 'cutsuae.com' — هذا التناقض قد يجعل الزائر يتردد في التأكد من أنه في الموقع الصحيح",
+        "جدول الأسعار يغطي فقط 8 من أصل 12 خدمة مُبرزة أعلاه (لا يوجد سعر للمساج أو صبغ الشعر أو النمص أو العلاجات) — لمعرفة أسعارها يجب الاتصال",
+        "لا توجد أي تقييمات أو آراء عملاء ظاهرة، رغم أنها بالضبط ما يطمئن الزوار أكثر قبل حجز موعد في صالون جديد",
+      ],
+      recommendations: [
+        "توحيد اسم العلامة التجارية الظاهر (البريد الإلكتروني، حقوق النشر) مع اسم النطاق لتفادي أي لبس",
+        "استكمال جدول الأسعار بالخدمات الناقصة، أو على الأقل ذكر سعر تقريبي 'ابتداءً من'",
+        "إضافة تقييمات جوجل أو آراء العملاء مباشرة على الصفحة الرئيسية",
+      ],
+      siteUrl: "https://cutsuae.com",
+      published: true,
+    },
+    {
+      slug: "breakdown-construction",
+      title: "Contrast (ContrastTKP) — مراجعة الموقع",
+      category: "الإنشاءات",
+      uxScore: 6,
+      summary:
+        "موقع B2B يبني الثقة بفضل مراجع عملاء قوية وأسئلة شائعة مدروسة جيدًا — لكن قناة تواصل معطلة وملف أعمال غير مفصّل بما يكفي يعيقان التحويل.",
+      strengths: [
+        "قائمة عملاء قوية جدًا تمنح مصداقية فورية (إعمار، نخيل، مراس، ياس آيلاند...) وتطمئن المشتري سواء كان شركة أو فردًا يبحث عن مستوى راقٍ",
+        "قسم أسئلة شائعة يجيب مباشرة عن التحفظات الحقيقية قبل التواصل (المدة، المناطق المخدومة، الضمان، إدارة التكاليف)",
+        "خطاب علامة تجارية مدروس ('Contrast ليس مجرد اسمنا، إنه لغتنا') يميز الشركة عن مقاول إنشاءات عادي",
+      ],
+      weaknesses: [
+        "عنوان البريد الإلكتروني الظاهر في تذييل الصفحة وقسم التواصل يظهر حرفيًا كـ '[email protected]' بدلاً من العنوان الحقيقي — قناة تواصل كاملة معطلة أمام الزائر",
+        "تستخدم كل خدمة نفس رابط 'Learn More' دون أي نص مميز — الزائر الذي يتصفح الصفحة بسرعة لا يمكنه التفريق بين الروابط",
+        "قسم 'المشاريع المميزة' يعرض فقط أسماء المشاريع (SALT Cairo، Sahel - Villa 1...) دون وصف أو أرقام أو صور قبل/بعد، رغم أن هذا بالضبط ما يجب أن يقنع العميل بعد 35 عامًا من الخبرة",
+      ],
+      recommendations: [
+        "إصلاح عرض البريد الإلكتروني (على الأرجح مكوّن إضافي لإخفاء البريد معطّل) لاستعادة قناة التواصل هذه",
+        "إعطاء كل رابط 'Learn More' نصًا مميزًا وخاصًا به (مثال: 'اكتشف مشاريع Turnkey')",
+        "تحويل كل مشروع إلى دراسة حالة مصغّرة مع سطرين من السياق وصور قبل/بعد",
+      ],
+      siteUrl: "https://contrasttkp.com",
+      published: true,
     },
   ],
 };
