@@ -129,6 +129,8 @@ export const en: Dictionary = {
   testimonialsSection: {
     eyebrow: "Testimonials",
     title: "What clients say",
+    readMore: "Read more",
+    readLess: "Read less",
   },
   aboutTeaser: {
     eyebrow: "About",

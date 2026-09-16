@@ -126,6 +126,8 @@ export const ar: Dictionary = {
   testimonialsSection: {
     eyebrow: "آراء العملاء",
     title: "ماذا يقول عني عملائي",
+    readMore: "قراءة المزيد",
+    readLess: "عرض أقل",
   },
   aboutTeaser: {
     eyebrow: "نبذة عني",

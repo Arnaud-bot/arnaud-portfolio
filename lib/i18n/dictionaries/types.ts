@@ -52,7 +52,12 @@ export type Dictionary = {
   };
   process: { eyebrow: string; title: string; description: string };
   techStack: { eyebrow: string; title: string };
-  testimonialsSection: { eyebrow: string; title: string };
+  testimonialsSection: {
+    eyebrow: string;
+    title: string;
+    readMore: string;
+    readLess: string;
+  };
   aboutTeaser: { eyebrow: string; title: string; body: string; cta: string };
   contactCta: { title: string; description: string; cta: string };
   footer: {
