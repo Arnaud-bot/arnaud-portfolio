@@ -16,10 +16,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "Responsable Marketing, EasyFitness UAE",
     },
     {
-      quote: "[Témoignage à recueillir auprès d'un client réel.]",
-      name: "[Nom du client]",
-      role: "[Poste, entreprise]",
-      published: false,
+      quote:
+        "J'ai vu Arnaud travailler sur ses projets récents. Ce qui m'a marqué, c'est sa capacité à itérer vite sans sacrifier la qualité, et à toujours poser les bonnes questions avant d'avancer — même sous pression. Un vrai gage de sérieux.",
+      name: "Haji",
+      role: "Coach personnel",
     },
   ],
   en: [
@@ -36,10 +36,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "Marketing Manager, EasyFitness UAE",
     },
     {
-      quote: "[Testimonial to collect from a real client.]",
-      name: "[Client name]",
-      role: "[Role, company]",
-      published: false,
+      quote:
+        "I saw Arnaud work on his recent projects. What struck me was his ability to iterate quickly without sacrificing quality, and to always ask the right questions before going ahead - even under pressure. A real guarantee of seriousness.",
+      name: "Haji",
+      role: "Personal Coach",
     },
   ],
   ar: [
@@ -56,10 +56,10 @@ const testimonialsByLocale: Record<Locale, Testimonial[]> = {
       role: "مديرة التسويق، EasyFitness UAE",
     },
     {
-      quote: "[شهادة سيتم جمعها من عميل حقيقي.]",
-      name: "[اسم العميل]",
-      role: "[المنصب، الشركة]",
-      published: false,
+      quote:
+        "شاهدت أرنو يعمل على مشاريعه الأخيرة. ما لفت انتباهي هو قدرته على التكرار بسرعة دون التضحية بالجودة، وطرح الأسئلة الصحيحة دائمًا قبل المضي قدمًا — حتى تحت الضغط. ضمانة حقيقية للجدية.",
+      name: "Haji",
+      role: "مدرّب شخصي",
     },
   ],
 };
