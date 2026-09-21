@@ -128,6 +128,8 @@ export const ar: Dictionary = {
     title: "ماذا يقول عني عملائي",
     readMore: "قراءة المزيد",
     readLess: "عرض أقل",
+    pause: "إيقاف مؤقت",
+    play: "استئناف",
   },
   aboutTeaser: {
     eyebrow: "نبذة عني",

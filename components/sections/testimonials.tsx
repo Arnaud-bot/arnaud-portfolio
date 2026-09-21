@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Pause, Play } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { getTestimonials } from "@/lib/content/testimonials";
@@ -72,11 +73,15 @@ function TestimonialCard({
 }
 
 export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const [isPaused, setIsPaused] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false);
+
   const testimonials = getTestimonials(lang);
 
   if (testimonials.length === 0) return null;
 
   const canLoop = testimonials.length >= 3;
+  const isRunning = !isPaused && !isInteracting;
 
   return (
     <Section
@@ -84,24 +89,48 @@ export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary })
       title={dict.testimonialsSection.title}
     >
       {canLoop ? (
-        <div className="group -mx-6 overflow-x-hidden overflow-y-visible [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:-mx-12 lg:-mx-20">
-          <div
-            className="testimonials-track flex w-max items-start gap-6 px-6 rtl:[animation-direction:reverse] group-hover:[animation-play-state:paused] md:px-12 lg:px-20"
-            style={{
-              animation: `testimonials-marquee ${testimonials.length * 9}s linear infinite`,
-            }}
-          >
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <TestimonialCard
-                key={t.name + i}
-                testimonial={t}
-                readMoreLabel={dict.testimonialsSection.readMore}
-                readLessLabel={dict.testimonialsSection.readLess}
-                hidden={i >= testimonials.length}
-              />
-            ))}
+        <>
+          <div className="mb-4 flex justify-end">
+            <button
+              type="button"
+              onClick={() => setIsPaused((v) => !v)}
+              aria-pressed={isPaused}
+              className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {isPaused ? (
+                <Play className="size-3.5" />
+              ) : (
+                <Pause className="size-3.5" />
+              )}
+              {isPaused ? dict.testimonialsSection.play : dict.testimonialsSection.pause}
+            </button>
           </div>
-        </div>
+          <div
+            className="-mx-6 overflow-x-hidden overflow-y-visible [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:-mx-12 lg:-mx-20"
+            onMouseEnter={() => setIsInteracting(true)}
+            onMouseLeave={() => setIsInteracting(false)}
+            onFocus={() => setIsInteracting(true)}
+            onBlur={() => setIsInteracting(false)}
+          >
+            <div
+              className="testimonials-track flex w-max items-start gap-6 px-6 rtl:[animation-direction:reverse] md:px-12 lg:px-20"
+              style={{
+                animation: `testimonials-marquee ${testimonials.length * 9}s linear infinite`,
+                animationPlayState: isRunning ? "running" : "paused",
+              }}
+            >
+              {[...testimonials, ...testimonials].map((t, i) => (
+                <TestimonialCard
+                  key={t.name + i}
+                  testimonial={t}
+                  readMoreLabel={dict.testimonialsSection.readMore}
+                  readLessLabel={dict.testimonialsSection.readLess}
+                  hidden={i >= testimonials.length}
+                />
+              ))}
+            </div>
+          </div>
+        </>
       ) : (
         <div
           className={cn(
