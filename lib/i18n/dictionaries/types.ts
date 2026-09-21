@@ -30,6 +30,7 @@ export type Dictionary = {
     availableBadge: string;
   };
   trustBar: { quote: string; author: string };
+  clientsSection: { title: string };
   valueProposition: {
     eyebrow: string;
     title: string;

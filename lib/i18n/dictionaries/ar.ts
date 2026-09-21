@@ -72,6 +72,9 @@ export const ar: Dictionary = {
       "اهتمامه بالتفاصيل، واستجابته السريعة، وقدرته على تحويل رؤيتنا إلى موقع حديث وعالي الأداء فاقت توقعاتنا.",
     author: "Ali Chaikhi، COO، EasyFitness UAE",
   },
+  clientsSection: {
+    title: "الشركات التي أعمل معها حاليًا",
+  },
   valueProposition: {
     eyebrow: "مهمتي",
     title: "أنا لا أبني مواقع فقط",
