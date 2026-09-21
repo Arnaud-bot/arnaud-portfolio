@@ -140,6 +140,31 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       siteUrl: "https://contrasttkp.com",
       published: true,
     },
+    {
+      slug: "breakdown-perfume",
+      title: "Oud Al Naas — Analyse du site",
+      category: "Parfumerie",
+      uxScore: 4,
+      summary:
+        "Une boutique en ligne au catalogue riche et aux prix clairs — mais des liens de menu qui renvoient encore vers le site de démonstration du thème d'origine, ce qui casse sérieusement la confiance sur une boutique de produits premium.",
+      strengths: [
+        "Un catalogue riche (plus de 200 produits) bien organisé par catégories claires (huiles, flacons, oud pur, matières premières, accessoires)",
+        "Les prix sont affichés directement sur chaque fiche produit, du petit échantillon à 5 AED jusqu'aux huiles d'oud premium à plus de 6 000 AED",
+        "Les vraies coordonnées de contact (adresse à Deira, Dubaï, email, téléphone) sont bien présentes en pied de page",
+      ],
+      weaknesses: [
+        "Le menu mobile et plusieurs liens de navigation pointent encore vers le site de démonstration du thème WordPress d'origine (wpecomus.com) — un visiteur qui clique sur « Screen protection », « Headphone » ou « Need Help? » quitte le site vers une boutique d'accessoires électroniques sans rapport",
+        "Le menu mobile affiche une fausse adresse à New York (« 1234 Fashion Street ») et un email générique (« info@fashionshop.com »), en contradiction directe avec les vraies coordonnées à Dubaï affichées ailleurs sur le site",
+        "Aucun avis ni note client n'apparaît sur les produits, malgré des prix élevés (jusqu'à 6 200 AED) où la confiance est justement le principal frein à l'achat",
+      ],
+      recommendations: [
+        "Auditer entièrement le menu (desktop et mobile) pour retirer tous les liens et textes hérités du template d'origine",
+        "Remplacer l'adresse et l'email placeholder du menu mobile par les vraies coordonnées Dubaï déjà utilisées en pied de page",
+        "Activer la collecte d'avis clients, au moins sur les références les plus vendues, pour rassurer avant un achat premium",
+      ],
+      siteUrl: "https://oudalnaas.com/shop/",
+      published: true,
+    },
   ],
   en: [
     {
@@ -275,6 +300,31 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
       siteUrl: "https://contrasttkp.com",
       published: true,
     },
+    {
+      slug: "breakdown-perfume",
+      title: "Oud Al Naas — Website Review",
+      category: "Perfume",
+      uxScore: 4,
+      summary:
+        "An online shop with a rich catalog and clear pricing — but menu links that still point to the original theme's demo site, which seriously undermines trust on a store selling premium goods.",
+      strengths: [
+        "A rich catalog (200+ products) well organized into clear categories (oils, bottles, pure oud, raw materials, accessories)",
+        "Prices are shown directly on every product, from AED 5 samples up to premium oud oils above AED 6,000",
+        "Real contact details (Deira, Dubai address, email, phone) are present in the footer",
+      ],
+      weaknesses: [
+        "The mobile menu and several navigation links still point to the original WordPress theme's demo site (wpecomus.com) — a visitor clicking \"Screen protection,\" \"Headphone,\" or \"Need Help?\" leaves the site for an unrelated electronics-accessories shop",
+        "The mobile menu shows a fake New York address (\"1234 Fashion Street\") and a generic email (\"info@fashionshop.com\"), directly contradicting the real Dubai contact details shown elsewhere on the site",
+        "No reviews or ratings appear on any product, despite prices reaching AED 6,200 — exactly where trust matters most before buying",
+      ],
+      recommendations: [
+        "Fully audit the menu (desktop and mobile) to remove every leftover link and text from the original template",
+        "Replace the placeholder address and email in the mobile menu with the real Dubai details already used in the footer",
+        "Turn on customer review collection, at least on best-sellers, to reassure buyers before a premium purchase",
+      ],
+      siteUrl: "https://oudalnaas.com/shop/",
+      published: true,
+    },
   ],
   ar: [
     {
@@ -408,6 +458,31 @@ const breakdownsByLocale: Record<Locale, Breakdown[]> = {
         "تحويل كل مشروع إلى دراسة حالة مصغّرة مع سطرين من السياق وصور قبل/بعد",
       ],
       siteUrl: "https://contrasttkp.com",
+      published: true,
+    },
+    {
+      slug: "breakdown-perfume",
+      title: "Oud Al Naas — مراجعة الموقع",
+      category: "عطور",
+      uxScore: 4,
+      summary:
+        "متجر إلكتروني بكتالوج غني وأسعار واضحة — لكن روابط قائمة التنقل ما زالت تُحيل إلى الموقع التجريبي للقالب الأصلي، ما يُضعف الثقة بشكل كبير في متجر يبيع منتجات فاخرة.",
+      strengths: [
+        "كتالوج غني (أكثر من 200 منتج) منظم بوضوح ضمن فئات واضحة (زيوت، قوارير، عود خام، مواد أولية، إكسسوارات)",
+        "الأسعار معروضة مباشرة على كل منتج، من عينات بـ 5 دراهم إلى زيوت عود فاخرة تتجاوز 6000 درهم",
+        "بيانات التواصل الحقيقية (عنوان في ديرة، دبي، البريد الإلكتروني، الهاتف) موجودة في تذييل الصفحة",
+      ],
+      weaknesses: [
+        "لا تزال قائمة التنقل على الجوال وعدة روابط تُحيل إلى الموقع التجريبي لقالب ووردبريس الأصلي (wpecomus.com) — الزائر الذي ينقر على 'Screen protection' أو 'Headphone' أو 'Need Help?' يغادر الموقع إلى متجر إكسسوارات إلكترونية لا علاقة له بالموقع",
+        "تعرض قائمة الجوال عنوانًا وهميًا في نيويورك ('1234 Fashion Street') وبريدًا إلكترونيًا عامًا ('info@fashionshop.com')، ما يتناقض مباشرة مع بيانات التواصل الحقيقية في دبي الظاهرة في مكان آخر من الموقع",
+        "لا تظهر أي تقييمات أو آراء عملاء على أي منتج، رغم أن الأسعار تصل إلى 6200 درهم — وهي بالضبط النقطة التي تكون فيها الثقة الحاجز الأكبر أمام الشراء",
+      ],
+      recommendations: [
+        "مراجعة كاملة للقائمة (على الحاسوب والجوال) لإزالة كل رابط أو نص متبقٍ من القالب الأصلي",
+        "استبدال العنوان والبريد الإلكتروني الوهميين في قائمة الجوال بالبيانات الحقيقية في دبي المستخدمة بالفعل في التذييل",
+        "تفعيل جمع تقييمات العملاء، على الأقل للمنتجات الأكثر مبيعًا، لطمأنة المشترين قبل عملية شراء فاخرة",
+      ],
+      siteUrl: "https://oudalnaas.com/shop/",
       published: true,
     },
   ],
