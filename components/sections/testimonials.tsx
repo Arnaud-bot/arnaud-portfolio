@@ -28,7 +28,7 @@ function TestimonialCard({
   return (
     <figure
       aria-hidden={hidden}
-      className="flex h-[276px] w-[320px] shrink-0 flex-col justify-between rounded-lg border border-border bg-card p-8 sm:w-[360px]"
+      className="flex min-h-[276px] w-[320px] shrink-0 flex-col justify-between rounded-lg border border-border bg-card p-8 sm:w-[360px]"
     >
       <div>
         <blockquote
@@ -84,7 +84,7 @@ export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary })
       title={dict.testimonialsSection.title}
     >
       {canLoop ? (
-        <div className="group -mx-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:-mx-12 lg:-mx-20">
+        <div className="group -mx-6 overflow-x-hidden overflow-y-visible [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:-mx-12 lg:-mx-20">
           <div
             className="testimonials-track flex w-max items-start gap-6 px-6 rtl:[animation-direction:reverse] group-hover:[animation-play-state:paused] md:px-12 lg:px-20"
             style={{
