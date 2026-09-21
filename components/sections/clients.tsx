@@ -28,6 +28,14 @@ const CLIENTS = [
     height: 84,
     className: "h-9 sm:h-10",
   },
+  {
+    name: "Skill Set",
+    href: "https://skillsetservice.com",
+    logo: "/clients/skillset.png",
+    width: 150,
+    height: 150,
+    className: "h-12 sm:h-14",
+  },
 ];
 
 export function Clients({ dict }: { dict: Dictionary }) {
