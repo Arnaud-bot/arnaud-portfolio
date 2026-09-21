@@ -134,8 +134,8 @@ export const fr: Dictionary = {
     title: "Ce que les clients en disent",
     readMore: "Lire plus",
     readLess: "Lire moins",
-    pause: "Mettre en pause",
-    play: "Reprendre",
+    previous: "Précédent",
+    next: "Suivant",
   },
   aboutTeaser: {
     eyebrow: "À propos",

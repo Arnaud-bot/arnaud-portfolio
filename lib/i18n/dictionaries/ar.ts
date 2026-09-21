@@ -131,8 +131,8 @@ export const ar: Dictionary = {
     title: "ماذا يقول عني عملائي",
     readMore: "قراءة المزيد",
     readLess: "عرض أقل",
-    pause: "إيقاف مؤقت",
-    play: "استئناف",
+    previous: "السابق",
+    next: "التالي",
   },
   aboutTeaser: {
     eyebrow: "نبذة عني",

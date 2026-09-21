@@ -58,8 +58,8 @@ export type Dictionary = {
     title: string;
     readMore: string;
     readLess: string;
-    pause: string;
-    play: string;
+    previous: string;
+    next: string;
   };
   aboutTeaser: { eyebrow: string; title: string; body: string; cta: string };
   contactCta: { title: string; description: string; cta: string };

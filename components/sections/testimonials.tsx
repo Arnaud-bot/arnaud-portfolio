@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Pause, Play } from "lucide-react";
+import { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { getTestimonials } from "@/lib/content/testimonials";
@@ -16,20 +16,18 @@ function TestimonialCard({
   testimonial,
   readMoreLabel,
   readLessLabel,
-  hidden,
 }: {
   testimonial: Testimonial;
   readMoreLabel: string;
   readLessLabel: string;
-  hidden?: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
   const isLong = testimonial.quote.length > TRUNCATE_LENGTH;
 
   return (
     <figure
-      aria-hidden={hidden}
-      className="flex min-h-[276px] w-[320px] shrink-0 flex-col justify-between rounded-lg border border-border bg-card p-8 sm:w-[360px]"
+      data-card
+      className="flex min-h-[276px] w-[320px] shrink-0 snap-start flex-col justify-between rounded-lg border border-border bg-card p-8 sm:w-[360px]"
     >
       <div>
         <blockquote
@@ -43,7 +41,6 @@ function TestimonialCard({
         {isLong && (
           <button
             type="button"
-            tabIndex={hidden ? -1 : 0}
             onClick={() => setExpanded((v) => !v)}
             className="mt-2 text-xs font-semibold text-primary hover:underline"
           >
@@ -73,64 +70,65 @@ function TestimonialCard({
 }
 
 export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary }) {
-  const [isPaused, setIsPaused] = useState(false);
-  const [isInteracting, setIsInteracting] = useState(false);
-
+  const trackRef = useRef<HTMLDivElement>(null);
   const testimonials = getTestimonials(lang);
 
   if (testimonials.length === 0) return null;
 
-  const canLoop = testimonials.length >= 3;
-  const isRunning = !isPaused && !isInteracting;
+  const canSwipe = testimonials.length >= 3;
+
+  const scrollByCard = (direction: 1 | -1) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.querySelector<HTMLElement>("[data-card]");
+    const gap = 24;
+    const amount = (card?.offsetWidth ?? 320) + gap;
+    const isRTL = getComputedStyle(track).direction === "rtl";
+    track.scrollBy({
+      left: direction * amount * (isRTL ? -1 : 1),
+      behavior: "smooth",
+    });
+  };
 
   return (
     <Section
       eyebrow={dict.testimonialsSection.eyebrow}
       title={dict.testimonialsSection.title}
     >
-      {canLoop ? (
-        <>
-          <div className="mb-4 flex justify-end">
+      {canSwipe ? (
+        <div className="relative">
+          <div
+            ref={trackRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {testimonials.map((t, i) => (
+              <TestimonialCard
+                key={t.name + i}
+                testimonial={t}
+                readMoreLabel={dict.testimonialsSection.readMore}
+                readLessLabel={dict.testimonialsSection.readLess}
+              />
+            ))}
+          </div>
+          <div className="mt-6 flex justify-center gap-3">
             <button
               type="button"
-              onClick={() => setIsPaused((v) => !v)}
-              aria-pressed={isPaused}
-              className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => scrollByCard(-1)}
+              aria-label={dict.testimonialsSection.previous}
+              className="inline-flex size-9 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-accent"
             >
-              {isPaused ? (
-                <Play className="size-3.5" />
-              ) : (
-                <Pause className="size-3.5" />
-              )}
-              {isPaused ? dict.testimonialsSection.play : dict.testimonialsSection.pause}
+              <ChevronLeft className="size-4 rtl:-scale-x-100" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollByCard(1)}
+              aria-label={dict.testimonialsSection.next}
+              className="inline-flex size-9 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-accent"
+            >
+              <ChevronRight className="size-4 rtl:-scale-x-100" />
             </button>
           </div>
-          <div
-            className="-mx-6 overflow-x-hidden overflow-y-visible [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:-mx-12 lg:-mx-20"
-            onMouseEnter={() => setIsInteracting(true)}
-            onMouseLeave={() => setIsInteracting(false)}
-            onFocus={() => setIsInteracting(true)}
-            onBlur={() => setIsInteracting(false)}
-          >
-            <div
-              className="testimonials-track flex w-max items-start gap-6 px-6 rtl:[animation-direction:reverse] md:px-12 lg:px-20"
-              style={{
-                animation: `testimonials-marquee ${testimonials.length * 9}s linear infinite`,
-                animationPlayState: isRunning ? "running" : "paused",
-              }}
-            >
-              {[...testimonials, ...testimonials].map((t, i) => (
-                <TestimonialCard
-                  key={t.name + i}
-                  testimonial={t}
-                  readMoreLabel={dict.testimonialsSection.readMore}
-                  readLessLabel={dict.testimonialsSection.readLess}
-                  hidden={i >= testimonials.length}
-                />
-              ))}
-            </div>
-          </div>
-        </>
+        </div>
       ) : (
         <div
           className={cn(
