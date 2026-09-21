@@ -151,7 +151,7 @@ export function Testimonials({ lang, dict }: { lang: Locale; dict: Dictionary })
         <div className="relative">
           <div
             ref={trackRef}
-            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {items.map((t, i) => (
               <TestimonialCard
