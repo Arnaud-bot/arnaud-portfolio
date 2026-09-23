@@ -56,12 +56,12 @@ export const en: Dictionary = {
   hero: {
     eyebrow: "Product-Focused Developer · Dubai, UAE",
     title:
-      "I turn digital products into experiences people love to use.",
-    titleHighlight: "people love",
+      "I turn underperforming digital products into credible experiences that convert.",
+    titleHighlight: "credible experiences that convert",
     description:
-      "I audit, redesign and build premium websites and apps for founders and product teams who want to convert more and look more credible.",
+      "I support founders and product teams, from UX audit to production, on web and mobile.",
     viewMyWork: "View My Work",
-    letsTalk: "Let's Talk",
+    letsTalk: "Request a UX Audit",
     availableBadge: "Available for new projects",
   },
   trustBar: {

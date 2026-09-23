@@ -56,12 +56,12 @@ export const fr: Dictionary = {
   hero: {
     eyebrow: "Product-Focused Developer · Dubai, UAE",
     title:
-      "Je transforme des produits digitaux en expériences que les gens aiment utiliser.",
-    titleHighlight: "les gens aiment",
+      "Je transforme des produits numériques sous-performants en expériences crédibles qui convertissent.",
+    titleHighlight: "crédibles qui convertissent",
     description:
-      "J'analyse, je redesigne et je développe des sites et applications premium pour des fondateurs et des équipes produit qui veulent convertir plus et paraître plus crédibles.",
+      "J'accompagne les fondateurs et les équipes produit, de l'audit UX à la mise en production, sur le web et le mobile.",
     viewMyWork: "Voir mes réalisations",
-    letsTalk: "Me contacter",
+    letsTalk: "Demander un audit UX",
     availableBadge: "Disponible pour nouveaux projets",
   },
   trustBar: {
