@@ -103,9 +103,12 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                 <Button
                   asChild
                   variant="ghost"
-                  className="h-10 px-4 text-sm sm:h-12 sm:border sm:border-border sm:px-8 sm:text-base"
+                  className="h-10 border border-border px-4 text-sm sm:h-12 sm:px-8 sm:text-base"
                 >
-                  <Link href={`/${lang}/contact`}>{dict.hero.letsTalk}</Link>
+                  <Link href={`/${lang}/contact`}>
+                    {dict.hero.letsTalk}
+                    <ArrowRight className="size-4 rtl:-scale-x-100" />
+                  </Link>
                 </Button>
               </div>
             </RevealOnMount>
@@ -122,7 +125,8 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   src="/Ras.jpg"
                   alt="Portrait"
                   fill
-                  priority
+                  loading="eager"
+                  fetchPriority="high"
                   className="object-cover object-top"
                   sizes="(min-width: 640px) 420px, 220px"
                 />

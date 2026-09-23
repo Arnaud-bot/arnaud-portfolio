@@ -1,5 +1,4 @@
 export type Dictionary = {
-  constructionBanner: { message: string; dismiss: string };
   meta: {
     home: { title: string; description: string; ogDescription: string };
     about: { title: string; description: string };

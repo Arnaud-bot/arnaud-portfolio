@@ -8,16 +8,16 @@ const CLIENTS = [
     name: "EasyFitness UAE",
     href: "https://www.easyfitness-uae.com",
     logo: "/clients/easyfitness.png",
-    width: 2500,
-    height: 550,
+    width: 591,
+    height: 130,
     className: "h-6 sm:h-7",
   },
   {
     name: "Cuts Gents Salon",
     href: "https://cutsuae.com",
     logo: "/clients/cutsuae.png",
-    width: 1250,
-    height: 480,
+    width: 339,
+    height: 130,
     className: "h-10 sm:h-12",
   },
   {
@@ -65,7 +65,7 @@ export function Clients({ dict }: { dict: Dictionary }) {
               aria-hidden={i >= CLIENTS.length}
               tabIndex={i >= CLIENTS.length ? -1 : 0}
               aria-label={client.name}
-              className="shrink-0 opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              className="shrink-0 opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={client.logo}

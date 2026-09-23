@@ -60,7 +60,12 @@ export function TechStack({ dict }: { dict: Dictionary }) {
               key={name}
               className="flex flex-col items-center gap-2 text-foreground transition-transform hover:-translate-y-0.5"
             >
-              <Icon size={32} style={color ? { color } : undefined} />
+              <Icon
+                size={32}
+                style={color ? { color } : undefined}
+                aria-hidden="true"
+                role="presentation"
+              />
               <span className="text-xs font-medium text-muted-foreground">
                 {name}
               </span>

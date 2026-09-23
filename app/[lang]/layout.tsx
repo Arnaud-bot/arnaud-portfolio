@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { Manrope, Inter, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { ConstructionBanner } from "@/components/layout/construction-banner";
 import {
   locales,
   hasLocale,
@@ -12,6 +11,7 @@ import {
   type Locale,
 } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { buildAlternates } from "@/lib/seo";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -60,13 +60,13 @@ export async function generateMetadata({
       locale: ogLocaleMap[locale],
       title: dict.meta.home.title,
       description: dict.meta.home.ogDescription,
+      images: ["/opengraph-image"],
     },
     twitter: {
       card: "summary_large_image",
+      images: ["/opengraph-image"],
     },
-    alternates: {
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
-    },
+    alternates: buildAlternates(locale, ""),
   };
 }
 
@@ -82,6 +82,21 @@ export default async function RootLayout({
 
   const dict = await getDictionary(lang);
 
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Arnaud Malanda",
+    jobTitle: dict.hero.eyebrow,
+    description: dict.meta.home.description,
+    url: `https://arnaudmalanda.com/${lang}`,
+    image: "https://arnaudmalanda.com/Ras.jpg",
+    sameAs: [
+      "https://www.linkedin.com/in/arnaud-malanda-8883a7260/",
+      "https://github.com/Arnaud-bot",
+      "https://www.instagram.com/arnaud_kuyzer/",
+    ],
+  };
+
   return (
     <html
       lang={lang}
@@ -89,7 +104,10 @@ export default async function RootLayout({
       className={`dark ${manrope.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ConstructionBanner dict={dict.constructionBanner} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Navbar lang={lang} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer lang={lang} dict={dict} />
