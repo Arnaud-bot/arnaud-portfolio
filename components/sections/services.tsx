@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import { HoverLift } from "@/components/animations/hover-lift";
 import { SERVICE_ILLUSTRATIONS } from "@/components/illustrations/service-illustrations";
 import { getServices } from "@/lib/content/services";
 import type { Locale } from "@/lib/i18n/config";
@@ -19,15 +20,17 @@ export function Services({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           const Illustration = SERVICE_ILLUSTRATIONS[service.slug];
           return (
             <Reveal key={service.slug} delay={(i % 3) * 0.05}>
-              <div className="h-full rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent">
-                <Illustration className="h-[140px] w-full" />
-                <h3 className="mt-4 text-lg font-semibold">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm leading-[1.7] text-muted-foreground">
-                  {service.description}
-                </p>
-              </div>
+              <HoverLift className="h-full">
+                <div className="h-full rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent">
+                  <Illustration className="h-[140px] w-full" />
+                  <h3 className="mt-4 text-lg font-semibold">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-[1.7] text-muted-foreground">
+                    {service.description}
+                  </p>
+                </div>
+              </HoverLift>
             </Reveal>
           );
         })}

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import { ScoreGauge } from "@/components/animations/score-gauge";
 import { getBreakdowns } from "@/lib/content/breakdowns";
 import { hasLocale, defaultLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -52,10 +53,9 @@ export default async function BreakdownPage({
         <h1 className="mt-5 text-3xl font-bold leading-[1.1] tracking-[-0.02em] md:text-5xl">
           {item.title}
         </h1>
-        <p className="mt-4 text-2xl font-semibold text-primary">
-          {item.uxScore}
-          <span className="text-base text-muted-foreground">/10</span>
-        </p>
+        <div className="mt-6">
+          <ScoreGauge score={item.uxScore} />
+        </div>
         <p className="mx-auto mt-4 max-w-[600px] text-base leading-[1.7] text-muted-foreground">
           {item.summary}
         </p>

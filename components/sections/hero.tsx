@@ -12,6 +12,7 @@ import type { IconType } from "react-icons";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { RevealOnMount } from "@/components/animations/reveal-on-mount";
+import { Magnetic } from "@/components/animations/magnetic";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
@@ -94,12 +95,14 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
             <RevealOnMount delay={0.15}>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 md:mt-10">
-                <Button asChild className="h-12 w-full px-8 text-base sm:w-auto">
-                  <Link href={`/${lang}/work`}>
-                    {dict.hero.viewMyWork}
-                    <ArrowRight className="size-4 rtl:-scale-x-100" />
-                  </Link>
-                </Button>
+                <Magnetic strength={0.25} className="w-full sm:w-auto">
+                  <Button asChild className="h-12 w-full px-8 text-base sm:w-auto">
+                    <Link href={`/${lang}/work`}>
+                      {dict.hero.viewMyWork}
+                      <ArrowRight className="size-4 rtl:-scale-x-100" />
+                    </Link>
+                  </Button>
+                </Magnetic>
                 <Button
                   asChild
                   variant="ghost"

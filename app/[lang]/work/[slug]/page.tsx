@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import { BeforeAfterLinks } from "@/components/animations/before-after-links";
+import { ScrollProgress } from "@/components/animations/scroll-progress";
 import { getCaseStudies } from "@/lib/content/case-studies";
 import { hasLocale, defaultLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -44,6 +46,7 @@ export default async function CaseStudyPage({
 
   return (
     <>
+      <ScrollProgress />
       <Section
         align="center"
         narrow
@@ -67,32 +70,28 @@ export default async function CaseStudyPage({
         </div>
         <p className="mt-4 text-sm text-muted-foreground">{study.client}</p>
 
-        {(study.beforeUrl || study.afterUrl || study.pdfUrl) && (
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            {study.beforeUrl && (
-              <Button asChild variant="outline" size="sm">
-                <a href={study.beforeUrl} target="_blank" rel="noreferrer">
-                  {dict.workPage.beforeSite}
-                  <ExternalLink className="size-3.5" />
-                </a>
-              </Button>
-            )}
-            {study.afterUrl && (
-              <Button asChild variant="outline" size="sm">
-                <a href={study.afterUrl} target="_blank" rel="noreferrer">
-                  {dict.workPage.afterSite}
-                  <ExternalLink className="size-3.5" />
-                </a>
-              </Button>
-            )}
-            {study.pdfUrl && (
-              <Button asChild variant="outline" size="sm">
-                <a href={study.pdfUrl} target="_blank" rel="noreferrer">
-                  {dict.workPage.readPdf}
-                  <ExternalLink className="size-3.5" />
-                </a>
-              </Button>
-            )}
+        {(study.beforeUrl || study.afterUrl) && (
+          <div className="mt-6 flex justify-center">
+            <BeforeAfterLinks
+              items={[
+                ...(study.beforeUrl
+                  ? [{ href: study.beforeUrl, label: dict.workPage.beforeSite }]
+                  : []),
+                ...(study.afterUrl
+                  ? [{ href: study.afterUrl, label: dict.workPage.afterSite }]
+                  : []),
+              ]}
+            />
+          </div>
+        )}
+        {study.pdfUrl && (
+          <div className="mt-4 flex justify-center">
+            <Button asChild variant="outline" size="sm">
+              <a href={study.pdfUrl} target="_blank" rel="noreferrer">
+                {dict.workPage.readPdf}
+                <ExternalLink className="size-3.5" />
+              </a>
+            </Button>
           </div>
         )}
       </Section>

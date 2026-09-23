@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Manrope, Inter, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { MotionProvider } from "@/components/animations/motion-provider";
 import {
   locales,
   hasLocale,
@@ -108,9 +109,11 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <Navbar lang={lang} dict={dict} />
-        <main className="flex-1">{children}</main>
-        <Footer lang={lang} dict={dict} />
+        <MotionProvider>
+          <Navbar lang={lang} dict={dict} />
+          <main className="flex-1">{children}</main>
+          <Footer lang={lang} dict={dict} />
+        </MotionProvider>
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
+import { ScrollProgress } from "@/components/animations/scroll-progress";
 import { getBlogPosts } from "@/lib/content/blog";
 import { hasLocale, defaultLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -48,6 +49,7 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <ScrollProgress />
       <Section
         align="center"
         narrow
