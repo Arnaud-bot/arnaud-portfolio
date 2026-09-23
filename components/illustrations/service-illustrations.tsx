@@ -180,63 +180,6 @@ export const SERVICE_ILLUSTRATIONS: Record<
   "conversion-optimization": ConversionOptimizationIllustration,
 };
 
-function MissionBadge({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <circle cx="60" cy="60" r="52" fill={AMBER} opacity="0.1" />
-      {children}
-    </>
-  );
-}
-
-export function AuditMissionIllustration(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 120 120" {...props}>
-      <MissionBadge>
-        <rect x="38" y="34" width="28" height="6" rx="2" fill={INK} opacity="0.3" />
-        <rect x="38" y="46" width="20" height="6" rx="2" fill={INK} opacity="0.3" />
-        <rect x="38" y="58" width="24" height="6" rx="2" fill={INK} opacity="0.3" />
-        <circle cx="68" cy="66" r="18" fill={DEEP} stroke={AMBER} strokeWidth="5" />
-        <line x1="80" y1="78" x2="90" y2="88" stroke={AMBER} strokeWidth="6" strokeLinecap="round" />
-      </MissionBadge>
-    </svg>
-  );
-}
-
-export function RedesignMissionIllustration(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 120 120" {...props}>
-      <MissionBadge>
-        <rect x="30" y="66" width="30" height="30" rx="5" fill={DEEP} stroke={INK} strokeWidth="2" />
-        <rect x="38" y="74" width="14" height="4" rx="2" fill={INK} opacity="0.4" />
-        <rect x="38" y="82" width="10" height="4" rx="2" fill={INK} opacity="0.4" />
-        <path
-          d="M56 70 L78 48 L86 56 L64 78 Z"
-          fill={AMBER}
-        />
-        <rect x="82" y="38" width="9" height="9" rx="2" fill={AMBER} transform="rotate(45 86.5 42.5)" />
-        <circle cx="34" cy="34" r="6" fill={AMBER} opacity="0.7" />
-      </MissionBadge>
-    </svg>
-  );
-}
-
-export function BuildMissionIllustration(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 120 120" {...props}>
-      <MissionBadge>
-        <path d="M40 45 L26 60 L40 75" fill="none" stroke={AMBER} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M80 45 L94 60 L80 75" fill="none" stroke={AMBER} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="66" y1="38" x2="54" y2="82" stroke={INK} strokeWidth="4" strokeLinecap="round" opacity="0.75" />
-      </MissionBadge>
-    </svg>
-  );
-}
-
-export const MISSION_ILLUSTRATIONS: Array<
-  (props: SVGProps<SVGSVGElement>) => React.JSX.Element
-> = [AuditMissionIllustration, RedesignMissionIllustration, BuildMissionIllustration];
-
 function StepBadge({ children }: { children: React.ReactNode }) {
   return (
     <>

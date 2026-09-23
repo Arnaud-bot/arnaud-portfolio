@@ -30,12 +30,6 @@ export type Dictionary = {
   };
   trustBar: { quote: string; author: string };
   clientsSection: { title: string };
-  valueProposition: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    points: { title: string; description: string }[];
-  };
   homeServices: { eyebrow: string; title: string; description: string };
   featuredCaseStudies: {
     eyebrow: string;

@@ -1,7 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { Clients } from "@/components/sections/clients";
 import { TrustBar } from "@/components/sections/trust-bar";
-import { ValueProposition } from "@/components/sections/value-proposition";
 import { Services } from "@/components/sections/services";
 import { FeaturedCaseStudies } from "@/components/sections/featured-case-studies";
 import { BreakdownsTeaser } from "@/components/sections/breakdowns-teaser";
@@ -27,7 +26,6 @@ export default async function Home({
       <Hero lang={lang} dict={dict} />
       <Clients dict={dict} />
       <TrustBar dict={dict} />
-      <ValueProposition dict={dict} />
       <Services lang={lang} dict={dict} />
       <FeaturedCaseStudies lang={lang} dict={dict} />
       <BreakdownsTeaser lang={lang} dict={dict} />

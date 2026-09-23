@@ -72,29 +72,6 @@ export const fr: Dictionary = {
   clientsSection: {
     title: "Les entreprises avec qui je travaille en ce moment",
   },
-  valueProposition: {
-    eyebrow: "Ma mission",
-    title: "Je ne construis pas simplement des sites",
-    description:
-      "J'aide les entreprises à transformer leurs produits digitaux en expériences que les gens aiment utiliser.",
-    points: [
-      {
-        title: "J'analyse",
-        description:
-          "Avant de dessiner ou de coder quoi que ce soit, j'identifie ce qui bloque réellement tes utilisateurs et ta conversion.",
-      },
-      {
-        title: "Je redesigne",
-        description:
-          "Je transforme les problèmes identifiés en interfaces claires, cohérentes et alignées avec ton positionnement.",
-      },
-      {
-        title: "Je construis",
-        description:
-          "Je développe des produits rapides et fiables — web et mobile — prêts pour de vrais utilisateurs.",
-      },
-    ],
-  },
   homeServices: {
     eyebrow: "Services",
     title: "Ce que je peux faire pour ton produit",
