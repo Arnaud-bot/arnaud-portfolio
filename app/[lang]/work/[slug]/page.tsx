@@ -8,6 +8,7 @@ import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/animations/reveal";
 import { BeforeAfterLinks } from "@/components/animations/before-after-links";
 import { ScrollProgress } from "@/components/animations/scroll-progress";
+import { Parallax } from "@/components/animations/parallax";
 import { getCaseStudies } from "@/lib/content/case-studies";
 import { hasLocale, defaultLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -115,22 +116,24 @@ export default async function CaseStudyPage({
             </div>
           ) : (
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border bg-background">
-              <Image
-                src={study.thumbnail}
-                alt=""
-                aria-hidden
-                fill
-                className="scale-110 object-cover opacity-40 blur-2xl"
-                sizes="(min-width: 1024px) 900px, 100vw"
-              />
-              <Image
-                src={study.thumbnail}
-                alt={study.title}
-                fill
-                className="object-contain"
-                sizes="(min-width: 1024px) 900px, 100vw"
-                priority
-              />
+              <Parallax offset={24} className="absolute inset-0">
+                <Image
+                  src={study.thumbnail}
+                  alt=""
+                  aria-hidden
+                  fill
+                  className="scale-110 object-cover opacity-40 blur-2xl"
+                  sizes="(min-width: 1024px) 900px, 100vw"
+                />
+                <Image
+                  src={study.thumbnail}
+                  alt={study.title}
+                  fill
+                  className="object-contain"
+                  sizes="(min-width: 1024px) 900px, 100vw"
+                  priority
+                />
+              </Parallax>
             </div>
           )}
         </Reveal>

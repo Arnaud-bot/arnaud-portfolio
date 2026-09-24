@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/animations/reveal";
+import { Parallax } from "@/components/animations/parallax";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
@@ -13,13 +14,15 @@ export function AboutTeaser({ lang, dict }: { lang: Locale; dict: Dictionary }) 
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal>
           <div className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-lg border border-border bg-card">
-            <Image
-              src="/Ras.jpg"
-              alt="Arnaud Malanda"
-              fill
-              className="object-cover object-top"
-              sizes="400px"
-            />
+            <Parallax offset={18} className="absolute inset-0">
+              <Image
+                src="/Ras.jpg"
+                alt="Arnaud Malanda"
+                fill
+                className="scale-110 object-cover object-top"
+                sizes="400px"
+              />
+            </Parallax>
           </div>
         </Reveal>
         <Reveal delay={0.05}>

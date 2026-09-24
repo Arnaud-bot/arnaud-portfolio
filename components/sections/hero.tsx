@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { RevealOnMount } from "@/components/animations/reveal-on-mount";
 import { Magnetic } from "@/components/animations/magnetic";
+import { Parallax } from "@/components/animations/parallax";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
@@ -119,10 +120,12 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
           <RevealOnMount delay={0.1}>
             <div className="relative mx-auto w-[62%] max-w-[220px] sm:w-full sm:max-w-[420px]">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-[radial-gradient(circle,rgba(242,169,59,0.18),transparent_70%)] sm:-inset-12"
-              />
+              <Parallax offset={22} className="pointer-events-none absolute -inset-8 -z-10 sm:-inset-12">
+                <div
+                  aria-hidden
+                  className="size-full rounded-full bg-[radial-gradient(circle,rgba(242,169,59,0.18),transparent_70%)]"
+                />
+              </Parallax>
               <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-border bg-card md:aspect-[4/5]">
                 <Image
                   src="/Ras.jpg"
